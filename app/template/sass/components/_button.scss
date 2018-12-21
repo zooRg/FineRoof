@@ -14,7 +14,10 @@
 	cursor: pointer;
 	transition: .3s;
 	padding: 13px 60px;
-
+	@include adaptive (1075) {
+    font-size: 13px;
+    padding: 9px 23px;
+	}
 }
 
 .green-text {
@@ -22,4 +25,7 @@
 	font-size: 15px;
 	font-weight: 400;
 	letter-spacing: 0.38px;
+	@include adaptive (1075) {
+		font-size: 13px;
+	}
 }

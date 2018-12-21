@@ -1,10 +1,9 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const browserSync = require('browser-sync');
-const rename = require('gulp-rename');
-const plumber = require('gulp-plumber');
-const autoprefixer = require('gulp-autoprefixer');
-const ts = require('gulp-typescript');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync');
+var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
     gulp.src('app/template/sass/**/*.scss')
@@ -14,14 +13,6 @@ gulp.task('sass', function() {
         .pipe(rename('style.css'))
         .pipe(gulp.dest('app/template/css'))
         .pipe(browserSync.reload({stream: true}))
-});
-
-gulp.task('typescript', function() {
-    var tsProject = ts.createProject('tsconfig.json', { noImplicitAny: true });
-    var tsResult = gulp.src("app/template/ts/**/*.ts")
-        .pipe(tsProject());
-
-    return tsResult.js.pipe(gulp.dest('app/template/js'));
 });
 
 gulp.task('browser-sync', function() {

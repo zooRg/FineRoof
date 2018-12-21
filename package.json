@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "typescript": "^3.1.3"
+  },
+  "author": "",
+  "scripts": {
+    "start": "gulp"
+  },
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "npm": "^6.4.1"
+  }
+}

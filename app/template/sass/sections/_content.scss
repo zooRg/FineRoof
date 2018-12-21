@@ -1,0 +1,23 @@
+body .content {
+  h2,
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    @include adaptive (1140) {
+      font-size: 40px;
+      line-height: 55px;
+    }
+    @include adaptive (600) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 30px;
+    @include adaptive (600) {
+      line-height: 22px;
+    }
+  }
+}

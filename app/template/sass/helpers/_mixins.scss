@@ -1,0 +1,59 @@
+// Font
+@mixin fonts($font-family, $font-name, $font-weight, $font-style) {
+    @if $font-style == "italic" {
+        @font-face {
+            font-family: $font-family;
+            src: url("../fonts/#{$font-name}-#{$font-weight}i.woff2") format("woff2"),
+                 url("../fonts/#{$font-name}-#{$font-weight}i.woff") format("woff");
+            font-weight: $font-weight;
+            font-style: $font-style;
+        }
+    } @else {
+        @font-face {
+            font-family: $font-family;
+            src: url("../fonts/#{$font-name}-#{$font-weight}.woff2") format("woff2"),
+                 url("../fonts/#{$font-name}-#{$font-weight}.woff") format("woff");
+            font-weight: $font-weight;
+            font-style: $font-style;
+        }
+    }
+}
+
+//Adaptive
+@mixin adaptive($media-width) {
+    @media screen and (max-width: #{$media-width}px) {
+        @content;
+    }
+}
+
+
+
+//Touch adaptive
+@mixin touch {
+  @media (pointer:coarse) {
+      @content;
+  }
+}
+
+//Target - smartphones
+@mixin phone {
+  @media screen and (max-width: 479px) {
+      @content;
+  }
+}
+
+//target - tablets
+@mixin tablet {
+  @media screen and (min-width:480px) and (max-width:800px) {
+    @content;
+  }
+}
+
+//placeholder
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}

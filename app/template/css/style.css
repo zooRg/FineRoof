@@ -334,6 +334,10 @@ a {
           animation: mask 6s steps(1, end) infinite;
 }
 
+.popup {
+  display: none;
+}
+
 .classic-button {
   color: #1bc09b;
   font-size: 15px;
@@ -684,6 +688,14 @@ a {
 
 .catalog-slider {
   margin-top: 139px;
+  margin-bottom: 220px;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog-slider {
+    margin-top: 70px;
+    margin-bottom: 140px;
+  }
 }
 
 .catalog-slider__item {
@@ -700,10 +712,39 @@ a {
   margin-top: 56px !important;
 }
 
+@media screen and (max-width: 1075px) {
+  .catalog-slider__wrapper {
+    max-width: 470px;
+    margin-top: 0px !important;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .catalog-slider__wrapper {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .catalog-slider__head {
+    max-width: 300px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .catalog-slider__block {
   border-radius: 50%;
   overflow: hidden;
   margin-top: -80px;
+}
+
+@media screen and (max-width: 479px) {
+  .catalog-slider__block {
+    margin-top: -30px;
+  }
 }
 
 .catalog-slider__block::before {
@@ -740,6 +781,20 @@ a {
   justify-content: center;
 }
 
+@media screen and (max-width: 1075px) {
+  .catalog-slider__picture {
+    max-width: 290px;
+    max-height: 290px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .catalog-slider__picture {
+    max-width: 220px;
+    max-height: 220px;
+  }
+}
+
 .catalog-slider__picture img {
   display: block;
   max-height: 100%;
@@ -762,6 +817,31 @@ a {
   z-index: 3;
 }
 
+@media screen and (max-width: 1075px) {
+  .catalog-slider__name {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .catalog-slider__name {
+    font-size: 24px;
+  }
+}
+
+.catalog-slider__wrap {
+  background-image: url("../img/background1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog-slider__wrap {
+    background-image: none;
+  }
+}
+
 .index-slider {
   margin-bottom: 65px;
 }
@@ -782,11 +862,26 @@ a {
   letter-spacing: 3.35px;
 }
 
+@media screen and (max-width: 1075px) {
+  .custom-title span {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .custom-title span {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
 .custom-title span:last-child::before {
   content: '';
   width: 94px;
   height: 92px;
   background-image: url("../img/house-full.png");
+  background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   right: 0;
@@ -794,6 +889,20 @@ a {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: -1;
+}
+
+@media screen and (max-width: 1075px) {
+  .custom-title span:last-child::before {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .custom-title span:last-child::before {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .navigation {

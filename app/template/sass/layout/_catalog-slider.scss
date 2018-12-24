@@ -1,22 +1,48 @@
 .catalog-slider {
 	margin-top: 139px;
+	margin-bottom: 220px;
+	@include adaptive (775) {
+		margin-top: 70px;
+		margin-bottom: 140px;
+	}
+	$parent: &;
 	&__item {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+
 	}
 	&__wrapper {
 		max-width: 620px;
 		margin-right: auto!important;
 		margin-left: 0 !important;
 		margin-top: 56px !important;
+		@include adaptive (1075) {
+			max-width: 470px;
+			margin-top: 0px !important;
+		}
+		@include adaptive (775) {
+			max-width: none;
+		}
+	}
+	&__head {
+		@include phone {
+			max-width: 300px;
+			max-height: 300px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 	&__block {
 		border-radius: 50%;
 		overflow: hidden;
 		margin-top: -80px;
+		@include phone {
+			margin-top: -30px;
+		}
 		&::before {
 			content: '';
 			width: 200%;
@@ -50,6 +76,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include adaptive (1075) {
+			max-width: 290px;
+			max-height: 290px;
+		}
+		@include phone {
+			max-width: 220px;
+			max-height: 220px;
+
+		}
 		& img {
 			display: block;
 			max-height: 100%;
@@ -69,5 +104,21 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 3;
+		@include adaptive (1075) {
+			font-size: 24px;
+		}
+		@include adaptive (610) {
+			font-size: 24px;
+
+		}
+	}
+	&__wrap {
+		background-image: url('../img/background1.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right;
+		@include adaptive (775) {
+			background-image: none;
+		}
 	}
 }

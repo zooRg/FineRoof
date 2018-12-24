@@ -64,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
       autoplay: {
         delay: 5000,
       },
+	  breakpoints: {
+		  775: {
+			slidesPerView: 1,
+			spaceBetween: 0
+		  },
+  	  },
       speed: 1000,
       pagination: {
         el: '.swiper-pagination',
@@ -73,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
       navigation: {
-       nextEl: '.slider-right_index',
-       prevEl: '.slider-left_index',
+       nextEl: '.slider-right_catalog',
+       prevEl: '.slider-left_catalog',
       },
     })
 });

@@ -11,18 +11,35 @@
     line-height: 82.01px;
     text-transform: uppercase;
     letter-spacing: 3.35px;
+	@include adaptive (1075) {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	@include adaptive (610) {
+		font-size: 28px;
+		line-height: 36px;
+	}
     &:last-child {
       &::before {
         content: '';
         width: 94px;
         height: 92px;
         background-image: url('../img/house-full.png');
+		background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
         right: 0;
         top: 45%;
         transform: translateY(-50%);
         z-index: -1;
+		@include adaptive (1075) {
+			width: 50px;
+			height: 50px;
+		}
+		@include adaptive (610) {
+			width: 35px;
+			height: 35px;
+		}
       }
     }
   }

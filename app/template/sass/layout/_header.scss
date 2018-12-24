@@ -1,5 +1,12 @@
 .header {
 	$parent: &;
+	padding-bottom: 127px;
+	@include adaptive (1075) {
+		padding-bottom: 40px;
+	}
+	@include adaptive (610) {
+		padding-bottom: 20px;
+	}
 	&__top {
 		background-color: #232323;
 		padding: 22px 0px 27px;

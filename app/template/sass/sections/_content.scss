@@ -1,0 +1,29 @@
+.custom-title {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  & span {
+    color: #232323;
+    font-size: 67px;
+    font-weight: 700;
+    line-height: 82.01px;
+    text-transform: uppercase;
+    letter-spacing: 3.35px;
+    &:last-child {
+      &::before {
+        content: '';
+        width: 94px;
+        height: 92px;
+        background-image: url('../img/house-full.png');
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+  }
+}

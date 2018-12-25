@@ -14,10 +14,15 @@
 	cursor: pointer;
 	transition: .3s;
 	padding: 13px 60px;
-	@include adaptive (1075) {
-    font-size: 13px;
-    padding: 9px 23px;
+		@include adaptive (1075) {
+	    font-size: 13px;
+	    padding: 9px 23px;
+		}
+	&_white {
+		border: 2px solid #d7eae5;
+		background: white;
 	}
+
 }
 
 .green-text {

@@ -84,3 +84,36 @@
     }
   }
 }
+
+.custom-subtitle {
+	color: #222222;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 35px;
+	text-transform: uppercase;
+	letter-spacing: 1.4px;
+	text-align: left;
+	margin-bottom: 72px;
+	@include adaptive (1075) {
+		font-size: 22px;
+		line-height: 26px;
+		margin-bottom: 40px;
+	}
+	@include phone {
+		font-size: 20px;
+	}
+	&::before {
+		content: '';
+		width: 58px;
+		height: 11px;
+		background-color: #232323;
+		position: absolute;
+		bottom: -31px;
+		left: -58px;
+		@include adaptive (1075) {
+			height: 6px;
+			left: 5px;
+			bottom: -20px;
+		}
+	}
+}

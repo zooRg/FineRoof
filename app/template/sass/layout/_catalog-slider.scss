@@ -1,9 +1,12 @@
 .catalog-slider {
 	margin-top: 139px;
 	margin-bottom: 220px;
+	@include adaptive (1075) {
+		margin-bottom: 80px;
+	}
 	@include adaptive (775) {
 		margin-top: 70px;
-		margin-bottom: 140px;
+		margin-bottom: 60px;
 	}
 	$parent: &;
 	&__item {
@@ -19,6 +22,7 @@
 		margin-right: auto!important;
 		margin-left: 0 !important;
 		margin-top: 56px !important;
+
 		@include adaptive (1075) {
 			max-width: 470px;
 			margin-top: 0px !important;

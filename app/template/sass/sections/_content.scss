@@ -4,31 +4,71 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  &_center {
+    align-items: center;
+  }
+  &_with-border {
+    span {
+      line-height: 68.01px;
+      border-bottom: 9px solid #1bc09b;
+      @include adaptive (1075) {
+        line-height: 35px;
+        border-bottom: 5px solid #1bc09b;
+      }
+      @include adaptive (610) {
+	      line-height: 24px;
+        border-bottom: 3px solid #1bc09b;
+      }
+    }
+  }
+  &_no-border {
+    span {
+      line-height: 82.01px;
+      @include adaptive (1075) {
+      		line-height: 50px;
+      }
+      @include adaptive (610) {
+        	line-height: 36px;
+      }
+    }
+  }
+  &_not-full-house {
+    & span:last-child {
+      &::before {
+        background-image: url('../img/house-notfull.png');
+        right: -20px;
+      }
+    }
+  }
+  &_full-house {
+    & span:last-child {
+      &::before {
+        background-image: url('../img/house-full.png');
+        right: 0;
+      }
+    }
+  }
   & span {
     color: #232323;
     font-size: 67px;
     font-weight: 700;
-    line-height: 82.01px;
     text-transform: uppercase;
     letter-spacing: 3.35px;
-	@include adaptive (1075) {
-		font-size: 40px;
-		line-height: 50px;
-	}
-	@include adaptive (610) {
-		font-size: 28px;
-		line-height: 36px;
-	}
+  	@include adaptive (1075) {
+  		font-size: 40px;
+  	}
+  	@include adaptive (610) {
+  		font-size: 28px;
+
+  	}
     &:last-child {
       &::before {
         content: '';
         width: 94px;
         height: 92px;
-        background-image: url('../img/house-full.png');
-		background-repeat: no-repeat;
+		    background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        right: 0;
         top: 45%;
         transform: translateY(-50%);
         z-index: -1;

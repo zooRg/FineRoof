@@ -1,0 +1,187 @@
+.catalog {
+	$parent: &;
+	& .container {
+		background-image: url('../img/background2.png');
+		background-repeat: no-repeat;
+		background-position: left 100px;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: center;
+		padding-top: 129px;
+		padding-bottom: 10px;
+		border-top: 2px solid #e1f1ed;
+		border-bottom: 2px solid #e1f1ed;
+		@include adaptive (1750) {
+			background-size: 25vw;
+			background-position: left 0px;
+		}
+		@include adaptive (1075) {
+			background-image: none;
+			padding-top: 40px;
+			padding-bottom: 10px;
+		}
+	}
+	&__title {
+		margin-bottom: 66px;
+		@include adaptive (775) {
+			margin-bottom: 25px;
+		}
+	}
+	&__wrap {
+		max-width: 1200px;
+		width: 100%;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-image: url('../img/background3.png');
+		background-repeat: no-repeat;
+		background-position: right 30px;
+		@include adaptive (1075) {
+			background-size: 15vw;
+			background-position: right  0;
+		}
+		@include adaptive (775) {
+			background-image: none;
+		}
+
+	}
+	&__wrapper {
+    max-width: 699px;
+		width: 100%;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+	&__row {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		margin: 0px -28px;
+		@include adaptive (775) {
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: unset;
+			margin: 0px -10px;
+		}
+		@include phone {
+			justify-content: center;
+		}
+		&:nth-child(1) {
+			justify-content: space-between;
+			@include adaptive (775) {
+				justify-content: unset;
+			}
+			@include phone {
+				justify-content: center;
+			}
+
+		}
+		&:nth-child(2) {
+			& #{$parent}__item {
+				&:nth-child(1) {
+					justify-content: flex-end;
+					@include adaptive (775) {
+						justify-content: center;
+					}
+				}
+				&:nth-child(3) {
+					justify-content: flex-start;
+					@include adaptive (775) {
+						justify-content: center;
+					}
+				}
+			}
+		}
+		& #{$parent}__item {
+			&:nth-child(2) {
+				min-width: 158px;
+				flex-grow: 0;
+				flex-shrink: 1;
+			}
+
+		}
+	}
+	&__picture {
+		height: 74px;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		margin-bottom: 20px;
+		@include adaptive (775) {
+			margin-bottom: 10px;
+		}
+		@include phone {
+			height: 40px;
+		}
+		& img {
+			display: block;
+			object-fit: contain;
+			max-height: 100%;
+		}
+	}
+	&__subwrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__item {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+		flex-shrink: 0;
+		margin: 0px 28px 66px;
+		@include adaptive (1075) {
+			margin: 0px 28px 30px;
+		}
+		@include adaptive (775) {
+			width: calc(50% - 20px);
+			flex-grow: 0;
+			flex-shrink: 1;
+			margin: 0px 10px 20px;
+		}
+		&:nth-child(4) {
+			align-items: flex-end;
+			@include adaptive (775) {
+				align-items: center;
+			}
+		}
+		&:nth-child(6) {
+			align-items: flex-start;
+			@include adaptive (775) {
+				align-items: center;
+			}
+		}
+	}
+	&__name {
+		text-align: center;
+		color: #000000;
+		font-size: 17px;
+		font-weight: 700;
+		letter-spacing: 0.42px;
+		border-bottom: 5px solid #1bc09b;
+		@include adaptive (775) {
+			font-size: 15px;
+			letter-spacing: normal;
+			border-bottom-width: 3px;
+		}
+		@include phone {
+			font-size: 14px;
+			text-decoration: underline;
+			border-bottom: none;
+		}
+	}
+}

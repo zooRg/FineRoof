@@ -691,10 +691,16 @@ a {
   margin-bottom: 220px;
 }
 
+@media screen and (max-width: 1075px) {
+  .catalog-slider {
+    margin-bottom: 80px;
+  }
+}
+
 @media screen and (max-width: 775px) {
   .catalog-slider {
     margin-top: 70px;
-    margin-bottom: 140px;
+    margin-bottom: 60px;
   }
 }
 
@@ -846,6 +852,247 @@ a {
   margin-bottom: 65px;
 }
 
+.catalog .container {
+  background-image: url("../img/background2.png");
+  background-repeat: no-repeat;
+  background-position: left 100px;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  padding-top: 129px;
+  padding-bottom: 10px;
+  border-top: 2px solid #e1f1ed;
+  border-bottom: 2px solid #e1f1ed;
+}
+
+@media screen and (max-width: 1750px) {
+  .catalog .container {
+    background-size: 25vw;
+    background-position: left 0px;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .catalog .container {
+    background-image: none;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+}
+
+.catalog__title {
+  margin-bottom: 66px;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__title {
+    margin-bottom: 25px;
+  }
+}
+
+.catalog__wrap {
+  max-width: 1200px;
+  width: 100%;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../img/background3.png");
+  background-repeat: no-repeat;
+  background-position: right 30px;
+}
+
+@media screen and (max-width: 1075px) {
+  .catalog__wrap {
+    background-size: 15vw;
+    background-position: right  0;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__wrap {
+    background-image: none;
+  }
+}
+
+.catalog__wrapper {
+  max-width: 699px;
+  width: 100%;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog__row {
+  display: -ms-flex;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0px -28px;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__row {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: unset;
+    margin: 0px -10px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .catalog__row {
+    justify-content: center;
+  }
+}
+
+.catalog__row:nth-child(1) {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__row:nth-child(1) {
+    justify-content: unset;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .catalog__row:nth-child(1) {
+    justify-content: center;
+  }
+}
+
+.catalog__row:nth-child(2) .catalog__item:nth-child(1) {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__row:nth-child(2) .catalog__item:nth-child(1) {
+    justify-content: center;
+  }
+}
+
+.catalog__row:nth-child(2) .catalog__item:nth-child(3) {
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__row:nth-child(2) .catalog__item:nth-child(3) {
+    justify-content: center;
+  }
+}
+
+.catalog__row .catalog__item:nth-child(2) {
+  min-width: 158px;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.catalog__picture {
+  height: 74px;
+  display: -ms-flex;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__picture {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .catalog__picture {
+    height: 40px;
+  }
+}
+
+.catalog__picture img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
+}
+
+.catalog__subwrap {
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog__item {
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0px 28px 66px;
+}
+
+@media screen and (max-width: 1075px) {
+  .catalog__item {
+    margin: 0px 28px 30px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__item {
+    width: calc(50% - 20px);
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0px 10px 20px;
+  }
+}
+
+.catalog__item:nth-child(4) {
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__item:nth-child(4) {
+    align-items: center;
+  }
+}
+
+.catalog__item:nth-child(6) {
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__item:nth-child(6) {
+    align-items: center;
+  }
+}
+
+.catalog__name {
+  text-align: center;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  border-bottom: 5px solid #1bc09b;
+}
+
+@media screen and (max-width: 775px) {
+  .catalog__name {
+    font-size: 15px;
+    letter-spacing: normal;
+    border-bottom-width: 3px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .catalog__name {
+    font-size: 14px;
+    text-decoration: underline;
+    border-bottom: none;
+  }
+}
+
 .custom-title {
   display: -ms-flex;
   display: flex;
@@ -853,11 +1100,59 @@ a {
   align-items: flex-start;
 }
 
+.custom-title_center {
+  align-items: center;
+}
+
+.custom-title_with-border span {
+  line-height: 68.01px;
+  border-bottom: 9px solid #1bc09b;
+}
+
+@media screen and (max-width: 1075px) {
+  .custom-title_with-border span {
+    line-height: 35px;
+    border-bottom: 5px solid #1bc09b;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .custom-title_with-border span {
+    line-height: 24px;
+    border-bottom: 3px solid #1bc09b;
+  }
+}
+
+.custom-title_no-border span {
+  line-height: 82.01px;
+}
+
+@media screen and (max-width: 1075px) {
+  .custom-title_no-border span {
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .custom-title_no-border span {
+    line-height: 36px;
+  }
+}
+
+.custom-title_not-full-house span:last-child::before {
+  background-image: url("../img/house-notfull.png");
+  right: -20px;
+}
+
+.custom-title_full-house span:last-child::before {
+  background-image: url("../img/house-full.png");
+  right: 0;
+}
+
 .custom-title span {
   color: #232323;
   font-size: 67px;
   font-weight: 700;
-  line-height: 82.01px;
   text-transform: uppercase;
   letter-spacing: 3.35px;
 }
@@ -865,14 +1160,12 @@ a {
 @media screen and (max-width: 1075px) {
   .custom-title span {
     font-size: 40px;
-    line-height: 50px;
   }
 }
 
 @media screen and (max-width: 610px) {
   .custom-title span {
     font-size: 28px;
-    line-height: 36px;
   }
 }
 
@@ -880,11 +1173,9 @@ a {
   content: '';
   width: 94px;
   height: 92px;
-  background-image: url("../img/house-full.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  right: 0;
   top: 45%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);

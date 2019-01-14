@@ -1,0 +1,46 @@
+.classic-button {
+	color: #1bc09b;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.38px;
+	border-radius: 6px;
+	border: none;
+	background-color: #454647;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: .3s;
+	padding: 13px 60px;
+		@include adaptive (1075) {
+	    font-size: 13px;
+	    padding: 9px 23px;
+		}
+	&_white {
+		border: 2px solid #d7eae5;
+		background: white;
+	}
+
+}
+.border-link {
+	color: #009876;
+	font-size: 15px;
+	letter-spacing: 0.38px;
+	border-bottom: 5px solid #1bc09b;
+	transition: .5s;
+	@include adaptive (775) {
+		font-size: 13px;
+		border-bottom-width: 3px;
+	}
+}
+.green-text {
+	color: $solidgreen;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.38px;
+	@include adaptive (1075) {
+		font-size: 13px;
+	}
+}

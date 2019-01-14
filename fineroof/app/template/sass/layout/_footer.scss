@@ -1,0 +1,35 @@
+.footer {
+	padding: 15px 0;
+	background-color: #e1f1ed;
+	&__wrap {
+		color: #009876;
+		font-size: 15px;
+		letter-spacing: 0.38px;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		@include adaptive (775) {
+			font-size: 13px;
+		}
+		@include adaptive (610) {
+			flex-direction: column;
+		}
+	}
+	&__social {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__link {
+		margin-left: 56px;
+		@include adaptive (775) {
+			margin-left: 15px;
+		}
+		@include adaptive (610) {
+			margin-left: 0;
+			margin: 10px 0;
+		}
+	}
+}

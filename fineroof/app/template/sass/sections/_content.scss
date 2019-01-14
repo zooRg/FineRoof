@@ -1,0 +1,139 @@
+.custom-title {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: .5s;
+
+  cursor: pointer;
+  &_center {
+    align-items: center;
+  }
+  &:hover {
+
+    & span {
+      color: #1bc09b;
+
+      border-color: transparent;
+      &:last-child {
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &_with-border {
+    span {
+      line-height: 68.01px;
+      border-bottom: 9px solid #1bc09b;
+
+      transition: inherit;
+      @include adaptive (1075) {
+        line-height: 35px;
+        border-bottom: 5px solid #1bc09b;
+      }
+      @include adaptive (610) {
+	      line-height: 24px;
+        border-bottom: 3px solid #1bc09b;
+      }
+    }
+  }
+  &_no-border {
+    span {
+      line-height: 82.01px;
+      @include adaptive (1075) {
+      		line-height: 50px;
+      }
+      @include adaptive (610) {
+        	line-height: 36px;
+      }
+    }
+  }
+  &_not-full-house {
+    & span:last-child {
+      &::before {
+        background-image: url('../img/house-notfull.png');
+        right: -20px;
+      }
+    }
+  }
+  &_full-house {
+    & span:last-child {
+      &::before {
+        background-image: url('../img/house-full.png');
+        right: 0;
+      }
+    }
+  }
+  & span {
+    color: #232323;
+    font-size: 67px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3.35px;
+  	@include adaptive (1075) {
+  		font-size: 40px;
+  	}
+  	@include adaptive (610) {
+  		font-size: 28px;
+
+  	}
+    &:last-child {
+      &::before {
+        content: '';
+        width: 94px;
+        height: 92px;
+		    background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: -1;
+
+        transition: 0.3s;
+		@include adaptive (1075) {
+			width: 50px;
+			height: 50px;
+		}
+		@include adaptive (610) {
+			width: 35px;
+			height: 35px;
+		}
+      }
+    }
+  }
+}
+
+.custom-subtitle {
+	color: #222222;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 35px;
+	text-transform: uppercase;
+	letter-spacing: 1.4px;
+	text-align: left;
+	margin-bottom: 72px;
+	@include adaptive (1075) {
+		font-size: 22px;
+		line-height: 26px;
+		margin-bottom: 40px;
+	}
+	@include phone {
+		font-size: 20px;
+	}
+	&::before {
+		content: '';
+		width: 58px;
+		height: 11px;
+		background-color: #232323;
+		position: absolute;
+		bottom: -31px;
+		left: -58px;
+		@include adaptive (1075) {
+			height: 6px;
+			left: 5px;
+			bottom: -20px;
+		}
+	}
+}

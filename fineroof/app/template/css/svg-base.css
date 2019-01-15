@@ -54,38 +54,6 @@
   }
 }
 
-@-webkit-keyframes scale-up {
-  0%,
-  100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-
-    animation-play-state: paused;
-  }
-}
-
-@keyframes scale-up {
-  0%,
-  100% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-
-    animation-play-state: paused;
-  }
-}
-
 @-webkit-keyframes scale-down {
   0%,
   100% {
@@ -101,13 +69,12 @@
 }
 
 @keyframes scale-down {
-  0%,
-  100% {
+  0% {
     -webkit-transform: translate(38%, 13%) scale(1);
     -ms-transform: translate(38%, 13%) scale(1);
     transform: translate(38%, 13%) scale(1);
   }
-  50% {
+  100% {
     -webkit-transform: translate(38%, 13%) scale(0.5);
     -ms-transform: translate(38%, 13%) scale(0.5);
     transform: translate(38%, 13%) scale(0.5);
@@ -165,18 +132,5 @@
 }
 .hover-check:hover .hover-animation_play {
   animation: scale-down 0.5s 1;
-
-  animation-play-state:paused;
-  -moz-animation-play-state:paused;
-  -webkit-animation-play-state:paused;
-}
-.hover-check:hover .hover-animation_border {
-  animation: scale-up 0.5s 1;
-
-  transition-delay: 0.25s;
-  transition-property: animation-play-state;
-  animation-play-state:paused;
-  -moz-animation-play-state:paused;
-  -webkit-animation-play-state:paused;
 
 }

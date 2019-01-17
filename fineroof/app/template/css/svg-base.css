@@ -75,9 +75,9 @@
     transform: translate(38%, 13%) scale(1);
   }
   100% {
-    -webkit-transform: translate(38%, 13%) scale(0.5);
-    -ms-transform: translate(38%, 13%) scale(0.5);
-    transform: translate(38%, 13%) scale(0.5);
+    /* -webkit-transform: translate(38%, 13%) scale(0.5);
+    -ms-transform: translate(38%, 13%) scale(0.5); */
+    transform: translate(42%, 17%) scale(0.7);
 
   }
 }
@@ -131,6 +131,11 @@
   animation-direction: alternate;
 }
 .hover-check:hover .hover-animation_play {
-  animation: scale-down 0.5s 1;
+  animation: scale-down 0.5s 1 forwards;
 
+}
+
+.hover-animation_background {
+	transition: .5s;
+	transition-property: y, x;
 }

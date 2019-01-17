@@ -1,10 +1,22 @@
 .content-block {
 	padding-top: 73px;
+	$parent: &;
 	@include adaptive (1750) {
 		padding-top: 40px;
 	}
 	@include phone {
 		padding-top: 20px;
+	}
+	&_inner {
+		& #{$parent}__column {
+			padding-right: 10px;
+		}
+		& #{$parent}__body {
+			max-width: none;
+		}
+		& .custom-subtitle::before {
+			left: -44px;
+		}
 	}
 	&__body {
 		max-width: 917px;
@@ -76,6 +88,10 @@
 			margin-left: -28px;
 			margin-bottom: auto;
 			margin-top: -430px;
+			& object {
+				width: 645px;
+				height: 683px;
+			}
 			@include adaptive (1750) {
 				margin-left: 50px;
 				margin-bottom: auto;

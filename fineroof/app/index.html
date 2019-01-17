@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+	<script defer src='/template/libs/anime.min.js'></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
 			<div class="container">
 				<div class="header__wrap">
 					<div class="header__logo">
-						<object type="image/svg+xml" data="/template/img/icons.svg#mini-logo" alt='Логотип FineRoof'></object>
+						<object id="logoObject" type="image/svg+xml" data="/template/img/icons.svg#mini-logo" alt='Логотип FineRoof'></object>
 					</div>
 					<div class="header__contacts">
 						<div class="header__right">
@@ -51,6 +52,7 @@
 						</div>
 					</div>
 					<div class="header__map">
+						<object id='mainPin' class="animating jsAnimate" type="image/svg+xml" data="/template/img/icons.svg#pin-play"></object>
 						<button type="button" class="header__button classic-button">На карте</button>
 					</div>
 					<button type="button" class="header__mobile">
@@ -180,6 +182,9 @@
 		</div>
 		<div class="catalog-slider">
 			<div class="container_big container">
+				<div class="catalog-slider__svg">
+					<object id='mainPattern' class="animating jsAnimate" type="image/svg+xml" data="/template/img/icons.svg#pattern-play"></object>
+				</div>
 				<div class="catalog-slider__wrap">
 					<div class="catalog-slider__title custom-title custom-title_no-border custom-title_with-lane custom-title_full-house">
 						<span>Просто.</span>
@@ -231,17 +236,25 @@
 		</div>
 		<div class="catalog">
 			<div class="container container_full">
+				<div class="catalog__svg catalog__svg_worker">
+					<object id='mainWorker1' class="animating jsAnimate" type="image/svg+xml" data="/template/img/icons.svg#worker1-play"></object>
+				</div>
 				<div class="catalog__wrap">
 					<div class="catalog__title custom-title custom-title_with-border custom-title_not-full-house custom-title_center">
 						<span>Каталог</span>
 						<span>Продукции</span>
 					</div>
+					<div class="catalog__svg catalog__svg_hammer">
+						<object id='mainHammer' class="animating jsAnimate" type="image/svg+xml" data="/template/img/icons.svg#hammer-play"></object>
+					</div>
 					<div class="catalog__wrapper">
 						 <div class="catalog__row">
 							 <a href="#" class="catalog__item">
   							 <span class="catalog__subwrap">
-									 <span class="catalog__picture">
-    							 	<img src="/template/img/icon1.png" alt="">
+								<span class="catalog__picture">
+    							 	<svg>
+										 <use xlink:href="/template/img/catalog-icons.svg#catalog7"></use>
+									 </svg>
     							 </span>
     							 <span class="catalog__name">Фасадные материалы</span>
   							 </span>
@@ -249,16 +262,20 @@
   						 <a href="#" class="catalog__item">
   							 <span class="catalog__subwrap">
 									 <span class="catalog__picture">
-    							 	<img src="/template/img/icon2.png" alt="">
-    							 </span>
+										<svg>
+											<use xlink:href="/template/img/catalog-icons.svg#catalog6"></use>
+										</svg>
+    								 </span>
     							 <span class="catalog__name">Скатные кровли</span>
   							 </span>
   						 </a>
   						 <a href="#" class="catalog__item">
   							 <span class="catalog__subwrap">
 									 <span class="catalog__picture">
-    								 <img src="/template/img/icon6.png" alt="">
-    							 </span>
+										<svg>
+											<use xlink:href="/template/img/catalog-icons.svg#catalog2"></use>
+										</svg>
+    							 	</span>
     							 <span class="catalog__name">Изоляционные материалы</span>
   							 </span>
   						 </a>
@@ -266,25 +283,31 @@
 						 <div class="catalog__row">
 							 <a href="#" class="catalog__item">
 								 <span class="catalog__subwrap">
-									 <span class="catalog__picture">
-  									<img src="/template/img/icon3.png" alt="">
-  								 </span>
+									<span class="catalog__picture">
+										<svg>
+											<use xlink:href="/template/img/catalog-icons.svg#catalog1"></use>
+										</svg>
+  								 	</span>
   								 <span class="catalog__name">Водосток</span>
 								 </span>
 							 </a>
 							 <a href="#" class="catalog__item">
 								 <span class="catalog__subwrap">
 									 <span class="catalog__picture">
-  									<img src="/template/img/icon4.png" alt="">
-  								 </span>
+										<svg>
+											<use xlink:href="/template/img/catalog-icons.svg#catalog4"></use>
+										</svg>
+  									 </span>
   								 <span class="catalog__name">Мансардные окна</span>
 								 </span>
 							 </a>
 							 <a href="#" class="catalog__item">
 								 <span class="catalog__subwrap">
 									 <span class="catalog__picture">
-  									<img src="/template/img/icon5.png" alt="">
-  								 </span>
+										<svg>
+											<use xlink:href="/template/img/catalog-icons.svg#catalog5"></use>
+										</svg>
+  									 </span>
   								 <span class="catalog__name">Ограждения</span>
 								 </span>
 							 </a>
@@ -293,8 +316,10 @@
 							 <a href="#" class="catalog__item">
 								 <span class="catalog__subwrap">
 									 <span class="catalog__picture">
-  									<img src="/template/img/icon7.png" alt="">
-  								 </span>
+										<svg>
+											<use xlink:href="/template/img/catalog-icons.svg#catalog3"></use>
+										</svg>
+  									 </span>
   								 <span class="catalog__name">Кровельные аксессуары</span>
 								 </span>
 							 </a>
@@ -310,7 +335,7 @@
 			<div class="container">
 				<div class="content-block__wrap">
 					<div class="content-block__images image-block">
-						<img src="/template/img/background5.png" alt="">
+						<img id="mainFormObject" src="/template/img/background5.png" alt="">
 					</div>
 					<div class="content-block__body">
 						<div class="content-block__column">
@@ -337,7 +362,7 @@
 						</div>
 					</div>
 					<div class="content-block__images content-block__images_left content-block__images_bottom image-block ">
-						<img src="/template/img/background6.png" alt="">
+						<object id="mainFlowerObject" class='animating jsAnimate' type="image/svg+xml" data="/template/img/icons.svg#flower-play"></object>
 					</div>
 				</div>
 			</div>
@@ -345,9 +370,10 @@
 		<div class="actions">
 			<div class="container">
 				<div class="actions__wrap">
-					<div class="actions__item">
+					<div class="actions__item jsHoverEffect">
 						<div class="actions__icon">
-							<img src="/template/img/action1.png" alt="">
+							<object class="hoverDraw" type="image/svg+xml" data="/template/img/icons.svg#house-hover"></object>
+							<!-- <img src="/template/img/action1.png" alt=""> -->
 						</div>
 						<a href="#" class="actions__title custom-title custom-title_with-border custom-title_not-full-house custom-title_center">
 							<span>Форма</span>
@@ -374,7 +400,6 @@
 		</div>
 		<div class="gallery">
 			<div class="container">
-				<object id='svg-test' type="image/svg+xml" data="/template/img/svg-test.svg"></object>
 				<div class="gallery__wrap">
 
 					<div class="gallery__left">
@@ -426,7 +451,9 @@
 	<script src="/template/libs/picturefill.js"></script>
 	<script src="/template/libs/swiper.min.js"></script>
 	<script src="/template/js/script.js"></script>
-	<script src="/template/js/vivus.min.js"></script>
+	<script defer src='/template/js/svg-animate.js'></script>
+	<script defer src='/template/js/utils.js'></script>
+	<!-- <script src="/template/js/vivus.min.js"></script> -->
 </body>
 
 </html>

@@ -1,31 +1,4 @@
 "use strict";
-// (function () {
-//   var createCTX = function () {
-//     var canvas = document.getElementById('canvas');
-//     var sliderH = document.querySelector('.index-slider__item').offsetHeight;
-//     var sliderW = document.querySelector('.index-slider__item').offsetWidth;
-//     console.log(sliderH);
-//     console.log(sliderW);
-//     canvas.width = sliderW;
-//     canvas.height = sliderH;
-//     canvas.style.position = 'absolute';
-//     canvas.style.zIndex = '2';
-//     canvas.style.display = 'none';
-//     var ctx = canvas.getContext('2d');
-//
-//     ctx.fillStyle = 'transparent';
-//     ctx.fillRect(10, 10, 500, 300);
-//     ctx.globalAlpha = 0.7;
-//     ctx.fillStyle = 'rgb(255, 255, 255)';
-//     ctx.font = '100px AvenirNext';
-//     ctx.textBaseline = "hanging";
-//     ctx.strokeText('Привет', 120, 120);
-//   }
-//   window.slider = {
-//     canvas: createCTX,
-//   }
-// })();
-
 document.addEventListener('DOMContentLoaded', function () {
     var headerToggle = document.querySelector('.header__mobile');
     var headerNav = document.querySelector('.header__bottom');

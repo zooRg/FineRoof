@@ -123,13 +123,14 @@
 
 		}
 	}
-	&__wrap {
-		background-image: url('../img/background1.png');
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: right;
-		@include adaptive (775) {
-			background-image: none;
+	&__svg {
+		position: absolute;
+		right: -50%;
+		top: 0;
+		& object {
+			width: 1364px;
+			height: 1364px;
 		}
+
 	}
 }

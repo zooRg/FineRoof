@@ -1,9 +1,6 @@
 .catalog {
 	$parent: &;
 	& .container {
-		background-image: url('../img/background2.png');
-		background-repeat: no-repeat;
-		background-position: left 100px;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
@@ -12,12 +9,7 @@
 		padding-bottom: 10px;
 		border-top: 2px solid #e1f1ed;
 		border-bottom: 2px solid #e1f1ed;
-		@include adaptive (1750) {
-			background-size: 25vw;
-			background-position: left 0px;
-		}
 		@include adaptive (1075) {
-			background-image: none;
 			padding-top: 40px;
 			padding-bottom: 10px;
 		}
@@ -28,6 +20,26 @@
 			margin-bottom: 25px;
 		}
 	}
+	&__svg {
+		&_hammer {
+			position: absolute;
+			right: 0;
+			top: 27px;
+			& object {
+				width: 450px;
+				height: 450px;
+			}
+		}
+		&_worker {
+			position: absolute;
+			left: -171px;
+			top: 36px;
+			& object {
+				width: 766px;
+				height: 766px;
+			}
+		}
+	}
 	&__wrap {
 		max-width: 1200px;
 		width: 100%;
@@ -36,17 +48,6 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		background-image: url('../img/background3.png');
-		background-repeat: no-repeat;
-		background-position: right 30px;
-		@include adaptive (1075) {
-			background-size: 15vw;
-			background-position: right  0;
-		}
-		@include adaptive (775) {
-			background-image: none;
-		}
-
 	}
 	&__wrapper {
     max-width: 699px;
@@ -110,11 +111,10 @@
 		}
 	}
 	&__picture {
-		height: 74px;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		justify-content: center;
 		margin-bottom: 20px;
 		@include adaptive (775) {
@@ -123,10 +123,9 @@
 		@include phone {
 			height: 40px;
 		}
-		& img {
-			display: block;
-			object-fit: contain;
-			max-height: 100%;
+		& svg {
+			width: 150px;
+			height: 100px;
 		}
 	}
 	&__subwrap {
@@ -144,6 +143,14 @@
 		flex-grow: 1;
 		flex-shrink: 0;
 		margin: 0px 28px 66px;
+		&:hover {
+			& svg {
+				fill: black;
+			}
+			& #{$parent}__name {
+				border-bottom-color: transparent;
+			}
+		}
 		@include adaptive (1075) {
 			margin: 0px 28px 30px;
 		}
@@ -173,6 +180,8 @@
 		font-weight: 700;
 		letter-spacing: 0.42px;
 		border-bottom: 5px solid #1bc09b;
+
+		transition: .3s;
 		@include adaptive (775) {
 			font-size: 15px;
 			letter-spacing: normal;

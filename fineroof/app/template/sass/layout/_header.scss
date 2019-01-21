@@ -1,5 +1,8 @@
 .header {
 	$parent: &;
+	&_inner {
+		padding-bottom: 40px;
+	}
 	padding-bottom: 127px;
 	@include adaptive (1075) {
 		padding-bottom: 40px;

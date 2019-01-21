@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header header_inner">
 		<div class="header__top">
 			<div class="container">
 				<div class="header__wrap">
@@ -151,12 +151,32 @@
 		}
 	</script>
 	<main class="main">
-		<h1 class="visually-hidden">Продукция</h1>
+		<h1 class="visually-hidden">Фасад</h1>
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="breadcrumbs__wrap" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<meta itemprop="position" content="1">
+							<a class="breadcrumbs__link" href="" title="Главная" itemprop="item">Продукция</a>
+						</li>
+						<li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<meta itemprop="position" content="3">
+							<a class="breadcrumbs__link" href="" title="Главная" itemprop="item">Фасад</a>
+						</li>
+						<li class="breadcrumbs__item breadcrumbs__item_active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<meta itemprop="position" content="3">
+							<span>Фасадные панели</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div class="inner-title">
 			<div class="container">
-				<div class="inner-title__wrap inner-title__wrap_no-border inner-title__wrap_catalog-page">
+				<div class="inner-title__wrap inner-title__wrap_catalog-second-page">
 					<div class="inner-title__services custom-title custom-title_inner custom-title_no-border custom-title_with-lane custom-title_full-house">
-						<span>Продукция.</span>
+						<span>Фасад.</span>
 					</div>
 				</div>
 			</div>
@@ -164,90 +184,7 @@
 		<div class="inner-page">
 			<div class="container">
 				<div class="inner-page__wrap catalog-list">
-					<div class="catalog-list__row">
-						<div class="catalog-list__block isActive">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										 <use xlink:href="/template/img/catalog-icons.svg#catalog7"></use>
-									 </svg>
-								</div>
-								<div class="catalog-list__name">Фасадные материалы</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">
-									Фасадные панели
-								</li>
-								<li class="catalog-list__item">
-									Виниловый сайдинг
-								</li>
-								<li class="catalog-list__item">
-									Металлический сайдинг
-								</li>
-								<li class="catalog-list__item">
-									Сайдинг дпк
-								</li>
-								<li class="catalog-list__item">
-									Фиброцементный сайдинг cedral
-								</li>
-								<li class="catalog-list__item">
-									Комплектующие
-								</li>
-							</ul>
-						</div>
-
-
-						<div class="catalog-list__block">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										<use xlink:href="/template/img/catalog-icons.svg#catalog6"></use>
-									</svg>
-								</div>
-								<div class="catalog-list__name">Скатные кровли</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">Гибкая черепица Docke Pie</li>
-								<li class="catalog-list__item">Гибкая черепица Технониколь Shinglas</li>
-								<li class="catalog-list__item">Металлочерепица</li>
-								<li class="catalog-list__item">Кровельный профнастил</li>
-								<li class="catalog-list__item">Комплектующие</li>
-							</ul>
-						</div>
-						<div class="catalog-list__block">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										<use xlink:href="/template/img/catalog-icons.svg#catalog2"></use>
-									</svg>
-								</div>
-								<div class="catalog-list__name">Изоляционные материалы</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">Гидро- и пароизоляция</li>
-								<li class="catalog-list__item">	Утеплитель стекловолоконный</li>
-								<li class="catalog-list__item">Утеплитель базальтовый</li>
-								<li class="catalog-list__item">Комплектующие</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="catalog-list__detail catalog-section isActive">
+					<div class="catalog-list__detail catalog-section">
 							<div class="catalog-section__top">
 								<div class="container-inner">
 									<div class="catalog-section__wrapper">
@@ -419,101 +356,6 @@
 							<div class="catalog-section__pagination">
 								Показать следующего производителя «<span class="catalog-section__next">Smart Home</span>»
 							</div>
-					</div>
-
-					<div class="catalog-list__row">
-						<div class="catalog-list__block">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										<use xlink:href="/template/img/catalog-icons.svg#catalog1"></use>
-									</svg>
-								</div>
-								<div class="catalog-list__name">
-									Водосток
-								</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">	Пластиковая система Docke Lux</li>
-								<li class="catalog-list__item">Пластиковая система Docke Standart</li>
-								<li class="catalog-list__item">Металлическая система 125х90</li>
-								<li class="catalog-list__item">Комплектующие</li>
-							</ul>
-						</div>
-						<div class="catalog-list__block">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										<use xlink:href="/template/img/catalog-icons.svg#catalog4"></use>
-									</svg>
-								</div>
-								<div class="catalog-list__name">Мансардные окна</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">Мансардные окна на любой вкус</li>
-								<li class="catalog-list__item">Комплектуюшие</li>
-							</ul>
-						</div>
-						<div class="catalog-list__block">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										<use xlink:href="/template/img/catalog-icons.svg#catalog5"></use>
-									</svg>
-								</div>
-								<div class="catalog-list__name">Ограждения</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">	Профнастил</li>
-								<li class="catalog-list__item">Металлический штакетник</li>
-								<li class="catalog-list__item">Комплектующие</li>
-							</ul>
-						</div>
-
-					</div>
-					<div class="catalog-list__detail catalog-section">
-
-					</div>
-
-
-					<div class="catalog-list__row catalog-list__row">
-						<div class="catalog-list__block">
-							<div class="catalog-list__status">
-								<svg>
-									<use xlink:href="/template/img/catalog-icons.svg#checkbox"></use>
-								</svg>
-							</div>
-							<div class="catalog-list__top">
-								<div class="catalog-list__icon">
-									<svg>
-										<use xlink:href="/template/img/catalog-icons.svg#catalog3"></use>
-									</svg>
-								</div>
-								<div class="catalog-list__name">Кровельные аксессуары</div>
-							</div>
-							<ul class="catalog-list__list">
-								<li class="catalog-list__item">Вентиляция</li>
-								<li class="catalog-list__item">Элементы безопасности кровли</li>
-							</ul>
-						</div>
-					</div>
-					<div class="catalog-list__detail catalog-section">
-
 					</div>
 				</div>
 			</div>

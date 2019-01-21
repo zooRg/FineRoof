@@ -161,6 +161,17 @@
 				background-image: url('../img/inner-title-bg1.png');
 			}
 		}
+    &_catalog-second-page {
+      &::before {
+        width: 225px;
+        height: 150px;
+
+      	background-image: url('../img/inner-title3.png');
+        background-position-y: 0.5px;
+
+        right: 0;
+      }
+    }
 		&_catalog-page {
 			&::before {
 				width: 412px;
@@ -169,6 +180,8 @@
 				background-image: url('../img/inner-title-bg2.png');
 
 				background-position-y: 42px;
+
+        right: 50px;
 			}
 		}
 		&_no-border {
@@ -177,4 +190,24 @@
 
 
 	}
+}
+
+.inner-subtitle {
+  color: #222222;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+
+  &::before {
+     content: '';
+
+     width: 58px;
+     height: 11px;
+
+     background-color: #232323;
+
+     position: absolute;
+     bottom: -30px;
+     left: -58px;
+  }
 }

@@ -26,6 +26,16 @@
 		border: 2px solid #d7eae5;
 		background: white;
 	}
+	&_green {
+		background-color: #1bc09b;
+		color: white;
+
+		padding: 13px 22px;
+		&:hover {
+			background-color: #454647;
+			color: #1bc09b;
+		}
+	}
 }
 
 .border-link {
@@ -46,5 +56,125 @@
 	letter-spacing: 0.38px;
 	@include adaptive (1075) {
 		font-size: 13px;
+	}
+}
+
+.slider-controls {
+	width: 332px;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 100%;
+	left: 50%!important;
+	padding-top: 35px;
+	z-index: 2;
+	transform: translateX(-50%);
+	@include adaptive (1075) {
+		width: calc(100% - 20px);
+		left: 50%;
+		transform: translateX(-50%);
+		padding-top: 10px;
+	}
+	& .slider-right {
+		transform: rotate(180deg) translateY(4px);
+	}
+	& .slider-control {
+		@include adaptive (610) {
+			width: 50px;
+			height: 20px;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& img {
+				object-fit: contain;
+				display: block;
+				max-height: 100%;
+			}
+		}
+	}
+}
+.swiper-pagination {
+	height: 64px;
+	text-align: unset!important;
+	background: transparent;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	top: 100%;
+	left: 50%!important;
+	transform: translateX(-50%)!important;
+	padding-top: 35px;
+	@include adaptive (1075) {
+		padding-top: 10px;
+	}
+	@include adaptive (775) {
+		height: 39px;
+	}
+}
+.swiper-pagination-bullet {
+	width: 12px!important;
+	height: 12px!important;
+	background: #1bc09b!important;
+	flex-shrink: 0;
+	margin: 0px 5px;
+	&:not(&-active) {
+		opacity: 1!important;
+		&::before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background: white;
+			opacity: 1;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: .3s;
+		}
+	}
+	&-active {
+		background: #1bc09b!important;
+		&::before {
+			opacity: 0;
+		}
+		& .slider-bullet__pie {
+			width: 50%;
+			height: 100%;
+			transform-origin: 100% 50%;
+			position: absolute;
+			background: white;
+			&_spinner {
+				border-radius: 100% 0 0 100%/50% 0 0 50%;
+				z-index: 200;
+				border-right: none;
+				animation: rota 6s linear infinite;
+
+			}
+			&_filler {
+				border-radius: 0 100% 100% 0/0 50% 50% 0;
+				left: 50%;
+				opacity: 0;
+				z-index: 100;
+				animation: fill 6s steps(1, end) infinite;
+				border-left: none;
+			}
+		}
+		& .slider-bullet__mask {
+			width: 50%;
+			height: 100%;
+			border-radius: 100% 0 0 100%/50% 0 0 50%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background: inherit;
+			opacity: 1;
+			z-index: 300;
+			animation: mask 6s steps(1, end) infinite;
+		}
 	}
 }

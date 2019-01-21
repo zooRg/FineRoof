@@ -145,11 +145,6 @@
 		padding-bottom: 72px;
 		&::before {
 			content: '';
-
-			width: 576px;
-			height: 200px;
-
-			background-image: url('../img/inner-title-bg1.png');
 			background-position: center;
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -158,6 +153,28 @@
 			right: 0;
 			bottom: 0;
 		}
+		&_services {
+			&::before {
+				width: 576px;
+				height: 200px;
+
+				background-image: url('../img/inner-title-bg1.png');
+			}
+		}
+		&_catalog-page {
+			&::before {
+				width: 412px;
+				height: 179px;
+
+				background-image: url('../img/inner-title-bg2.png');
+
+				background-position-y: 42px;
+			}
+		}
+		&_no-border {
+			border-bottom: none;
+		}
+
 
 	}
 }

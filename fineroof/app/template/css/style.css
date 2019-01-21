@@ -1733,15 +1733,29 @@ a {
 
 .inner-title__wrap::before {
   content: '';
-  width: 576px;
-  height: 200px;
-  background-image: url("../img/inner-title-bg1.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.inner-title__wrap_services::before {
+  width: 576px;
+  height: 200px;
+  background-image: url("../img/inner-title-bg1.png");
+}
+
+.inner-title__wrap_catalog-page::before {
+  width: 412px;
+  height: 179px;
+  background-image: url("../img/inner-title-bg2.png");
+  background-position-y: 42px;
+}
+
+.inner-title__wrap_no-border {
+  border-bottom: none;
 }
 
 .navigation {

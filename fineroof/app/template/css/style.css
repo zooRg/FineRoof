@@ -1684,6 +1684,10 @@ a {
   margin-bottom: 165px;
 }
 
+.catalog-section {
+  width: 100%;
+}
+
 .catalog-section__wrapper {
   display: -ms-flex;
   display: flex;

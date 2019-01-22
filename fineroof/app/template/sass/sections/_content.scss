@@ -197,7 +197,9 @@
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1.4px;
-
+  &_with-margin {
+    margin: 66px 0px 76px;
+  }
   &::before {
      content: '';
 

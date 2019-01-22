@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="/template/css/glightbox.min.css">
 	<script defer src='/template/libs/anime.min.js'></script>
 </head>
 
@@ -380,21 +381,21 @@
 						<div class="props-table__tab jsTab classic-button classic-button_white">Сертификаты</div>
 						<div class="props-table__tab jsTab classic-button classic-button_white">Преимущества</div>
 					</div>
-					<div class="props-table__body">
-						<div class="props-table__list price-tab">
-							<div class="price-tab__title inner-title">
+					<div class="props-table__body isActive">
+						<div class="props-table__list price-tab isActive">
+							<div class="price-tab__title inner-subtitle inner-subtitle_with-margin">
 								Узнать цены
 							</div>
 							<div class="price-tab__wrap">
 								<a href="#" target="_blank" class="price-tab__item">
-									<img src="/template/img/pricelist.png" alt="">
+									<img src="/template/img/pricelist.png" alt="Прайс">
 									<span class="price-tab__name">
 										<span>Скачать</span>
 										<span>прайс</span>
 									</span>
 								</a>
 								<a href="#" target="_blank" class="price-tab__item">
-									<img src="/template/img/pricelist.png" alt="">
+									<img src="/template/img/coupon.png" alt="Купон">
 									<span class="price-tab__name">
 										<span>Скачать</span>
 										<span>скидочный купон</span>
@@ -402,9 +403,193 @@
 								</a>
 							</div>
 						</div>
-						<div class="props-table__list"></div>
-						<div class="props-table__list"></div>
-						<div class="props-table__list"></div>
+						<div class="props-table__list guarantee-tab">
+							<div class="inner-subtitle inner-subtitle_with-margin">Гарантия</div>
+							<p>Торговая марка Döcke-R принадлежит компании D.Ö.C.K.E. Systemlosungen Gmbh, Берлин, Германия. Фасадные панели Döcke-R выпускается по лицензии и под контролем данной немецкой компании на основании лицензионного договора. На фасадные панели, выпускаемые под ТМ Döcke-R, предоставляется дифференцированная гарантия, подтверждается фирменным гарантийным талоном на продукцию Дёке.</p>
+							<div class="props-table__item">
+								<div class="props-table__name">Общие правила транспортировки и хранения продукции Döcke.</div>
+								<ul class="props-table__desc">
+									<li>Транспортировка продукции Döcke должна осуществляться на автомобилях с крытыми или тентованными кузовами, длиной не менее 4 м.</li>
+									<li> Хранение осуществляется только в фирменной упаковке производителя.</li>
+									<li> Хранение осуществляется только в условиях, препятствующих попаданию влаги и прямых солнечных лучей.</li>
+									<li> Хранение допускается только в крытых помещениях, оборудованных вентиляцией, при температуре от -35°С до +50°С и относительной влажности воздуха 50-60%.</li>
+									<li> При длительном хранении (свыше 10 дней) необходимо использовать паллеты или стеллажи, при этом высота складирования коробок не должна превышать 1,5 м. </li>
+								</ul>
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name">Категорически запрещается хранить продукцию Döcke:</div>
+								<ul class="props-table__desc">
+									<li>Без упаковки производителя;</li>
+									<li>Под прямыми солнечными лучами;</li>
+									<li>Вблизи отопительных приборов (на расстоянии менее 1м).</li>
+								</ul>
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name">
+									До истечения срока Гарантии покупатель обязан обеспечить сохранность следующих документов:
+								</div>
+								<ul class="props-table__desc">
+									<li>Платежные документы (чеки, счета-фактуры и т.п.);</li>
+									<li>Договор на монтажные работы;</li>
+									<li>Упаковочную этикетку с указанием даты выпуска материала;</li>
+									<li>Полностью заполненный гарантийный талон с указанием даты покупки и печатью торгующей организации.</li>
+								</ul>
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name"></div>
+								<ul class="props-table__desc"></ul>
+							</div>
+							<div class="props-table__links">
+								<a href="#" target="_blank" class="props-table__link">
+									<span class='props-table__icon'>
+										<img src="/template/img/downloadicon.png" alt="">
+									</span>
+									<span>
+										<span class="recolor">Скачать</span>
+										<span>гарантийный талон для <span class="download-value">Гибкой черепицы Docke Pie Simple</span> </span>
+									</span>
+								</a>
+								<a href="#" target="_blank" class="props-table__link">
+									<span class='props-table__icon'>
+										<img src="/template/img/downloadicon.png" alt="">
+									</span>
+									<span>
+										<span class="recolor">Скачать</span>
+										<span>гарантийный талон для <span class="download-value">Гибкой черепицы Docke Pie Gold</span> </span>
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="props-table__list sertificate-tab">
+							<div class="inner-subtitle inner-subtitle_with-margin">Сертификаты</div>
+							<div class="props-table__sertificates">
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+										  <img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+								<div class="props-table__sertificate">
+									<div class="props-table__image">
+										<a href="/template/img/sertif.jpg" class="jsBoxSertificate" data-title="Сертификат" data-description="Описание" data-type="image">
+											<img src="/template/img/sertif.jpg" alt="Сертификат">
+										</a>
+									</div>
+									<div class="props-table__sertificate-name">
+										Сертификат соответствия на ендовый ковер
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="props-table__list advantages-tab">
+							<div class="inner-subtitle inner-subtitle_with-margin">
+								Преимущества
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name">
+									Высокое европейское качество:
+								</div>
+								<ul class="props-table__desc">
+									<li>Благодаря использованию сырья от лучших поставщиков и оборудования последнего поколения из Италии и США,
+							    		являющегося самым современным в России, мы гарантируем стабильно высокое качество и наличие необходимых объемов
+								   		 товара в «высокий» сезон.
+									 </li>
+								</ul>
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name">
+									Стабильность качества и цены:
+								</div>
+								<ul class="props-table__desc">
+									<li>Наше производство расположено в России. Именно поэтому мы гарантируем стабильно высокое качество при приемлемых для российских покупателей ценах. Импортозамещение – наш профиль!
+									 </li>
+								</ul>
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name">
+									Использование SBS-модифицированного битума:
+
+								</div>
+								<ul class="props-table__desc">
+									<li>Гибкая черепица Дёке Пай производится на основе SBS-модифицированного битума. Современные полимерные модификаторы битума, используемые при приготовлении битумной смеси, позволяют добиться великолепной эластичности и морозоустойчивости. При монтаже в местах сгибов и стыков не происходит изломов.
+									 </li>
+								</ul>
+							</div>
+							<div class="props-table__item">
+								<div class="props-table__name">
+									Уникальная двойная система нанесения клеевого слоя:
+
+								</div>
+								<ul class="props-table__desc">
+									<li>Помимо традиционной клеевой полосы на «лепестках» гонта, на лицевую сторону гибкой черепицы Дёке Пай наносится дополнительная полоса для обеспечения исключительной надежности при монтаже.
+									 </li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -491,9 +676,11 @@
 	<script src="/template/libs/svg4everybody.min.js"></script>
 	<script src="/template/libs/picturefill.js"></script>
 	<script src="/template/libs/swiper.min.js"></script>
+	<script src="/template/libs/glightbox.min.js"></script>
 	<script src="/template/js/script.js"></script>
 	<script defer src='/template/js/svg-animate.js'></script>
 	<script defer src='/template/js/utils.js'></script>
+	<script defer src='/template/js/catalog.js'></script>
 	<!-- <script src="/template/js/vivus.min.js"></script> -->
 </body>
 

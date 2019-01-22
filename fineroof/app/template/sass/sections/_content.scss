@@ -216,3 +216,17 @@
      left: -58px;
   }
 }
+
+.text-block {
+  margin-bottom: 70px;
+  
+  & p {
+    color: #232323;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+
+    margin: 0;
+  }
+
+}

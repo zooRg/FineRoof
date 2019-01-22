@@ -1979,6 +1979,133 @@ a {
   padding: 66px 0px 72px;
 }
 
+.card-detail__top {
+  width: 100%;
+}
+
+.card-detail__block {
+  width: 100%;
+  padding: 53px 24px 42px;
+  margin-bottom: 70px;
+}
+
+.card-detail__block:hover .card-detail__loop {
+  top: -10px;
+}
+
+.card-detail__block:hover .card-detail__price {
+  bottom: -10px;
+}
+
+.card-detail__count {
+  color: #222222;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.card-detail__subwrap {
+  display: -ms-flex;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-detail__left {
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-detail__price {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.38px;
+  bottom: 0;
+  transition: .5s;
+}
+
+.card-detail__price::before {
+  content: '';
+  width: 134px;
+  height: 81px;
+  background-image: url("../img/rectangle.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card-detail__price .price {
+  font-size: 28px;
+  letter-spacing: 0.7px;
+}
+
+.card-detail__image {
+  width: 202px;
+  height: 202px;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+
+.card-detail__image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-detail__row {
+  display: -ms-flex;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 14px 22px 15px 22px;
+}
+
+.card-detail__row:nth-of-type(even) {
+  background-color: #f1f6f5;
+}
+
+.card-detail__loop {
+  z-index: 2;
+  margin-bottom: -30px;
+  margin-left: -10px;
+  top: 0;
+  transition: .5s;
+  pointer-events: none;
+}
+
+.card-detail__left {
+  flex-shrink: 0;
+  margin-right: 51px;
+}
+
+.card-detail__right {
+  flex-grow: 1;
+}
+
+.card-detail__prop {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.38px;
+}
+
+.card-detail__prop_value {
+  color: #1bc09b;
+}
+
 .custom-title {
   display: -ms-flex;
   display: flex;
@@ -2202,6 +2329,18 @@ a {
   position: absolute;
   bottom: -30px;
   left: -58px;
+}
+
+.text-block {
+  margin-bottom: 70px;
+}
+
+.text-block p {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.38px;
+  margin: 0;
 }
 
 .navigation {

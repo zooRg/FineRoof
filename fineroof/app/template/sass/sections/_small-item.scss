@@ -1,0 +1,40 @@
+.small-item {
+  background: white;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__img {
+    width: 202px;
+    height: 103px;
+
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: content-box;
+
+    padding-top: 24px;
+    padding-bottom: 53px;
+
+  }
+  &__text {
+    color: #222222;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 7.65px;
+    text-transform: uppercase;
+
+    position: absolute;
+    left: 50%;
+    bottom: 17px;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+  }
+}

@@ -211,6 +211,46 @@ a {
   }
 }
 
+@-webkit-keyframes leftToLeft {
+  0%,
+  100% {
+    left: 0px;
+  }
+  50% {
+    left: -7px;
+  }
+}
+
+@keyframes leftToLeft {
+  0%,
+  100% {
+    left: 0px;
+  }
+  50% {
+    left: -7px;
+  }
+}
+
+@-webkit-keyframes rightToRight {
+  0%,
+  100% {
+    right: 0px;
+  }
+  50% {
+    right: -7px;
+  }
+}
+
+@keyframes rightToRight {
+  0%,
+  100% {
+    right: 0px;
+  }
+  50% {
+    right: -7px;
+  }
+}
+
 .popup {
   display: none;
 }
@@ -445,6 +485,54 @@ a {
   z-index: 300;
   -webkit-animation: mask 6s steps(1, end) infinite;
           animation: mask 6s steps(1, end) infinite;
+}
+
+.slider-small-arrows {
+  width: calc(100% + 52px);
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slider-small-arrows .slider-control {
+  width: 11px;
+  height: 11px;
+  border: 3px solid transparent;
+  pointer-events: all;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slider-small-arrows .slider-control.slider-left {
+  border-top-color: #1bc09b;
+  border-left-color: #1bc09b;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.slider-small-arrows .slider-control.slider-left:hover {
+  -webkit-animation: leftToLeft 1s 1;
+          animation: leftToLeft 1s 1;
+}
+
+.slider-small-arrows .slider-control.slider-right {
+  border-top-color: #1bc09b;
+  border-right-color: #1bc09b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.slider-small-arrows .slider-control.slider-right:hover {
+  -webkit-animation: rightToRight 1s 1;
+          animation: rightToRight 1s 1;
 }
 
 .brand-select {
@@ -1886,6 +1974,11 @@ a {
   margin-right: 27px;
 }
 
+.items-block {
+  background-color: #f1f6f5;
+  padding: 66px 0px 72px;
+}
+
 .custom-title {
   display: -ms-flex;
   display: flex;
@@ -2091,6 +2184,10 @@ a {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1.4px;
+}
+
+.inner-subtitle_margin-bottom {
+  margin-bottom: 75px;
 }
 
 .inner-subtitle_with-margin {
@@ -2626,4 +2723,38 @@ a {
 
 .price-tab__name span:first-of-type {
   color: #1bc09b;
+}
+
+.small-item {
+  background: white;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-item__img {
+  width: 202px;
+  height: 103px;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  padding-top: 24px;
+  padding-bottom: 53px;
+}
+
+.small-item__text {
+  color: #222222;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 7.65px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  bottom: 17px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
 }

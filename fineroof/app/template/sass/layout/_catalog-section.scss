@@ -5,6 +5,9 @@
 		display: -ms-flex;
 		display: flex;
 		align-items: center;
+		&_column {
+			flex-direction: column;
+		}
 		&_items {
 			flex-wrap: wrap;
 

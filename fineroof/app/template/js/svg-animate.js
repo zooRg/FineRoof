@@ -111,17 +111,17 @@
 
 	}
 
-	for (let i = 0; i < objectsList.length; i++) {
-		createNSupportDraw(objectsList[i].svgName, objectsList[i].svgAnimation, objectsList[i].defaultDur)
-	}
-
-	document.querySelectorAll('.jsHoverEffect').forEach(function(item) {
-		console.log(item);
-		hoverDrowEffect(item);
-	})
-
 	handleMapElement();
 
+	if (document.body.classList.contains('animated')) {
+		for (let i = 0; i < objectsList.length; i++) {
+			createNSupportDraw(objectsList[i].svgName, objectsList[i].svgAnimation, objectsList[i].defaultDur)
+		}
+		document.querySelectorAll('.jsHoverEffect').forEach(function(item) {
+			hoverDrowEffect(item);
+		})
+	} else {
+		return
+	}
+
 })();
-
-

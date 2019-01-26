@@ -56,4 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
        prevEl: '.slider-left_catalog',
       },
     })
+    var swiper = new Swiper ('.items-block__slider', {
+      slidesPerView: 3,
+      spaceBetween: 94,
+      navigation: {
+       nextEl: '.slider-right_similar',
+       prevEl: '.slider-left_similar',
+      },
+    })
 });

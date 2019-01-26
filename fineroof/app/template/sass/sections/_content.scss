@@ -197,7 +197,12 @@
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1.4px;
-
+  &_margin-bottom {
+    margin-bottom: 75px;
+  }
+  &_with-margin {
+    margin: 66px 0px 76px;
+  }
   &::before {
      content: '';
 
@@ -210,4 +215,18 @@
      bottom: -30px;
      left: -58px;
   }
+}
+
+.text-block {
+  margin-bottom: 70px;
+  
+  & p {
+    color: #232323;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+
+    margin: 0;
+  }
+
 }

@@ -1,0 +1,133 @@
+.card-detail {
+	$parent: &;
+	&__top {
+		width: 100%;
+	}
+	&__block {
+		width: 100%;
+
+		padding: 53px 24px 42px;
+
+		margin-bottom: 70px;
+		&:hover {
+			& #{$parent}__loop {
+				top: -10px;
+			}
+			& #{$parent}__price {
+				bottom: -10px;
+			}
+		}
+	}
+	&__count {
+		color: #222222;
+		font-size: 12px;
+		font-weight: 500;
+		letter-spacing: 0.3px;
+
+		position: absolute;
+		top: 0;
+		left: 50%;
+
+		transform: translateX(-50%);
+	}
+	&__subwrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: flex-start;
+	}
+	&__left {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__price {
+		color: #222222;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0.38px;
+
+		bottom: 0;
+
+		transition: .5s;
+		&::before {
+			content: '';
+
+			width: 134px;
+			height: 81px;
+
+			background-image: url('../img/rectangle.png');
+			background-position: center;
+			background-size: cover;
+
+			position: absolute;
+			top: 30%;
+			left: 50%;
+
+			transform: translate(-50%, -50%);
+		}
+		& .price {
+			font-size: 28px;
+			letter-spacing: 0.7px;
+		}
+	}
+	&__image {
+		width: 202px;
+		height: 202px;
+
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		transition: .3s;
+
+		& img {
+			object-fit: contain;
+		}
+	}
+	&__row {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+
+		padding: 14px 22px 15px 22px;
+
+		&:nth-of-type(even) {
+			background-color: #f1f6f5;
+		}
+	}
+	&__loop {
+		z-index: 2;
+
+		margin-bottom: -30px;
+    margin-left: -10px;
+
+		top: 0;
+		transition: .5s;
+
+		pointer-events: none;
+	}
+	&__left {
+		flex-shrink: 0;
+
+		margin-right: 51px;
+	}
+	&__right {
+		flex-grow: 1;
+	}
+	&__prop {
+		color: #222222;
+		font-size: 15px;
+		font-weight: 400;
+		letter-spacing: 0.38px;
+		&_value {
+			color: #1bc09b;
+		}
+	}
+}

@@ -36,6 +36,17 @@
   document.addEventListener('DOMContentLoaded', function () {
     multiTabsNavigation('.jsTab', '.props-table__list');
 
-    createLightBox('jsBoxSertificate')
+    createLightBox('jsBoxSertificate');
+	if (document.querySelector('.items-slider__wrap') !== null) {
+		var swiper = new Swiper ('.items-slider__wrap', {
+		  slidesPerView: 10,
+		  spaceBetween: 84,
+		  navigation: {
+		   nextEl: '.slider-right_color',
+		   prevEl: '.slider-left_color',
+		  },
+		})
+	}
+
   })
 })();

@@ -1,0 +1,11 @@
+.get-payment {
+	&__wrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: 130px;
+	}
+}

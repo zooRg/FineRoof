@@ -2878,6 +2878,49 @@ a {
   margin-bottom: 31px;
 }
 
+.card-item__props {
+  width: 100%;
+  display: -ms-flex;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0px 22px;
+}
+
+.card-item__props_colors {
+  justify-content: center;
+  padding: 21px 0px 33px;
+}
+
+.card-item__props_colors svg {
+  width: 21px;
+  height: 31px;
+  stroke-width: 1px;
+  stroke: transparent;
+  fill: inherit;
+}
+
+.card-item__color {
+  margin: 0px 6px;
+}
+
+.card-item__color_white svg {
+  stroke: #dddddd;
+  stroke-width: 1px;
+}
+
+.card-item__prop {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+}
+
+.card-item__prop_name {
+  color: #1bc09b;
+}
+
 .card-item__desc {
   color: #222222;
   font-size: 15px;
@@ -2894,6 +2937,7 @@ a {
 }
 
 .card-item__top {
+  width: 100%;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
@@ -2946,6 +2990,49 @@ a {
   margin-bottom: 31px;
 }
 
+.card-item__props {
+  width: 100%;
+  display: -ms-flex;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0px 22px;
+}
+
+.card-item__props_colors {
+  justify-content: center;
+  padding: 21px 0px 33px;
+}
+
+.card-item__props_colors svg {
+  width: 21px;
+  height: 31px;
+  stroke-width: 1px;
+  stroke: transparent;
+  fill: inherit;
+}
+
+.card-item__color {
+  margin: 0px 6px;
+}
+
+.card-item__color_white svg {
+  stroke: #dddddd;
+  stroke-width: 1px;
+}
+
+.card-item__prop {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+}
+
+.card-item__prop_name {
+  color: #1bc09b;
+}
+
 .card-item__desc {
   color: #222222;
   font-size: 15px;
@@ -2962,6 +3049,7 @@ a {
 }
 
 .card-item__top {
+  width: 100%;
   display: -ms-flex;
   display: flex;
   flex-direction: column;

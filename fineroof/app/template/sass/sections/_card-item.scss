@@ -50,6 +50,49 @@
 
 		margin-bottom: 31px;
 	}
+	&__props {
+		width: 100%;
+
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+
+		padding: 0px 22px;
+		&_colors {
+			justify-content: center;
+
+			padding: 21px 0px 33px;
+			& svg {
+				width: 21px;
+				height: 31px;
+
+				stroke-width: 1px;
+				stroke: transparent;
+				fill: inherit;
+			}
+		}
+	}
+	&__color {
+		&_white {
+			& svg {
+				stroke: #dddddd;
+				stroke-width: 1px;
+			}
+		}
+		margin: 0px 6px;
+	}
+	&__prop {
+		color: #222222;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.38px;
+		&_name {
+			color: #1bc09b;
+		}
+	}
 	&__desc {
 		color: #222222;
 		font-size: 15px;
@@ -65,6 +108,8 @@
 		margin-top: -5px;
 	}
 	&__top {
+		width: 100%;
+
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;

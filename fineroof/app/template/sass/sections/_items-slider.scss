@@ -1,0 +1,43 @@
+.items-slider {
+	margin-bottom: 63px;
+	&__title {
+		color: #232323;
+		font-size: 17px;
+		font-weight: 700;
+		letter-spacing: 0.42px;
+
+		margin-bottom: 5px;
+	}
+	&__item {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-bottom: 3px solid transparent;
+
+		transition: .3s;
+
+		transition-property: all!important;
+
+		cursor: pointer;
+
+		&:hover {
+			border-bottom-color: black;
+		}
+		&_white {
+			& svg {
+				stroke:  #dddddd;
+			}
+		}
+		& svg {
+			width: 21px;
+			height: 58px;
+
+			fill: inherit;
+
+			padding: 13px 0;
+		}
+	}
+}

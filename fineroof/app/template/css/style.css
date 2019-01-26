@@ -2897,3 +2897,41 @@ a {
           transform: translateX(-50%);
   z-index: 2;
 }
+
+.items-slider {
+  margin-bottom: 63px;
+}
+
+.items-slider__title {
+  color: #232323;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  margin-bottom: 5px;
+}
+
+.items-slider__item {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid transparent;
+  transition: .3s;
+  transition-property: all !important;
+  cursor: pointer;
+}
+
+.items-slider__item:hover {
+  border-bottom-color: black;
+}
+
+.items-slider__item_white svg {
+  stroke: #dddddd;
+}
+
+.items-slider__item svg {
+  width: 21px;
+  height: 58px;
+  fill: inherit;
+  padding: 13px 0;
+}

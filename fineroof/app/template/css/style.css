@@ -502,6 +502,11 @@ a {
   pointer-events: none;
 }
 
+.slider-small-arrows_min {
+  width: calc(100% + 30px);
+  top: 44%;
+}
+
 .slider-small-arrows .slider-control {
   width: 11px;
   height: 11px;
@@ -533,6 +538,73 @@ a {
 .slider-small-arrows .slider-control.slider-right:hover {
   -webkit-animation: rightToRight 1s 1;
           animation: rightToRight 1s 1;
+}
+
+.big-button {
+  min-width: 268px;
+  color: #1bc09b;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+  background-color: #f1f6f5;
+  padding: 21px 60px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.big-button:hover {
+  background-color: #d8d1cd;
+}
+
+.back-button {
+  color: #1bc09b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 2px solid #1bc09b;
+  background-color: #ffffff;
+  padding: 8px 24px;
+  margin-top: 36px;
+  transition: .3s;
+}
+
+.back-button:hover .back-button__arrow {
+  margin-left: -5px;
+  margin-right: 16px;
+}
+
+.back-button__arrow {
+  width: 29px;
+  height: 2px;
+  background: #1bc09b;
+  margin-right: 11px;
+  transition: .3s;
+}
+
+.back-button__arrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 2px solid transparent;
+  border-top-color: #1bc09b;
+  border-left-color: #1bc09b;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
 }
 
 .brand-select {
@@ -2934,4 +3006,12 @@ a {
   height: 58px;
   fill: inherit;
   padding: 13px 0;
+}
+
+.get-payment__wrap {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 130px;
 }

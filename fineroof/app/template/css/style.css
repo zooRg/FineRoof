@@ -2178,6 +2178,116 @@ a {
   color: #1bc09b;
 }
 
+.distributing-page {
+  margin: 73px 0px 130px;
+}
+
+.distributing-page__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.distributing-page__svg {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 27px;
+  left: 26px;
+  z-index: 2;
+}
+
+.distributing-page__svg svg {
+  width: 37px;
+  height: 15px;
+}
+
+.distributing-page__wrap {
+  display: -ms-flex;
+  display: flex;
+  align-items: stretch;
+}
+
+.distributing-page__column {
+  flex-grow: 1;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.distributing-page__name {
+  width: 100%;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+  border-top: 1px solid white;
+  margin-top: auto;
+  padding-top: 21px;
+}
+
+.distributing-page__item {
+  width: 391px;
+  height: 301px;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 26px;
+  cursor: pointer;
+  transition: .3s;
+  overflow: hidden;
+}
+
+.distributing-page__item a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+.distributing-page__item:hover svg {
+  fill: white;
+}
+
+.distributing-page__item:hover::before {
+  width: 1700px;
+  height: 1700px;
+}
+
+.distributing-page__item::before {
+  content: '';
+  width: 1180px;
+  height: 1180px;
+  background: transparent;
+  border: 430px solid #1bc09b75;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-transform: translate(-48%, -45%);
+          transform: translate(-48%, -45%);
+  transition: .3s;
+}
+
+.distributing-page__item_big {
+  height: 481px;
+}
+
 .custom-title {
   display: -ms-flex;
   display: flex;
@@ -2372,6 +2482,13 @@ a {
   background-image: url("../img/inner-title-bg2.png");
   background-position-y: 42px;
   right: 50px;
+}
+
+.inner-title__wrap_facades::before {
+  width: 139px;
+  height: 150px;
+  background-image: url("../img/products4.png");
+  right: 0;
 }
 
 .inner-title__wrap_no-border {

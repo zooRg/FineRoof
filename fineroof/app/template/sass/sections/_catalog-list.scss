@@ -156,9 +156,10 @@
 			& #{$parent}__status {
 				background-color: #1bc09b;
 			}
-			& #{$parent}__item:not(:hover) {
+			& #{$parent}__item:not(:hover) a {
 				color: #232323;
 			}
+
 		}
 	}
 	&__status {

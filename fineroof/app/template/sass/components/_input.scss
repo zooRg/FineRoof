@@ -207,3 +207,47 @@
 		}
 	}
 }
+
+.error {
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #1bc09b85;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  overflow: auto;
+
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__message {
+	  margin-bottom: 100px;
+  }
+  &__button {
+	  margin: 0 auto;
+  }
+}
+
+.error__message {
+  margin-bottom: 100px;
+}
+
+.error__button {
+  margin: 0 auto;
+}

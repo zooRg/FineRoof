@@ -30,7 +30,7 @@
     Array.from(files)
       .forEach(function (file) {
         if (!file.type.match(fileRegExp)) {
-          	window.utils.createErrorMsg(fileErrorMsg);
+          	window.utils.errorMsg(fileErrorMsg);
           	return;
         }
         var reader = new FileReader();

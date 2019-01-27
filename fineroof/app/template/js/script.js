@@ -21,6 +21,10 @@
 		}
 	}
 
+	window.script = {
+		closePopup: handleClosePopup,
+	}
+
 	document.addEventListener('DOMContentLoaded', function () {
 	    var headerToggle = document.querySelector('.header__mobile');
 	    var headerNav = document.querySelector('.header__bottom');

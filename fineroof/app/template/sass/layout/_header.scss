@@ -16,7 +16,9 @@
 
 		padding: 22px 0px 27px;
 		z-index: 5;
+
 		@include adaptive (610) {
+			z-index: auto;
 	    padding: 9px 0px 6px;
 		}
 
@@ -40,6 +42,9 @@
 		justify-content: space-between;
 
 		z-index: 2;
+		@include adaptive (610) {
+			z-index: auto;
+		}
 		&_column {
 			flex-direction: column;
 			@include adaptive (610) {
@@ -237,6 +242,9 @@
 			background-image: url('../img/map.png');
 			background-size: cover;
 			background-position: center;
+			@include adaptive (1750) {
+				display: none;
+			}
 		}
 		&::after {
 			background-color: #232323;

@@ -25,6 +25,14 @@
 			position: absolute;
 			right: 0;
 			top: 27px;
+			@include adaptive (1075) {
+				right: -90px;
+				top: -49px;
+
+			}
+			@include adaptive (610) {
+				display: none;
+			}
 			& object {
 				width: 450px;
 				height: 450px;
@@ -36,6 +44,12 @@
 			top: 36px;
 			@include adaptive (1655) {
 				left: -373px;
+			}
+			@include adaptive (1375) {
+				left: -440px;
+			}
+			@include adaptive (1075) {
+				display: none;
 			}
 			& object {
 				width: 766px;
@@ -53,7 +67,7 @@
 		flex-direction: column;
 	}
 	&__wrapper {
-    max-width: 699px;
+	    max-width: 699px;
 		width: 100%;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -74,6 +88,10 @@
 			flex-wrap: wrap;
 			justify-content: unset;
 			margin: 0px -10px;
+		}
+		@include adaptive (610) {
+			flex-direction: column;
+			align-items: center;
 		}
 		@include phone {
 			justify-content: center;
@@ -122,9 +140,6 @@
 		margin-bottom: 20px;
 		@include adaptive (775) {
 			margin-bottom: 10px;
-		}
-		@include phone {
-			height: 40px;
 		}
 		& svg {
 			width: 150px;

@@ -17,6 +17,10 @@
 		&_margin {
 			margin-bottom: 60px;
 			margin-top: 20px;
+			@include adaptive (1075) {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
 		}
 		@include adaptive (775) {
 			font-size: 13px;
@@ -35,6 +39,9 @@
 
 		padding: 0;
 		margin: 0;
+		@include adaptive (1075) {
+			display: none;
+		}
 	}
 	&__address {
 		display: -webkit-flex;
@@ -43,6 +50,11 @@
 		align-items: flex-start;
 
 		margin-left: 40px;
+		@include adaptive (610) {
+			margin-left: 0;
+
+			margin-bottom: 10px;
+		}
 	}
 	&__icon {
 		flex-shrink: 0;
@@ -58,6 +70,12 @@
 		@include adaptive (1375) {
 			flex-direction: column;
 			align-items: flex-start;
+		}
+		@include adaptive (1075) {
+			flex-direction: row;
+		}
+		@include adaptive (610) {
+			flex-direction: column;
 		}
 
 	}

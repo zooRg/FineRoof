@@ -37,6 +37,13 @@
 		&::before {
 			width: 237px;
 			height: 237px;
+			@include adaptive (1075) {
+				width: 160px;
+				height: 160px;
+			}
+			@include adaptive (610) {
+				display: none;
+			}
 		}
 	}
 	&::before {

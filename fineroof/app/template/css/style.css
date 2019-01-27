@@ -965,6 +965,7 @@ a {
 
 @media screen and (max-width: 610px) {
   .header__top {
+    z-index: auto;
     padding: 9px 0px 6px;
   }
 }
@@ -989,6 +990,12 @@ a {
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+}
+
+@media screen and (max-width: 610px) {
+  .header__wrap {
+    z-index: auto;
+  }
 }
 
 .header__wrap_column {
@@ -1221,6 +1228,12 @@ a {
   background-position: center;
 }
 
+@media screen and (max-width: 1750px) {
+  .header__map::before {
+    display: none;
+  }
+}
+
 .header__map::after {
   background-color: #232323;
 }
@@ -1341,7 +1354,7 @@ a {
   margin-bottom: 220px;
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1375px) {
   .catalog-slider {
     margin-bottom: 80px;
   }
@@ -1502,6 +1515,31 @@ a {
   top: 0;
 }
 
+@media screen and (max-width: 1375px) {
+  .catalog-slider__pattern {
+    width: 900px;
+    height: 700px;
+    right: -41%;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .catalog-slider__pattern {
+    width: 650px;
+    height: 650px;
+    right: -35%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .catalog-slider__pattern {
+    display: none;
+  }
+}
+
 .index-slider {
   margin-bottom: 65px;
 }
@@ -1539,6 +1577,19 @@ a {
   top: 27px;
 }
 
+@media screen and (max-width: 1075px) {
+  .catalog__svg_hammer {
+    right: -90px;
+    top: -49px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .catalog__svg_hammer {
+    display: none;
+  }
+}
+
 .catalog__svg_hammer object {
   width: 450px;
   height: 450px;
@@ -1553,6 +1604,18 @@ a {
 @media screen and (max-width: 1655px) {
   .catalog__svg_worker {
     left: -373px;
+  }
+}
+
+@media screen and (max-width: 1375px) {
+  .catalog__svg_worker {
+    left: -440px;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .catalog__svg_worker {
+    display: none;
   }
 }
 
@@ -1593,6 +1656,13 @@ a {
     flex-wrap: wrap;
     justify-content: unset;
     margin: 0px -10px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .catalog__row {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1655,12 +1725,6 @@ a {
 @media screen and (max-width: 775px) {
   .catalog__picture {
     margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .catalog__picture {
-    height: 40px;
   }
 }
 
@@ -1888,10 +1952,16 @@ a {
 
 @media screen and (max-width: 1750px) {
   .content-block__images:last-of-type {
-    margin-left: 50px;
+    margin-left: -20px;
     margin-bottom: auto;
-    margin-top: -500px;
+    margin-top: -400px;
     margin-bottom: 220px;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .content-block__images:last-of-type {
+    display: none;
   }
 }
 
@@ -2087,6 +2157,13 @@ a {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 1075px) {
+  .footer__wrap_margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 775px) {
   .footer__wrap {
     font-size: 13px;
@@ -2109,11 +2186,24 @@ a {
   margin: 0;
 }
 
+@media screen and (max-width: 1075px) {
+  .footer__list {
+    display: none;
+  }
+}
+
 .footer__address {
   display: -ms-flex;
   display: flex;
   align-items: flex-start;
   margin-left: 40px;
+}
+
+@media screen and (max-width: 610px) {
+  .footer__address {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .footer__icon {
@@ -2132,6 +2222,18 @@ a {
   .footer__right {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .footer__right {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .footer__right {
+    flex-direction: column;
   }
 }
 
@@ -3278,6 +3380,19 @@ a {
 .navigation__link:hover::before {
   width: 237px;
   height: 237px;
+}
+
+@media screen and (max-width: 1075px) {
+  .navigation__link:hover::before {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .navigation__link:hover::before {
+    display: none;
+  }
 }
 
 .navigation__link::before {

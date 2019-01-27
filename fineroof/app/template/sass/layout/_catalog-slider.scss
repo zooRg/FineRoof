@@ -1,7 +1,7 @@
 .catalog-slider {
 	margin-top: 139px;
 	margin-bottom: 220px;
-	@include adaptive (1075) {
+	@include adaptive (1375) {
 		margin-bottom: 80px;
 	}
 	@include adaptive (775) {
@@ -129,6 +129,21 @@
 		position: absolute;
 		right: -50%;
 		top: 0;
+		@include adaptive (1375) {
+			width: 900px;
+			height: 700px;
+			right: -41%;
+		}
+		@include adaptive (1075) {
+			width: 650px;
+			height: 650px;
+			right: -35%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		@include adaptive (775) {
+			display: none;
+		}
 
 	}
 }

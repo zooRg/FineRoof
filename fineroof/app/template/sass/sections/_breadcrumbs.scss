@@ -20,7 +20,7 @@
 		line-height: 24px;
 		letter-spacing: 0.42px;
 		padding: 0 7px;
-		& span {
+		& > span {
 			  color: #1bc09b;
 		}
 		&:not(#{$parent}__item_active)::before {

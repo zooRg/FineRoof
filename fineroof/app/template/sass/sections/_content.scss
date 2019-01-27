@@ -194,6 +194,16 @@
 				right: 66px;
 			}
 		}
+		&_contacts {
+			&::before {
+				width: 523px;
+				height: 157px;
+
+				background-image: url('../img/contacts-inner.png');
+
+				right: 45px;
+			}
+		}
 		&_catalog-page {
 			&::before {
 				width: 412px;

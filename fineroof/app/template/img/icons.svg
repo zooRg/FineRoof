@@ -1,7 +1,7 @@
 
 <svg class="hover-check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
-		<link href="/template/css/svg-base.css" type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml"/>
+		<link href="../css/svg-base.css" type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml"/>
 
 		<clipPath id="clip1">
 			<use xlink:href="#animatedFlower"/>
@@ -468,31 +468,31 @@
 			</g>
 			<polygon  fill='#1bc09b'  points="583.6,549.6 573.5,539.5 563.3,549.6 557.9,544.3 568.1,534.1   557.9,524 563.3,518.6 573.5,528.7 583.6,518.6 589,524 578.8,534.1 589,544.3 "/>
 			<ellipse  fill='#1bc09b'  cx="182" cy="302.6" rx="16.1" ry="15.8"/>
-		<image width="100%" height="100%" xlink:href="/template/img/background.png" mask='url(#mask-1)' clip-path="url(#clip1)"></image>
+		<image width="100%" height="100%" xlink:href="background.png" mask='url(#mask-1)' clip-path="url(#clip1)"></image>
 	</symbol>
 
 	<symbol id='hammer-play' viewBox="-210 0 445 445" class="animated-svg">
-		<image width="100%" height="100%" xlink:href="/template/img/background.png" mask='url(#mask-2)' clip-path="url(#clip2)"></image>
+		<image width="100%" height="100%" xlink:href="background.png" mask='url(#mask-2)' clip-path="url(#clip2)"></image>
 	</symbol>
 
 	<symbol viewBox="-5 -5 65 65" id='pin-play'  class="animated-svg">
-		<image class='hover-animation_background' width="100%" height="100%" xlink:href="/template/img/background.png" clip-path="url(#clip3)" mask='url(#mask-3)' x="-5" y="-5"></image>
+		<image class='hover-animation_background' width="100%" height="100%" xlink:href="background.png" clip-path="url(#clip3)" mask='url(#mask-3)' x="-5" y="-5"></image>
 	</symbol>
 
 	<symbol id='hammer-play' viewBox="-210 0 445 445" class="animated-svg">
-		<image width="100%" height="100%" xlink:href="/template/img/background.png" mask='url(#mask-2)' clip-path="url(#clip2)"></image>
+		<image width="100%" height="100%" xlink:href="background.png" mask='url(#mask-2)' clip-path="url(#clip2)"></image>
 	</symbol>
 
 	<symbol id='worker1-play' viewBox="0 0 766 766" class="animated-svg">
-			<image width="100%" height="100%" xlink:href="/template/img/background.png" mask='url(#mask-4)' clip-path="url(#clip4)"></image>
+			<image width="100%" height="100%" xlink:href="background.png" mask='url(#mask-4)' clip-path="url(#clip4)"></image>
 	</symbol>
 
 	<symbol id='pattern-play' viewBox="0 0 1364 1364" class="animated-svg">
-			<image width="100%" height="100%" xlink:href="/template/img/background2.png" mask='url(#mask-5)' clip-path="url(#clip5)"></image>
+			<image width="100%" height="100%" xlink:href="background2.png" mask='url(#mask-5)' clip-path="url(#clip5)"></image>
 	</symbol>
 
 	<symbol id='house-hover' viewBox="0 0 138 148" class="animated-svg">
-			<image width="100%" height="100%" xlink:href="/template/img/background.png" mask='url(#mask-6)' clip-path="url(#clip6)"></image>
+			<image width="100%" height="100%" xlink:href="background.png" mask='url(#mask-6)' clip-path="url(#clip6)"></image>
 	</symbol>
 
 

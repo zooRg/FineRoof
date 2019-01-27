@@ -11,6 +11,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
   &__sertificates {
     display: -webkit-flex;
@@ -58,7 +59,7 @@
   }
 	&__tab {
 	    padding: 6px 28px;
-			margin: 0px 3px;
+			margin: 3px;
 
 			&:not(.isActive) {
 				color: #a9c0ba;

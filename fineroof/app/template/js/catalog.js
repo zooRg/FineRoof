@@ -37,6 +37,7 @@
     multiTabsNavigation('.jsTab', '.props-table__list');
 
     createLightBox('jsBoxSertificate');
+	createLightBox('jsFacedes');
 	if (document.querySelector('.items-slider__wrap') !== null) {
 		var swiper = new Swiper ('.items-slider__wrap', {
 		  slidesPerView: 10,
@@ -45,6 +46,18 @@
 		   nextEl: '.slider-right_color',
 		   prevEl: '.slider-left_color',
 		  },
+		})
+	}
+	if (document.querySelector('.galery-block__slider') !== null) {
+		var swiper = new Swiper ('.galery-block__slider', {
+			slidesPerGroup: 3,
+			slidesPerColumn: 3,
+		  	slidesPerView: 3,
+		  	spaceBetween: 0,
+			navigation: {
+			 nextEl: '.slider-right_galery',
+			 prevEl: '.slider-left_galery',
+			},
 		})
 	}
 

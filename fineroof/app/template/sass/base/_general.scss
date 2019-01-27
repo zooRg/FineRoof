@@ -179,6 +179,17 @@ a {
   }
 }
 
+@keyframes topToTop {
+  0%,
+	100% {
+    top: 0px;
+  }
+
+  50% {
+    top: -10px
+  }
+}
+
 
 .popup {
 	display: none;

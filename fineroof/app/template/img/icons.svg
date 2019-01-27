@@ -495,6 +495,13 @@
 			<image width="100%" height="100%" xlink:href="background.png" mask='url(#mask-6)' clip-path="url(#clip6)"></image>
 	</symbol>
 
+	<symbol id='cross' viewBox="0 0 40 40">
+			<polygon fill="#1BC09B" points="38.44963,32.00142 26.33207,19.88306 38.44227,7.77256 32.02657,1.35686 19.91637,13.46706     7.7977,1.34765 1.382,7.76366 13.50075,19.88306 1.39084,31.99369 7.80654,38.40939 19.91637,26.29882 32.03393,38.41675   "/>
+	</symbol>
+
+	<symbol id='attach' viewBox="0 0 15 26">
+			<path fill="#1BC09B" d="M9.88446,24.52514c-2.47461,0-4.0083-0.98145-4.0083-5.86816l0.0083-12.13184l2,0.00098l-0.0083,12.13184     c0,3.86719,0.79883,3.86719,2.0083,3.86719c1.25293,0,2.00879,0,2.00879-3.86816L11.88446,6.52611     c0-2.30127-2.23242-3.7251-4.30029-3.7251h-0.3999c-2.20557,0-4,1.79443-4,4V20.8269h-2V6.80102c0-3.30859,2.69141-6,6-6h0.3999     c3.47412,0,6.30029,2.56787,6.30029,5.72461L13.89325,18.656C13.89325,23.56518,12.42352,24.52514,9.88446,24.52514z"/>
+	</symbol>
 
 	<use xlink:href="#logo" width="235" height="98" x="0" y="0"/>
 	<use xlink:href="#mini-logo" width="50" height="50" x="0" y="0"/>
@@ -506,4 +513,6 @@
 	<use xlink:href="#worker1-play" width="766" height="766" x="0" y="0" />
 	<use xlink:href="#pattern-play" width="1364" height="1364" x="0" y="0" />
 	<use xlink:href="#house-hover" width="138" height="148" x="0" y="0" />
+	<use xlink:href="#cross" width="40" height="40" x="200" y="0" />
+	<use xlink:href="#attach" width="15" height="26" x="300" y="0" />
 </svg>

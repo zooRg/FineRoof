@@ -1,6 +1,7 @@
 .actions {
 	border-top: 2px solid #e1f1ed;
 	border-bottom: 2px solid #e1f1ed;
+	$parent: &;
 	&__wrap {
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -17,8 +18,23 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
 		padding-top: 58px;
 		padding-bottom: 74px;
+		cursor: pointer;
+		&:hover {
+			& #{$parent}__title {
+				& span {
+					color: #1bc09b;
+					border-color: transparent;
+					&:last-child {
+						&::before {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
 
 		&:nth-child(1) {
 			border-right: 2px solid #e1f1ed;

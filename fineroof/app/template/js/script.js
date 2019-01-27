@@ -20,9 +20,14 @@
 			handleClosePopup();
 		}
 	}
+	var removeLogoitem = function () {
+		var headerLogo = document.querySelector('.header__logo');
+		headerLogo.classList.toggle('isWatching');
+	}
 
 	window.script = {
 		closePopup: handleClosePopup,
+		removePseudo: removeLogoitem,
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {
@@ -48,6 +53,7 @@
 		document.querySelectorAll('.popup__overlay').forEach(function (overlay) {
 			if (overlay !== null) overlay.addEventListener('click', handleOverlayClose);
 		})
+
 	    // window.slider.canvas();
 	    var swiper = new Swiper ('.index-slider__container', {
 	      slidesPerView: 1,

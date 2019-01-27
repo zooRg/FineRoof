@@ -1,0 +1,32 @@
+.social {
+	&__wrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+
+		margin: 0px -5px;
+	}
+	&__item {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 0px 5px;
+		&:hover {
+			svg {
+				fill: darken(#1bc09b, 10%);
+			}
+		}
+
+		& svg {
+			width: 36px;
+			height: 36px;
+
+			fill: #1bc09b;
+
+		}
+	}
+}

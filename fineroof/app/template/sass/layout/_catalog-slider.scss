@@ -123,14 +123,12 @@
 
 		}
 	}
-	&__svg {
+	&__pattern {
+		width: 1368px;
+		height: 832px;
 		position: absolute;
 		right: -50%;
 		top: 0;
-		& object {
-			width: 1364px;
-			height: 1364px;
-		}
 
 	}
 }

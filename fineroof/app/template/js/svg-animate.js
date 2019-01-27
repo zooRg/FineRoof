@@ -32,10 +32,12 @@
 				if (event.type == 'mouseover') {
 					mapPath.style.x = "-35";
 					mapPath.style.y = "40";
+					window.script.removePseudo();
 				}
 				if (event.type == 'mouseout') {
 					mapPath.style.x = "-5";
 					mapPath.style.y = "-5";
+					window.script.removePseudo();
 				}
 			};
 		});

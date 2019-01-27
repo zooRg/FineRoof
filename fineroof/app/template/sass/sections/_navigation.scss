@@ -33,11 +33,36 @@
     letter-spacing: 0.42px;
     display: block;
     transition: .3s;
+	&:hover {
+		&::before {
+			width: 237px;
+			height: 237px;
+		}
+	}
+	&::before {
+		content: '';
+		width: 0;
+		height: 0;
+
+		background-image: url('../img/nav-hover.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		border-radius: 50%;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -60%);
+		transition: .3s;
+		z-index: -1;
+	}
     @include adaptive (775) {
       font-size: 15px;
 
     }
-    &:hover {
+    &.isActive {
       color: #1bc09b;
     }
   }

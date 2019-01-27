@@ -34,6 +34,9 @@
 			position: absolute;
 			left: -171px;
 			top: 36px;
+			@include adaptive (1655) {
+				left: -373px;
+			}
 			& object {
 				width: 766px;
 				height: 766px;

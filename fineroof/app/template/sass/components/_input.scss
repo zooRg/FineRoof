@@ -122,6 +122,31 @@
 		flex-grow: 1;
 
 		margin:3.5px;
+		&__item {
+			font-size: 14px;
+			font-weight: 400;
+			color: #1bc09b;
+			margin: 5px;
+		}
+		&__name {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__uploaded {
+			max-width: 300px;
+
+			display: -ms-flex;
+			display: flex;
+			flex-wrap: wrap;
+			position: absolute;
+
+			top: calc(100% + 2px);
+			left: 0;
+
+			pointer-events: none;
+		}
 		&__span {
 			color: #1bc09b;
 			font-size: 15px;
@@ -141,6 +166,35 @@
 			padding: 13px 23px;
 			cursor: pointer;
 
+			transition: .3s;
+			& span,
+			& svg {
+				pointer-events: none;
+			}
+			&::before {
+				content: '';
+				width: 0;
+				height: 3px;
+
+				background: #1bc09b;
+
+				position: absolute;
+				top: calc(100% + 8px);
+				left: 0;
+				transition: .3s;
+			}
+			&_active {
+				color: darken(#1bc09b, 20%);
+				& svg {
+					fill: darken(#1bc09b, 20%);
+				}
+				&::before {
+					width: 100%;
+				}
+			}
+			&:hover {
+				color: darken(#1bc09b, 20%);
+			}
 			& svg {
 				width: 11px;
 				height: 22px;

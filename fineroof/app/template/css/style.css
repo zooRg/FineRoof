@@ -807,6 +807,30 @@ a {
   margin: 3.5px;
 }
 
+.text-file__item {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1bc09b;
+  margin: 5px;
+}
+
+.text-file__name {
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-file__uploaded {
+  max-width: 300px;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  pointer-events: none;
+}
+
 .text-file__span {
   color: #1bc09b;
   font-size: 15px;
@@ -821,6 +845,39 @@ a {
   background-color: #ffffff;
   padding: 13px 23px;
   cursor: pointer;
+  transition: .3s;
+}
+
+.text-file__span span,
+.text-file__span svg {
+  pointer-events: none;
+}
+
+.text-file__span::before {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #1bc09b;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  transition: .3s;
+}
+
+.text-file__span_active {
+  color: #0e6753;
+}
+
+.text-file__span_active svg {
+  fill: #0e6753;
+}
+
+.text-file__span_active::before {
+  width: 100%;
+}
+
+.text-file__span:hover {
+  color: #0e6753;
 }
 
 .text-file__span svg {
@@ -2703,6 +2760,11 @@ a {
   bottom: 0;
   right: 0;
   z-index: 11;
+  display: none;
+}
+
+.popup.isShowed {
+  display: block;
 }
 
 .popup__overlay {
@@ -2715,6 +2777,11 @@ a {
   background: #1bc09b85;
 }
 
+.popup__submit {
+  width: 100%;
+  margin-top: 58px;
+}
+
 .popup__row {
   width: 100%;
   display: -ms-flex;
@@ -2723,11 +2790,24 @@ a {
   margin: 0px -3.5px;
 }
 
+.popup__text {
+  max-width: 475px;
+  color: #222222;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.42px;
+  align-self: center;
+  margin-bottom: 39px;
+}
+
 .popup__wrap {
   max-width: 800px;
+  max-height: 100vh;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background: white;
   padding: 22px;
   z-index: 2;

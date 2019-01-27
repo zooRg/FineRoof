@@ -86,3 +86,168 @@
     }
   }
 }
+
+.text {
+	&-label {
+		max-width: calc(50% - 7px);
+		width: auto;
+
+		flex-grow: 1;
+
+		margin:3.5px;
+	}
+	&-input {
+		width: 100%;
+		height: 100%;
+
+		color: #222222;
+		font-size: 15px;
+		font-weight: 700;
+		letter-spacing: 0.38px;
+
+		border-radius: 6px;
+		border: 2px solid #d7eae5;
+		background-color: #ffffff;
+
+		padding: 13px 23px;
+		@include placeholder {
+			color: #1bc09b;
+			font-size: inherit;
+			font-weight: inherit;
+			letter-spacing: inherit;
+		}
+	}
+	&-file {
+		max-width: calc(50% - 7px);
+		flex-grow: 1;
+
+		margin:3.5px;
+		&__item {
+			font-size: 14px;
+			font-weight: 400;
+			color: #1bc09b;
+			margin: 5px;
+		}
+		&__name {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__uploaded {
+			max-width: 300px;
+
+			display: -ms-flex;
+			display: flex;
+			flex-wrap: wrap;
+			position: absolute;
+
+			top: calc(100% + 2px);
+			left: 0;
+
+			pointer-events: none;
+		}
+		&__span {
+			color: #1bc09b;
+			font-size: 15px;
+			font-weight: 700;
+			letter-spacing: 0.38px;
+
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			border-radius: 6px;
+			border: 2px solid #d7eae5;
+			background-color: #ffffff;
+
+			padding: 13px 23px;
+			cursor: pointer;
+
+			transition: .3s;
+			& span,
+			& svg {
+				pointer-events: none;
+			}
+			&::before {
+				content: '';
+				width: 0;
+				height: 3px;
+
+				background: #1bc09b;
+
+				position: absolute;
+				top: calc(100% + 8px);
+				left: 0;
+				transition: .3s;
+			}
+			&_active {
+				color: darken(#1bc09b, 20%);
+				& svg {
+					fill: darken(#1bc09b, 20%);
+				}
+				&::before {
+					width: 100%;
+				}
+			}
+			&:hover {
+				color: darken(#1bc09b, 20%);
+			}
+			& svg {
+				width: 11px;
+				height: 22px;
+
+				flex-shrink: 0;
+			}
+		}
+		&-input {
+
+		}
+	}
+}
+
+.error {
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #1bc09b85;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  overflow: auto;
+
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__message {
+	  margin-bottom: 100px;
+  }
+  &__button {
+	  margin: 0 auto;
+  }
+}
+
+.error__message {
+  margin-bottom: 100px;
+}
+
+.error__button {
+  margin: 0 auto;
+}

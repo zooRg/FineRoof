@@ -370,7 +370,7 @@
 		<div class="actions">
 			<div class="container">
 				<div class="actions__wrap">
-					<div class="actions__item jsHoverEffect">
+					<div class="actions__item jsHoverEffect jsOpenPopup" data-target='.jsCallbackForm'>
 						<div class="actions__icon">
 							<object class="hoverDraw" type="image/svg+xml" data="/template/img/icons.svg#house-hover"></object>
 							<!-- <img src="/template/img/action1.png" alt=""> -->
@@ -435,14 +435,51 @@
 			</div>
 		</div>
 	</footer>
-	<div class="popup js-login">
-		<div class="popup__wrap">
-			<div class="popup__cross cross js-close">
-				<svg>
-					<use xlink:href="/template/img/icons.svg#svg_cross"></use>
-				</svg>
-			</div>
-			<div class="popup__form">
+	<div class="popup jsCallbackForm">
+		<div class="popup__overlay">
+			<div class="popup__wrap">
+				<div class="popup__cross cross jsClosePopup">
+					<svg>
+						<use xlink:href="/template/img/icons.svg#cross"></use>
+					</svg>
+				</div>
+				<form class="" action="index.html" method="post">
+					<div class="popup__form">
+						<div class="popup__title custom-subtitle">
+							Оформите <br> заявку на расчет <br /> материалов
+						</div>
+						<div class="popup__text">
+							Оформите заявку и с Вами свяжется менеджер, который поможет в выборе и ответит на Ваши вопросы.
+						</div>
+						<div class="popup__row">
+							<label for="" class="popup__item text-label">
+								<input class="text-input" type="text" name="" value="" placeholder="Имя">
+							</label>
+							<label for="" class="popup__item text-label">
+								<input class="text-input" type="text" name="" value="" placeholder="Телефон">
+							</label>
+						</div>
+						<div class="popup__row">
+							<label for="" class="popup__item text-label">
+								<input class="text-input" type="text" name="" value="" placeholder="Город">
+							</label>
+							<label class="popup__item text-file">
+								<input type="file" id="file" name="files" class="text-file-input visually-hidden" value="">
+								<span class="text-file__span">
+									<span>Перетащите файл</span>
+									<svg>
+										<use xlink:href="/template/img/icons.svg#attach"></use>
+									</svg>
+								</span>
+								<span class="text-file__uploaded">
+									<span class="text-file__name">
+									</span>
+								</span>
+							</label>
+						</div>
+						<input type="submit" class="big-button popup__submit" value="Отправить">
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -453,7 +490,13 @@
 	<script src="/template/js/script.js"></script>
 	<script defer src='/template/js/svg-animate.js'></script>
 	<script defer src='/template/js/utils.js'></script>
+	<script defer src='/template/js/upload.js'></script>
 	<!-- <script src="/template/js/vivus.min.js"></script> -->
+	<template id="error">
+		<div class="error">
+			  <p class="error__message"></p>
+			  <button class="error__button classic-button" >Попробовать снова</button>
+		</div>
+	 </template>
 </body>
-
 </html>

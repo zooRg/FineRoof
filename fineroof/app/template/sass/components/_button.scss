@@ -70,6 +70,16 @@
 	padding-top: 35px;
 	z-index: 2;
 	transform: translateX(-50%);
+	.slider-left {
+		&:hover {
+			animation: leftToLeft ease-in 0.5s 1;
+		}
+	}
+	.slider-right {
+		&:hover {
+			animation: rightToRight ease-in 0.5s 1;
+		}
+	}
 	@include adaptive (1075) {
 		width: calc(100% - 20px);
 		left: 50%;
@@ -107,6 +117,7 @@
 	top: 100%;
 	left: 50%!important;
 	transform: translateX(-50%)!important;
+	pointer-events: none;
 	padding-top: 35px;
 	@include adaptive (1075) {
 		padding-top: 10px;
@@ -121,6 +132,8 @@
 	background: #1bc09b!important;
 	flex-shrink: 0;
 	margin: 0px 5px;
+	pointer-events: all;
+
 	&:not(&-active) {
 		opacity: 1!important;
 		&::before {

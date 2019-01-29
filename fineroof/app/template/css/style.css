@@ -961,6 +961,7 @@ a {
 .header__top {
   background-color: #232323;
   padding: 23px 0px 24px;
+  overflow: hidden;
   z-index: 5;
 }
 
@@ -2908,7 +2909,8 @@ a {
 
 .distributing-page__item:hover::before {
   width: 1700px;
-  height: 1700px;
+  height: 1600px;
+  top: -170px;
 }
 
 .distributing-page__item::before {
@@ -2934,7 +2936,7 @@ a {
 
 .distributing-page__item_big:hover::before {
   width: 1700px;
-  height: 1600px;
+  height: 1700px;
   top: -170px;
 }
 

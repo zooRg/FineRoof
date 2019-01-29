@@ -87,7 +87,8 @@
 			}
 			&::before {
 				width: 1700px;
-				height: 1700px;
+				height: 1600px;
+				top: -170px;
 			}
 		}
 		&::before {
@@ -114,7 +115,7 @@
 			&:hover {
 				&::before {
 					width: 1700px;
-					height: 1600px;
+					height: 1700px;
 
 					top: -170px;
 				}

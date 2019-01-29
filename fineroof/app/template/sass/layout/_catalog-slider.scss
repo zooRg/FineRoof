@@ -29,7 +29,7 @@
 		margin-right: auto!important;
 		margin-left: 0 !important;
 		margin-top: 56px !important;
-		padding-bottom: 70px!important;
+		padding-bottom: 56px !important;
 		@include adaptive (1075) {
 			max-width: 470px;
 			margin-top: 0px !important;
@@ -130,16 +130,23 @@
 		right: -50%;
 		top: 0;
 		@include adaptive (1375) {
-			width: 900px;
-			height: 700px;
-			right: -41%;
+			width: 101.5vw;
+			height: 838px;
+
+			right: -51vw;
+			top: -69px;
+		}
+		@include adaptive (1205) {
+			width: 93.5vw;
+			height: 838px;
+			right: -51vw;
+			top: 5px;
 		}
 		@include adaptive (1075) {
-			width: 650px;
-			height: 650px;
-			right: -35%;
-			top: 50%;
-			transform: translateY(-50%);
+			width: 83.5vw;
+			height: 838px;
+			right: -42vw;
+			top: 5px;
 		}
 		@include adaptive (775) {
 			display: none;

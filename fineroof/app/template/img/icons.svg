@@ -235,7 +235,7 @@
 		</g>
 	</symbol>
 
-	<symbol viewBox="0 8 60 61" id='mini-logo' class="animated-svg animated-svg_minilogo">
+	<symbol viewBox="5 8 50 50" id='mini-logo' class="animated-svg animated-svg_minilogo">
 		<g >
 			<path d="M30.50591,7.44455l-0.01562,0.0266    l-0.04644-0.07431L5.27271,21.80719v34.60947h49.78791V21.59819L30.50591,7.44455z M10.07743,50.62703V25.20511l20.32589-11.6622    l19.85301,11.41141v25.67272H10.07743z"/>
 

@@ -5,7 +5,7 @@
 		display: -ms-flex;
 		display: flex;
 		justify-content: center;
-		padding-top: 129px;
+		padding-top: 126px;
 		padding-bottom: 10px;
 		border-top: 2px solid #e1f1ed;
 		border-bottom: 2px solid #e1f1ed;
@@ -15,7 +15,7 @@
 		}
 	}
 	&__title {
-		margin-bottom: 66px;
+		margin-bottom: 47px;
 		@include adaptive (775) {
 			margin-bottom: 25px;
 		}
@@ -23,7 +23,7 @@
 	&__svg {
 		&_hammer {
 			position: absolute;
-			right: 0;
+			right: -64px;
 			top: 27px;
 			@include adaptive (1075) {
 				right: -90px;
@@ -41,7 +41,7 @@
 		&_worker {
 			position: absolute;
 			left: -171px;
-			top: 36px;
+			top: 55px;
 			@include adaptive (1655) {
 				left: -373px;
 			}
@@ -98,6 +98,13 @@
 		}
 		&:nth-child(1) {
 			justify-content: space-between;
+			margin: 0px -49px;
+			& #{$parent}__item {
+				margin: 0px 36px 51px;
+				&:last-child {
+					margin: 0px -10px 51px 71px;
+				}
+			}
 			@include adaptive (775) {
 				justify-content: unset;
 			}
@@ -108,6 +115,7 @@
 		}
 		&:nth-child(2) {
 			& #{$parent}__item {
+				margin: 0px 9px 44px;
 				&:nth-child(1) {
 					justify-content: flex-end;
 					@include adaptive (775) {
@@ -116,6 +124,8 @@
 				}
 				&:nth-child(3) {
 					justify-content: flex-start;
+
+					margin: 0px -28px 44px 32px;
 					@include adaptive (775) {
 						justify-content: center;
 					}
@@ -137,13 +147,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		@include adaptive (775) {
 			margin-bottom: 10px;
 		}
 		& svg {
-			width: 150px;
-			height: 100px;
+			width: 149px;
+			height: 105px;
 		}
 	}
 	&__subwrap {

@@ -15,8 +15,9 @@
 
     & span {
       color: #1bc09b;
-
-      border-color: transparent;
+	  &::after {
+		  opacity: 0;
+	  }
       &:last-child {
         &::before {
           opacity: 0;
@@ -24,20 +25,32 @@
       }
 		}
 	}
-	
+
   &_with-border {
     span {
-      line-height: 68.01px;
-      border-bottom: 9px solid #1bc09b;
+      line-height: 82.01px;
 
       transition: inherit;
+	  &::after {
+		  content: '';
+		  	width: 100%;
+		  	height: 9px;
+		  	background: #1bc09b;
+		  	position: absolute;
+		  	top: calc(100% - 9px);
+		  	left: 0;
+			opacity: 1;
+			transition: .3s;
+			@include adaptive (1075) {
+				height: 5px;
+				top: calc(100% - 4px);
+			}
+	  }
       @include adaptive (1075) {
-        line-height: 35px;
-        border-bottom: 5px solid #1bc09b;
+	      line-height: 42.51px;
       }
       @include adaptive (610) {
-	      line-height: 24px;
-        border-bottom: 3px solid #1bc09b;
+	      line-height: 42.51px;
       }
     }
   }
@@ -57,6 +70,9 @@
       &::before {
         background-image: url('../img/house-notfull.png');
         right: -20px;
+		@include adaptive (775) {
+			right: -5px;
+		}
       }
     }
   }
@@ -86,29 +102,33 @@
   		font-size: 40px;
   	}
   	@include adaptive (610) {
-  		font-size: 28px;
+  		font-size: 35px;
 
   	}
     &:last-child {
       &::before {
-        content: '';
-        width: 94px;
-        height: 92px;
-		    background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        top: 45%;
-        transform: translateY(-50%);
-        z-index: -1;
-
-        transition: 0.3s;
+		    content: '';
+		  	width: 94px;
+		  	height: 90px;
+		  	background-repeat: no-repeat;
+		  	background-size: contain;
+		  	position: absolute;
+		  	top: 45%;
+		  	-webkit-transform: translateY(-50%);
+		  	transform: translateY(-50%);
+		  	z-index: -1;
+		  	transition: 0.3s;
 		@include adaptive (1075) {
 			width: 50px;
 			height: 50px;
+
+			right: -6px;
 		}
 		@include adaptive (610) {
-			width: 35px;
-			height: 35px;
+			top: 47%;
+		}
+		@include phone {
+			top: 45%;
 		}
       }
     }
@@ -131,6 +151,7 @@
 	}
 	@include phone {
 		font-size: 20px;
+		margin-left: 31px;
 	}
 	&::before {
 		content: '';

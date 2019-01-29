@@ -111,6 +111,14 @@
 		}
 		&_big {
 			height: 481px;
+			&:hover {
+				&::before {
+					width: 1700px;
+					height: 1600px;
+
+					top: -170px;
+				}
+			}
 		}
 	}
 }

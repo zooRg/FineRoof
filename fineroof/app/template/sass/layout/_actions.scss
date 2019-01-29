@@ -1,6 +1,9 @@
 .actions {
 	border-top: 2px solid #e1f1ed;
 	border-bottom: 2px solid #e1f1ed;
+	@include phone {
+		border: none;
+	}
 	$parent: &;
 	&__wrap {
 		display: -webkit-flex;
@@ -20,17 +23,26 @@
 		align-items: center;
 
 		padding-top: 58px;
-		padding-bottom: 53px;
+		padding-bottom: 69px;
 		cursor: pointer;
 		&:last-child {
 			padding-left: 58px;
+			@include adaptive (775) {
+				padding-left: 0;
+			}
 			& #{$parent}__text {
-				top: calc(50% - 33px);
+				top: calc(50% - 43px);
+				@include adaptive (1075) {
+					top: auto;
+				}
 			}
 
 		}
 		&:first-child {
 			padding-right: 37px;
+			@include adaptive (775) {
+				padding-right: 0;
+			}
 			& #{$parent}__icon {
 				margin-right: 20px;
 			}
@@ -39,7 +51,9 @@
 			& #{$parent}__title {
 				& span {
 					color: #1bc09b;
-					border-color: transparent;
+					&::after {
+						opacity: 0;
+					}
 					&:last-child {
 						&::before {
 							opacity: 0;
@@ -51,13 +65,12 @@
 
 		&:nth-child(1) {
 			border-right: 2px solid #e1f1ed;
+			@include phone {
+				border: none;
+			}
 
 			& * {
 				pointer-events: none;
-			}
-			@include phone {
-				border-right: none;
-				border-bottom:  2px solid #e1f1ed;
 			}
 		}
 		@include adaptive (775) {
@@ -67,6 +80,7 @@
 		@include phone {
 			width: 100%;
 			padding: 15px;
+			padding-right: 0;
 			padding-bottom: 20px;
 		}
 	}
@@ -88,7 +102,7 @@
 		letter-spacing: 0.38px;
 		position: absolute;
 		right: 35px;
-		top: calc(50% - 50px);
+		top: calc(50% - 60px);
 		@include adaptive (1075) {
 			text-align: center;
 			margin: 10px;

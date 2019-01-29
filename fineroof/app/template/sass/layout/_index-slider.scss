@@ -1,3 +1,18 @@
 .index-slider {
 	    margin-bottom: 65px;
+		& .slider-controls,
+		& .swiper-pagination {
+			@include phone {
+				display: none;
+			}
+		}
+		&__item {
+			@include phone {
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
 }

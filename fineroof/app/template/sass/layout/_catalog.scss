@@ -30,7 +30,7 @@
 				top: -49px;
 
 			}
-			@include adaptive (610) {
+			@include adaptive (1075) {
 				display: none;
 			}
 			& object {
@@ -115,7 +115,7 @@
 		}
 		&:nth-child(2) {
 			& #{$parent}__item {
-				margin: 0px 9px 44px;
+				margin: 0px 17px 44px;
 				&:nth-child(1) {
 					justify-content: flex-end;
 					@include adaptive (775) {
@@ -125,7 +125,7 @@
 				&:nth-child(3) {
 					justify-content: flex-start;
 
-					margin: 0px -28px 44px 32px;
+						margin: 0px 1px 44px -3px;
 					@include adaptive (775) {
 						justify-content: center;
 					}
@@ -183,10 +183,10 @@
 			margin: 0px 28px 30px;
 		}
 		@include adaptive (775) {
-			width: calc(50% - 20px);
+			width: 100%;
 			flex-grow: 0;
 			flex-shrink: 1;
-			margin: 0px 10px 20px;
+			margin: 0px 10px 20px!important;
 		}
 		&:nth-child(4) {
 			align-items: flex-end;

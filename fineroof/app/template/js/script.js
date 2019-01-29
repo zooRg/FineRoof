@@ -32,7 +32,7 @@
 
 	document.addEventListener('DOMContentLoaded', function () {
 	    var headerToggle = document.querySelector('.header__mobile');
-	    var headerNav = document.querySelector('.header__bottom');
+	    var headerNav = document.querySelector('.navigation');
 	    var overlay = document.querySelector('.overlay');
 	    if (headerToggle != null && headerNav != null) {
 	        headerToggle.addEventListener('click', function () {

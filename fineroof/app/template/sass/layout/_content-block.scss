@@ -24,6 +24,9 @@
 
 		margin-bottom: auto;
 		margin-top: 21px;
+		@include adaptive (775) {
+			display: none;
+		}
 	}
 	&__svg {
 		display: -webkit-flex;
@@ -32,12 +35,19 @@
 		align-items: center;
 
 		padding-left: 85px;
+		@include phone {
+			padding-left: 149px;
+		}
 	}
 	&__center {
 		width: 526px;
 		height: 509px;
 
 		margin-left: -60px;
+		@include adaptive (775) {
+			width: 228px;
+			height: 237px;
+		}
 	}
 	&__right {
 		width: 230px;
@@ -46,6 +56,15 @@
 		margin-bottom: auto;
 		margin-top: -50px;
 		margin-left: 109px;
+
+		@include adaptive (775) {
+			width: 103px;
+			height: 44px;
+		}
+		@include phone {
+			margin-top: 0px;
+			margin-left: 40px;
+		}
 
 	}
 	&__body {
@@ -80,13 +99,16 @@
 
 		&:last-child {
 			margin-left: 38px;
+			@include adaptive (610) {
+				margin-left: 0;
+			}
 		}
 		@include adaptive (1075) {
 			padding-left: 40px;
 		}
 		@include adaptive (610) {
 			width: 100%;
-			padding-left: 30px;
+			padding-left: 0;
 			padding-right: 0;
 		}
 	}
@@ -99,6 +121,9 @@
 	}
 	&__subtitle {
 		margin-left: -35px;
+		@include adaptive (610) {
+			margin-left: 31px;
+		}
 	}
 	&__images {
 		@include adaptive (1750) {

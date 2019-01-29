@@ -1,5 +1,26 @@
 .navigation {
   width: 100%;
+  @include adaptive (610) {
+	  width: 400px;
+	  height: 100%;
+	  max-width: 100vw;
+	  max-height: 100vh;
+	  position: fixed;
+	  top: 0;
+	  right: -400px;
+	  background: white;
+	  overflow: auto;
+	  -webkit-overflow-scrolling: touch;
+	  z-index: 11;
+	  transition: .5s;
+	  &.isActive {
+		  right: 0;
+	  }
+  }
+  @include phone {
+	  width: 100%;
+	  right: -100%;
+  }
   &__list {
     display: -webkit-flex;
     display: -ms-flex;

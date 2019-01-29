@@ -103,6 +103,7 @@
 	&__block {
 		min-height: 400px;
 		width: calc(100% / 3);
+		max-width: calc(100% / 3);
 
 		display: -webkit-flex;
 		display: -ms-flex;

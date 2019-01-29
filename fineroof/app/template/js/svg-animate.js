@@ -114,34 +114,40 @@
 	}
 	var animatedGalery = function() {
 		var svgWrapper = document.querySelector('.gallery__wrap');
-
-
 		var SVG = document.querySelector('.galery-house');
 		SVG.addEventListener('load', function(){
 			svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
-			var contentAnimateUp = SVG.contentDocument.querySelector('.lights-up');
-			var contentAnimateDown = SVG.contentDocument.querySelector('.lights-up');
+			var animationUp = SVG.contentDocument.querySelector('.lights-up');
+			var recolorElems = SVG.contentDocument.querySelectorAll('.recolor-elems');
 			function handler(event) {
-				
+
 				if (event.type == 'mouseover') {
 					anime({
-						targets: contentAnimateUp,
-						translateY: 25
+						targets: animationUp,
+						translateY: -10
 					});
-					anime({
-						targets: contentAnimateDown,
-						translateY: -25
-					});
+					recolorElems.forEach(function (elem) {
+						anime({
+						  targets: elem,
+						  fill: '#1bc09b',
+						  easing: 'easeInOutSine',
+						  duration: 500
+						});
+					})
 				}
 				if (event.type == 'mouseout') {
 					anime({
-						targets: contentAnimateUp,
+						targets: animationUp,
 						translateY: 0
 					});
-					anime({
-						targets: contentAnimateDown,
-						translateY: 0
-					});
+					recolorElems.forEach(function (elem) {
+						anime({
+						  targets: elem,
+						  fill: '#DAE9E5',
+						  easing: 'easeInOutSine',
+				   		  duration: 500
+						});
+					})
 				}
 			};
 		})

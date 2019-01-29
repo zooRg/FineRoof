@@ -24,33 +24,34 @@
   }
 }
 
+
 @-webkit-keyframes up-logo-forwards {
   to {
-    -webkit-transform: translate(-31%, -89%);
-    -ms-transform: translate(-31%, -89%);
-    transform: translate(-31%, -89%);
+    -webkit-transform: translate(-37%, -93%);
+    -ms-transform: translate(-37%, -93%);
+    transform: translate(-37%, -93%);
   }
 }
 @-webkit-keyframes up-logo-back {
   to {
-    -webkit-transform: translate(-31%, -28%);
-    -ms-transform: translate(-31%, -28%);
-    transform: translate(-31%, -28%);
+    -webkit-transform: translate(-37%, -28%);
+    -ms-transform: translate(-37%, -28%);
+    transform: translate(-37%, -28%);
   }
 }
 
 @keyframes up-logo-forwards {
   to {
-    -webkit-transform: translate(-31%, -89%);
-    -ms-transform: translate(-31%, -89%);
-    transform: translate(-31%, -89%);
+    -webkit-transform: translate(-37%, -93%);
+    -ms-transform: translate(-37%, -93%);
+    transform: translate(-37%, -93%);
   }
 }
 @keyframes up-logo-back {
   to {
-    -webkit-transform: translate(-31%, -28%);
-    -ms-transform: translate(-31%, -28%);
-    transform: translate(-31%, -28%);
+    -webkit-transform: translate(-37%, -30%);
+    -ms-transform: translate(-37%, -28%);
+    transform: translate(-37%, -28%);
   }
 }
 
@@ -109,11 +110,11 @@
 }
 
 .hover-animation_mini-forward path {
-  transform: translate(-31%, -28%);
+  transform: translate(-37%, -33%);
 }
 
 .hover-animation_mini-back path {
-  transform: translate(-31%, 33%);
+  transform: translate(-37%, 33%);
 }
 
 .hover-animation_play {

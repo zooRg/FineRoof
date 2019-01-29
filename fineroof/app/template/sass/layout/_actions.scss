@@ -20,8 +20,21 @@
 		align-items: center;
 
 		padding-top: 58px;
-		padding-bottom: 74px;
+		padding-bottom: 53px;
 		cursor: pointer;
+		&:last-child {
+			padding-left: 58px;
+			& #{$parent}__text {
+				top: calc(50% - 33px);
+			}
+
+		}
+		&:first-child {
+			padding-right: 37px;
+			& #{$parent}__icon {
+				margin-right: 20px;
+			}
+		}
 		&:hover {
 			& #{$parent}__title {
 				& span {
@@ -58,7 +71,8 @@
 		}
 	}
 	&__icon {
-		margin-bottom: 34px;
+		margin-right: -37px;
+		margin-bottom: 15px;
 		& object {
 			width: 138px;
 			height: 148px;
@@ -68,13 +82,13 @@
 		}
 	}
 	&__text {
-		color: #232323;
 		font-size: 15px;
+		line-height: 17px;
 		font-weight: 400;
 		letter-spacing: 0.38px;
 		position: absolute;
-		right: 22px;
-		top: calc(50% - 57px);
+		right: 35px;
+		top: calc(50% - 50px);
 		@include adaptive (1075) {
 			text-align: center;
 			margin: 10px;

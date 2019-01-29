@@ -49,6 +49,7 @@
 	&__link {
 		margin-top: 38px;
 		margin-left: 48px;
+		pointer-events: all;
 		@include adaptive (775) {
 			margin-top: 20px;
 			margin-left: 0;

@@ -1867,6 +1867,10 @@ a {
   left: -44px;
 }
 
+.content-block__subtitle {
+  margin-bottom: 64px;
+}
+
 .content-block__left {
   width: 311px;
   height: 371px;
@@ -1878,12 +1882,13 @@ a {
   display: -ms-flex;
   display: flex;
   align-items: center;
+  padding-left: 85px;
 }
 
 .content-block__center {
   width: 526px;
   height: 509px;
-  margin-left: -70px;
+  margin-left: -60px;
 }
 
 .content-block__right {
@@ -1891,7 +1896,7 @@ a {
   height: 100px;
   margin-bottom: auto;
   margin-top: -50px;
-  margin-left: 210px;
+  margin-left: 109px;
 }
 
 .content-block__body {
@@ -1899,7 +1904,7 @@ a {
   width: 100%;
   display: -ms-flex;
   display: flex;
-  margin-top: 52px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 610px) {
@@ -1917,8 +1922,9 @@ a {
 .content-block__body p {
   color: #222222;
   font-size: 17px;
-  line-height: 23px;
+  line-height: 24px;
   letter-spacing: 0.42px;
+  margin: 19px 0px;
 }
 
 @media screen and (max-width: 479px) {
@@ -1931,7 +1937,11 @@ a {
 .content-block__column {
   width: 50%;
   padding-left: 78px;
-  padding-right: 35px;
+  padding-left: 87px;
+}
+
+.content-block__column:last-child {
+  margin-left: 38px;
 }
 
 @media screen and (max-width: 1075px) {
@@ -2000,10 +2010,10 @@ a {
 
 @media screen and (max-width: 1750px) {
   .content-block__images:last-of-type {
-    margin-left: -20px;
+    margin-left: 16px;
     margin-bottom: auto;
-    margin-top: -400px;
-    margin-bottom: 220px;
+    margin-top: -351px;
+    margin-bottom: 138px;
   }
 }
 
@@ -2037,8 +2047,24 @@ a {
   flex-direction: column;
   align-items: center;
   padding-top: 58px;
-  padding-bottom: 74px;
+  padding-bottom: 53px;
   cursor: pointer;
+}
+
+.actions__item:last-child {
+  padding-left: 58px;
+}
+
+.actions__item:last-child .actions__text {
+  top: calc(50% - 33px);
+}
+
+.actions__item:first-child {
+  padding-right: 37px;
+}
+
+.actions__item:first-child .actions__icon {
+  margin-right: 20px;
 }
 
 .actions__item:hover .actions__title span {
@@ -2081,7 +2107,8 @@ a {
 }
 
 .actions__icon {
-  margin-bottom: 34px;
+  margin-right: -37px;
+  margin-bottom: 15px;
 }
 
 .actions__icon object {
@@ -2096,13 +2123,13 @@ a {
 }
 
 .actions__text {
-  color: #232323;
   font-size: 15px;
+  line-height: 17px;
   font-weight: 400;
   letter-spacing: 0.38px;
   position: absolute;
-  right: 22px;
-  top: calc(50% - 57px);
+  right: 35px;
+  top: calc(50% - 50px);
 }
 
 @media screen and (max-width: 1075px) {

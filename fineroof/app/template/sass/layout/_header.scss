@@ -15,6 +15,7 @@
 		background-color: #232323;
 
 		padding: 23px 0px 24px;
+		overflow: hidden;
 		z-index: 5;
 
 		@include adaptive (610) {

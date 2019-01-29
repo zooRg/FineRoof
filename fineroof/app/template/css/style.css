@@ -2089,10 +2089,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  pointer-events: none;
 }
 
 .gallery__text {
   padding-left: 48px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 775px) {
@@ -2103,8 +2105,15 @@ a {
 }
 
 .gallery__right {
+  pointer-events: none;
   flex-shrink: 0;
   margin-left: 57px;
+}
+
+.gallery__right object {
+  width: 418px;
+  height: 365px;
+  pointer-events: inherit;
 }
 
 @media screen and (max-width: 775px) {
@@ -3128,6 +3137,14 @@ a {
 .custom-title_full-house span:last-child::before {
   background-image: url("../img/house-full.png");
   right: 0;
+}
+
+.custom-title_full-house:hover span {
+  color: #232323;
+}
+
+.custom-title_full-house:hover span:last-child::before {
+  opacity: 1;
 }
 
 .custom-title span {

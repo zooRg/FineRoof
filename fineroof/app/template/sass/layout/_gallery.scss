@@ -16,15 +16,26 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+
+		pointer-events: none;
 	}
 	&__text {
 		padding-left: 48px;
+
+		pointer-events: none;
 		@include adaptive (775) {
 			font-size: 15px;
 			padding-left: 0;
 		}
 	}
 	&__right {
+		pointer-events: none;
+		& object {
+			width: 418px;
+			height: 365px;
+
+			pointer-events: inherit;
+		}
 		flex-shrink: 0;
 		margin-left: 57px;
 		@include adaptive (775) {

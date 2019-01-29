@@ -112,8 +112,45 @@
 		});
 
 	}
+	var animatedGalery = function() {
+		var svgWrapper = document.querySelector('.gallery__wrap');
 
+
+		var SVG = document.querySelector('.galery-house');
+		SVG.addEventListener('load', function(){
+			svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
+			var contentAnimateUp = SVG.contentDocument.querySelector('.lights-up');
+			var contentAnimateDown = SVG.contentDocument.querySelector('.lights-up');
+			function handler(event) {
+				
+				if (event.type == 'mouseover') {
+					anime({
+						targets: contentAnimateUp,
+						translateY: 25
+					});
+					anime({
+						targets: contentAnimateDown,
+						translateY: -25
+					});
+				}
+				if (event.type == 'mouseout') {
+					anime({
+						targets: contentAnimateUp,
+						translateY: 0
+					});
+					anime({
+						targets: contentAnimateDown,
+						translateY: 0
+					});
+				}
+			};
+		})
+
+
+
+	}
 	handleMapElement();
+	animatedGalery();
 
 	if (document.body.classList.contains('animated')) {
 		for (let i = 0; i < objectsList.length; i++) {

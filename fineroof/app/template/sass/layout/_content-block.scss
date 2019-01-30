@@ -2,6 +2,7 @@
 	padding-top: 121px;
 	$parent: &;
 	@include phone {
+		overflow: hidden;
 		padding-top: 20px;
 	}
 	&_inner {

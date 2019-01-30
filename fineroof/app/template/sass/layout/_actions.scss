@@ -30,6 +30,13 @@
 			@include adaptive (775) {
 				padding-left: 0;
 			}
+			@include phone {
+				padding-left: 0px;
+				padding-right: 0;
+			}
+			& #{$parent}__icon {
+				margin-left: 40px;
+			}
 			& #{$parent}__text {
 				top: calc(50% - 43px);
 				@include adaptive (1075) {
@@ -43,8 +50,15 @@
 			@include adaptive (775) {
 				padding-right: 0;
 			}
+			@include phone {
+				padding-left: 0px;
+				padding-right: 0;
+			}
 			& #{$parent}__icon {
 				margin-right: 20px;
+				@include phone {
+					margin-right: 0;
+				}
 			}
 		}
 		&:hover {
@@ -93,6 +107,9 @@
 		}
 		@include adaptive (1075) {
 			margin-bottom: 10px;
+		}
+		@include phone {
+			margin-right: 0;
 		}
 	}
 	&__text {

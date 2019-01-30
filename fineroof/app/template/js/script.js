@@ -24,6 +24,24 @@
 		var headerLogo = document.querySelector('.header__logo');
 		headerLogo.classList.toggle('isWatching');
 	}
+	var fixedMenu = function (object) {
+		let wHeight = window.innerHeight;
+		let headerBlock = document.querySelector('.header');
+		let fixedHeader = document.querySelector('.fixed-menu');
+		let windowScroll = window.pageYOffset;
+
+		function getCoords() {
+			return {
+				itemTop: headerBlock.getBoundingClientRect().top + pageYOffset,
+			};
+		}
+		console.log(window.utils.visibility(headerBlock));
+		if (window.utils.visibility(headerBlock) === true) {
+			fixedHeader.classList.add('isFixed');
+		} else {
+			fixedHeader.classList.remove('isFixed');
+		}
+	}
 
 	window.script = {
 		closePopup: handleClosePopup,
@@ -31,16 +49,20 @@
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {
-	    var headerToggle = document.querySelector('.header__mobile');
+	    var headerToggle = document.querySelectorAll('.header__mobile');
 	    var headerNav = document.querySelector('.navigation');
 	    var overlay = document.querySelector('.overlay');
 	    if (headerToggle != null && headerNav != null) {
-	        headerToggle.addEventListener('click', function () {
-	            this.classList.toggle('header__mobile_opened');
-	            headerNav.classList.toggle('isActive');
-	            document.body.classList.toggle('overflow');
-	            overlay.classList.toggle('isActive');
-	        });
+			headerToggle.forEach(function (burger) {
+				burger.addEventListener('click', function() {
+					headerToggle.forEach(function (item) {
+						item.classList.toggle('header__mobile_opened');
+					})
+					headerNav.classList.toggle('isActive');
+					document.body.classList.toggle('overflow');
+					overlay.classList.toggle('isActive');
+				});
+			})
 	    };
 
 
@@ -53,6 +75,9 @@
 		document.querySelectorAll('.popup__overlay').forEach(function (overlay) {
 			if (overlay !== null) overlay.addEventListener('click', handleOverlayClose);
 		})
+		window.addEventListener('scroll', function () {
+			window.utils.debounce(fixedMenu, 50);
+		});
 
 	    // window.slider.canvas();
 	    var swiper = new Swiper ('.index-slider__container', {

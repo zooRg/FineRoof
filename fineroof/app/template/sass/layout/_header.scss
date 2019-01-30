@@ -277,7 +277,7 @@
   &__mobile {
     display: none;
     @include adaptive (610) {
- 	width: 35px;
+ 		width: 35px;
       height: 30px;
       display: block;
       border: none;
@@ -289,6 +289,8 @@
       -webkit-transition: 0.5s ease-in-out;
       -o-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out;
+	  top: 0;
+	  right: 0;
       cursor: pointer;
       z-index: 12;
       &:hover span {
@@ -341,10 +343,14 @@
         }
       }
       &_opened {
-        z-index: 12;
+    	z-index: 13;
+		position: fixed;
+		top: 35px;
+		right: 15px;
         transition: 0.5s ease-in-out;
 
         & span {
+			background: white;
           &:nth-child(1),
           &:nth-child(6) {
             -webkit-transform: rotate(45deg);

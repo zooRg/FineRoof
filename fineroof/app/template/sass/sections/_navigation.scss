@@ -1,17 +1,22 @@
 .navigation {
   width: 100%;
   @include adaptive (610) {
-	  width: 400px;
+	  width: 100%;
 	  height: 100%;
 	  max-width: 100vw;
 	  max-height: 100vh;
+	  display: -webkit-flex;
+	  display: -ms-flex;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
 	  position: fixed;
 	  top: 0;
-	  right: -400px;
-	  background: white;
+	  right: -100%;
+	  background: #0dc4a0;
 	  overflow: auto;
 	  -webkit-overflow-scrolling: touch;
-	  z-index: 11;
+	  z-index: 12;
 	  transition: .5s;
 	  &.isActive {
 		  right: 0;
@@ -36,6 +41,10 @@
     }
     @include adaptive (610) {
       flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+
+	  margin-top: 0;
     }
   }
   &__item {
@@ -90,6 +99,17 @@
       font-size: 15px;
 
     }
+	@include adaptive (610) {
+		color: #ffffff;
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 42.51px;
+		text-transform: uppercase;
+		letter-spacing: 2.7px;
+		&:hover {
+			color: #282828;
+		}
+	}
     &.isActive {
       color: #1bc09b;
     }
@@ -107,8 +127,7 @@
       font-size: 11px;
     }
     @include adaptive (610) {
-      position: relative;
-      top: auto;
+      display: none;
     }
   }
 }

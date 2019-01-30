@@ -108,6 +108,9 @@ a {
 	max-width: 1204px;
 	padding: 0 15px;
 	margin: 0 auto;
+	&_no-padding {
+		padding: 0;
+	}
 	&-inner {
 		max-width: 1060px;
 

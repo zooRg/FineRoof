@@ -1,5 +1,6 @@
 "use strict";
 (function () {
+	var lastActionTimer;
 	var createTemplateResponse = function (itemTemplate) {
 	  var itemNode = itemTemplate.cloneNode(true);
 	  var fragment = document.createDocumentFragment();
@@ -57,7 +58,7 @@
 				return true;
 			};
 		};
-		var lastActionTimer;
+
 		var debounce = function (callback, debounceInterval) {
 				if (lastActionTimer) {
 					clearTimeout(lastActionTimer);

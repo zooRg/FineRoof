@@ -34,9 +34,9 @@
 }
 @-webkit-keyframes up-logo-back {
   to {
-    -webkit-transform: translate(-37%, -28%);
-    -ms-transform: translate(-37%, -28%);
-    transform: translate(-37%, -28%);
+    -webkit-transform: translate(-37%, -33%);
+    -ms-transform: translate(-37%, -33%);
+    transform: translate(-37%, -33%);
   }
 }
 
@@ -49,9 +49,9 @@
 }
 @keyframes up-logo-back {
   to {
-    -webkit-transform: translate(-37%, -30%);
-    -ms-transform: translate(-37%, -28%);
-    transform: translate(-37%, -28%);
+    -webkit-transform: translate(-37%, -33%);
+    -ms-transform: translate(-37%, -33%);
+    transform: translate(-37%, -33%);
   }
 }
 

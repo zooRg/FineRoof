@@ -34,6 +34,9 @@
 				padding-left: 0px;
 				padding-right: 0;
 			}
+			& #{$parent}__icon {
+				margin-left: 40px;
+			}
 			& #{$parent}__text {
 				top: calc(50% - 43px);
 				@include adaptive (1075) {

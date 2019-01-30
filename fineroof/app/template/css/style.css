@@ -2172,6 +2172,10 @@ a {
   }
 }
 
+.actions__item:last-child .actions__icon {
+  margin-left: 40px;
+}
+
 .actions__item:last-child .actions__text {
   top: calc(50% - 43px);
 }

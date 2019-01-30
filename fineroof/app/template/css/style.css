@@ -132,6 +132,10 @@ a {
   margin: 0 auto;
 }
 
+.container_no-padding {
+  padding: 0;
+}
+
 .container-inner {
   max-width: 1060px;
   margin: 0 auto;
@@ -1403,7 +1407,7 @@ a {
 .catalog-slider__wrapper {
   max-width: 620px;
   margin-right: auto !important;
-  margin-left: 0 !important;
+  margin-left: -15px !important;
   margin-top: 56px !important;
   padding-bottom: 56px !important;
 }
@@ -1418,6 +1422,7 @@ a {
 @media screen and (max-width: 775px) {
   .catalog-slider__wrapper {
     max-width: none;
+    margin-left: 0 !important;
   }
 }
 
@@ -1575,6 +1580,12 @@ a {
   .index-slider .swiper-pagination {
     display: none;
   }
+}
+
+.index-slider__item {
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 479px) {

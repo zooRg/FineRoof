@@ -27,7 +27,7 @@
 	&__wrapper {
 		max-width: 620px;
 		margin-right: auto!important;
-		margin-left: 0 !important;
+		margin-left: -15px !important;
 		margin-top: 56px !important;
 		padding-bottom: 56px !important;
 		@include adaptive (1075) {
@@ -36,6 +36,7 @@
 		}
 		@include adaptive (775) {
 			max-width: none;
+			margin-left: 0 !important;
 		}
 	}
 	&__head {

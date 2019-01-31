@@ -7,6 +7,9 @@
 	}
 	&_inner {
 		& #{$parent}__column {
+			display: flex;
+			flex-direction: column;
+
 			padding-right: 10px;
 		}
 		& #{$parent}__body {
@@ -126,7 +129,39 @@
 			margin-left: 31px;
 		}
 	}
+	&__image {
+		&_services {
+			margin-top: 80px;
+		}
+		&_worker {
+			position: absolute;
+			top: calc(50% - 21vw);
+			left: -64vw;
+			& svg {
+				width: 1400px;
+				height: 581px;
+			}
+		}
+		&_spiral {
+			margin: auto auto -92px auto ;
+			& svg {
+				width: 63px;
+				height: 310px;
+
+			}
+		}
+	}
 	&__images {
+		&_hammer {
+			margin-right: auto;
+			margin-left: 30px;
+			margin-bottom: 73px;
+			margin-top: -383px;
+			& object {
+				width: 445px;
+				height: 445px;
+			}
+		}
 		@include adaptive (1750) {
 			height: 400px;
 			display: flex;
@@ -144,7 +179,7 @@
 		@include adaptive (775) {
 			display: none;
 		}
-		&:last-of-type {
+		&:last-of-type:not(#{$parent}__images_hammer) {
 			margin-right: auto;
 			margin-left: -28px;
 			margin-bottom: auto;

@@ -34,6 +34,7 @@
 		display: -ms-flex;
 		display: flex;
 		align-items: stretch;
+		margin-right: 73px;
 
 	}
 	&__column {
@@ -88,7 +89,7 @@
 			&::before {
 				width: 1700px;
 				height: 1600px;
-				top: -170px;
+				top: -150px;
 			}
 		}
 		&::before {
@@ -117,7 +118,7 @@
 					width: 1700px;
 					height: 1700px;
 
-					top: -170px;
+					top: -25px;
 				}
 			}
 		}

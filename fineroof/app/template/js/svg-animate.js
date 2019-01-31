@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 (function(){
 	var objectsList = [
@@ -151,12 +151,73 @@
 				}
 			};
 		})
-
-
-
 	}
+	var animatedLogo = function() {
+		var svgWrapper = document.querySelector('.header__image');
+		var SVG = svgWrapper.querySelector('object');
+		SVG.addEventListener('load', function(){
+			svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
+			var animationUp = SVG.contentDocument.querySelector('.hover-animation_logo');
+			function handler(event) {
+
+				if (event.type == 'mouseover') {
+					anime({
+						targets: animationUp,
+						translateX: 20,
+						easing: 'easeInOutBack',
+						duration: 600
+
+					});
+				}
+				if (event.type == 'mouseout') {
+					anime({
+						targets: animationUp,
+						translateX: 0,
+						easing: 'easeInOutBack',
+						duration: 600
+					});
+				}
+			};
+		})
+	}
+	var animatedYt = function() {
+		var svgWrapper = document.querySelector('.jsChannel');
+		var SVG = svgWrapper.querySelector('object');
+		SVG.addEventListener('load', function(){
+			svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
+			var animationUp = SVG.contentDocument.querySelector('.hover-animation_play');
+			function handler(event) {
+
+				if (event.type == 'mouseover') {
+					anime({
+						targets: animationUp,
+						translateX: 11,
+						translateY: 7,
+
+						scale: 0.7,
+						easing: 'easeInOutBack',
+						duration: 600
+
+					});
+				}
+				if (event.type == 'mouseout') {
+					anime({
+						targets: animationUp,
+						translateX: 0,
+						translateY: 0,
+						scale: 1,
+						easing: 'easeInOutBack',
+						duration: 600
+					});
+				}
+			};
+		})
+	}
+
 	handleMapElement();
 	animatedGalery();
+	animatedLogo();
+	animatedYt();
 
 	if (document.body.classList.contains('animated')) {
 		for (let i = 0; i < objectsList.length; i++) {

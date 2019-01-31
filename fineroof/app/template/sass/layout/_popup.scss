@@ -13,6 +13,7 @@
 	z-index: 11;
 
 	display: none;
+	$parent: &;
 	&.isShowed {
 		display: block;
 	}
@@ -42,6 +43,11 @@
 		align-items: stretch;
 
 		margin: 0px -3.5px;
+		&:nth-child(odd) {
+			& input:focus ~ span {
+				top: -15px;
+			}
+		}
 	}
 	&__text {
 		max-width: 475px;

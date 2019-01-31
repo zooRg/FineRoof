@@ -101,6 +101,8 @@
 		& object {
 			width: 219px;
 			height: 99px;
+
+			pointer-events: none;
 			@include phone {
 				width: 156px;
 				height: 71px;

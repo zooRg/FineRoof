@@ -777,6 +777,22 @@ a {
   margin: 3.5px;
 }
 
+.text-label span {
+  color: #1bc09b;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.38px;
+  position: absolute;
+  left: 25px;
+  top: 17px;
+  transition: .3s;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .text-input {
   width: 100%;
   height: 100%;
@@ -788,6 +804,12 @@ a {
   border: 2px solid #d7eae5;
   background-color: #ffffff;
   padding: 13px 23px;
+}
+
+.text-input:focus ~ span {
+  font-size: 12px;
+  top: calc(100% + 5px);
+  left: 0;
 }
 
 .text-input::-webkit-input-placeholder {
@@ -1061,6 +1083,7 @@ a {
 .header__image object {
   width: 219px;
   height: 99px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 479px) {
@@ -2155,8 +2178,14 @@ a {
   cursor: pointer;
 }
 
+.actions__item.jsChannel object,
+.actions__item.jsChannel .actions__text,
+.actions__item.jsChannel a {
+  pointer-events: none;
+}
+
 .actions__item:last-child {
-  padding-left: 58px;
+  padding-left: 17px;
 }
 
 @media screen and (max-width: 775px) {
@@ -3282,6 +3311,10 @@ a {
   display: flex;
   align-items: stretch;
   margin: 0px -3.5px;
+}
+
+.popup__row:nth-child(odd) input:focus ~ span {
+  top: -15px;
 }
 
 .popup__text {

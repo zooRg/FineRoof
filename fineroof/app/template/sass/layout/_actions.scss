@@ -25,8 +25,15 @@
 		padding-top: 58px;
 		padding-bottom: 69px;
 		cursor: pointer;
+		&.jsChannel {
+			& object,
+			& #{$parent}__text,
+			& a {
+				pointer-events: none;
+			}
+		}
 		&:last-child {
-			padding-left: 58px;
+			padding-left: 17px;
 			@include adaptive (775) {
 				padding-left: 0;
 			}

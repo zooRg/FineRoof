@@ -2,6 +2,9 @@
 	$parent: &;
 	&_inner {
 		padding-bottom: 40px;
+		& #{$parent}__feature {
+			display: none;
+		}
 	}
 	padding-bottom: 127px;
 	@include adaptive (1075) {
@@ -49,7 +52,7 @@
 		&_column {
 			flex-direction: column;
 			@include adaptive (610) {
-				align-items: flex-start;
+				align-items: center;
 			}
 		}
 	}

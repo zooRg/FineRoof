@@ -972,6 +972,10 @@ a {
   padding-bottom: 40px;
 }
 
+.header_inner .header__feature {
+  display: none;
+}
+
 @media screen and (max-width: 1075px) {
   .header {
     padding-bottom: 40px;
@@ -1032,7 +1036,7 @@ a {
 
 @media screen and (max-width: 610px) {
   .header__wrap_column {
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
@@ -3196,12 +3200,25 @@ a {
   margin-top: 67px;
 }
 
+@media screen and (max-width: 479px) {
+  .contacts {
+    margin-top: 30px;
+  }
+}
+
 .contacts__top {
   width: 100%;
   display: -ms-flex;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 610px) {
+  .contacts__top {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contacts__icon {
@@ -3217,6 +3234,13 @@ a {
   font-weight: 700;
   letter-spacing: 0.42px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 775px) {
+  .contacts__prop {
+    color: #1bc09b;
+    margin-bottom: 16px;
+  }
 }
 
 .contacts__value {
@@ -3241,6 +3265,12 @@ a {
   padding: 129px 0px 79px;
 }
 
+@media screen and (max-width: 775px) {
+  .contacts__info {
+    padding: 95px 0px 57px;
+  }
+}
+
 .contacts__info a {
   color: #222222;
   font-size: 67px;
@@ -3249,6 +3279,22 @@ a {
   letter-spacing: 3.35px;
   border-bottom: 11px solid  #1bc09b;
   transition: .3s;
+}
+
+@media screen and (max-width: 1075px) {
+  .contacts__info a {
+    font-size: 27px;
+    line-height: 36px;
+    border-bottom: 6px solid #1bc09b;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contacts__info a {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+  }
 }
 
 .contacts__info a::before {
@@ -3267,6 +3313,15 @@ a {
           transform: translateY(-50%);
 }
 
+@media screen and (max-width: 1075px) {
+  .contacts__info a::before {
+    width: 250px;
+    height: 40px;
+    background-size: contain;
+    left: -100%;
+  }
+}
+
 .contacts__info a:hover {
   border-bottom-color: transparent;
   color: #1bc09b;
@@ -3278,6 +3333,12 @@ a {
 
 .contacts__phone {
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 775px) {
+  .contacts__phone {
+    margin-bottom: 20px;
+  }
 }
 
 .contacts__name {
@@ -3293,6 +3354,16 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 775px) {
+  .contacts__name {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.04px;
+    margin-bottom: 25px;
+  }
+}
+
 .contacts__name .icon-top {
   margin-bottom: -4px;
 }
@@ -3306,6 +3377,12 @@ a {
   margin-bottom: 72px;
 }
 
+@media screen and (max-width: 775px) {
+  .contacts__props {
+    margin-bottom: 30px;
+  }
+}
+
 .contacts__column {
   width: 50%;
   display: -ms-flex;
@@ -3314,8 +3391,33 @@ a {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 610px) {
+  .contacts__column {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contacts__column {
+    align-items: flex-start;
+  }
+}
+
 .contacts__wrapper {
   padding-left: 107px;
+}
+
+@media screen and (max-width: 1075px) {
+  .contacts__wrapper {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contacts__wrapper {
+    padding-left: 0;
+  }
 }
 
 .popup {
@@ -3537,6 +3639,12 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 610px) {
+  .custom-title_inner {
+    align-items: center;
+  }
+}
+
 .custom-title_center {
   align-items: center;
 }
@@ -3733,6 +3841,13 @@ a {
   padding-bottom: 72px;
 }
 
+@media screen and (max-width: 610px) {
+  .inner-title__wrap {
+    text-align: center;
+    padding-bottom: 155px;
+  }
+}
+
 .inner-title__wrap::before {
   content: '';
   background-position: center;
@@ -3778,6 +3893,21 @@ a {
   height: 157px;
   background-image: url("../img/contacts-inner.png");
   right: 45px;
+}
+
+@media screen and (max-width: 1075px) {
+  .inner-title__wrap_contacts::before {
+    width: 288px;
+    height: 86px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .inner-title__wrap_contacts::before {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
 }
 
 .inner-title__wrap_catalog-page::before {

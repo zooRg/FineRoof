@@ -8,9 +8,14 @@
 
 	cursor: pointer;
 	$parent: &;
-  &_center {
-    align-items: center;
-  }
+	&_inner {
+		@include adaptive(610) {
+			align-items: center;
+		}
+	}
+	  &_center {
+		align-items: center;
+	  }
   &:hover {
 
     & span {
@@ -154,6 +159,7 @@
 		font-size: 20px;
 		margin-left: 31px;
 	}
+
 	&::before {
 		content: '';
 		width: 58px;
@@ -175,6 +181,10 @@
 		border-bottom: 2px solid #e1f1ed;
 
 		padding-bottom: 72px;
+		@include adaptive(610) {
+			text-align: center;
+			padding-bottom: 155px;
+		}
 		&::before {
 			content: '';
 			background-position: center;
@@ -234,6 +244,18 @@
 				background-image: url('../img/contacts-inner.png');
 
 				right: 45px;
+				@include adaptive(1075) {
+					width: 288px;
+					height: 86px;
+				}
+				@include adaptive(610) {
+					right: 50%;
+					-webkit-transform: translateX(50%);
+					-moz-transform: translateX(50%);
+					-ms-transform: translateX(50%);
+					-o-transform: translateX(50%);
+					transform: translateX(50%);
+				}
 			}
 		}
 		&_catalog-page {

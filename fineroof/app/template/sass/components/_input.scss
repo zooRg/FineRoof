@@ -95,6 +95,10 @@
 		flex-grow: 1;
 
 		margin:3.5px;
+		@include phone {
+			max-width: 100%;
+			margin: 10px 0;
+		}
         & span {
             color: rgb(27, 192, 155);
             font-size: 15px;
@@ -139,6 +143,10 @@
 		flex-grow: 1;
 
 		margin:3.5px;
+		@include phone {
+			max-width: 100%;
+			margin: 10px 0;
+		}
 		&__item {
 			font-size: 14px;
 			font-weight: 400;

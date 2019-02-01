@@ -813,6 +813,13 @@ a {
   margin: 3.5px;
 }
 
+@media screen and (max-width: 479px) {
+  .text-label {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
 .text-label span {
   color: #1bc09b;
   font-size: 15px;
@@ -880,6 +887,13 @@ a {
   max-width: calc(50% - 7px);
   flex-grow: 1;
   margin: 3.5px;
+}
+
+@media screen and (max-width: 479px) {
+  .text-file {
+    max-width: 100%;
+    margin: 10px 0;
+  }
 }
 
 .text-file__item {
@@ -3577,9 +3591,25 @@ a {
   background: #1bc09b85;
 }
 
+@media screen and (max-width: 479px) {
+  .popup__overlay {
+    background: rgba(27, 192, 155, 0.9);
+  }
+}
+
 .popup__submit {
   width: 100%;
   margin-top: 58px;
+}
+
+@media screen and (max-width: 610px) {
+  .popup__submit {
+    max-width: 246px;
+    font-size: 28px;
+    letter-spacing: 0.7px;
+    line-height: 28px;
+    padding: 18px 55px;
+  }
 }
 
 .popup__row {
@@ -3588,6 +3618,12 @@ a {
   display: flex;
   align-items: stretch;
   margin: 0px -3.5px;
+}
+
+@media screen and (max-width: 479px) {
+  .popup__row {
+    flex-direction: column;
+  }
 }
 
 .popup__row:nth-child(odd) input:focus ~ span {
@@ -3605,6 +3641,12 @@ a {
   margin-bottom: 39px;
 }
 
+@media screen and (max-width: 775px) {
+  .popup__text {
+    display: none;
+  }
+}
+
 .popup__wrap {
   max-width: 800px;
   max-height: 100vh;
@@ -3617,6 +3659,20 @@ a {
   z-index: 2;
 }
 
+@media screen and (max-width: 610px) {
+  .popup__wrap {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .popup__wrap {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .popup__form {
   display: -ms-flex;
   display: flex;
@@ -3625,8 +3681,24 @@ a {
   padding: 0px 57px 21px;
 }
 
-.popup__title {
+@media screen and (max-width: 610px) {
+  .popup__form {
+    padding: 0px 15px;
+    padding-bottom: 40px;
+  }
+}
+
+.popup__title.custom-subtitle {
   margin-right: auto;
+}
+
+@media screen and (max-width: 479px) {
+  .popup__title.custom-subtitle {
+    margin-left: 18px;
+  }
+  .popup__title.custom-subtitle::before {
+    left: -16px;
+  }
 }
 
 .popup__cross {
@@ -3637,6 +3709,13 @@ a {
 .popup__cross svg {
   width: 36px;
   height: 36px;
+}
+
+@media screen and (max-width: 479px) {
+  .popup__cross svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .fixed-menu {

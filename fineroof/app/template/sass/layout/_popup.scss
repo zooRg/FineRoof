@@ -10,6 +10,7 @@
 	bottom: 0;
 	right: 0;
 
+
 	z-index: 11;
 
 	display: none;
@@ -28,11 +29,21 @@
 		justify-content: center;
 
 		background: #1bc09b85;
+		@include phone {
+			background: rgba(27, 192, 155, 0.9)
+		}
 	}
 	&__submit {
 		width: 100%;
 
 		margin-top: 58px;
+		@include adaptive(610) {
+			max-width: 246px;
+			font-size: 28px;
+			letter-spacing: 0.7px;
+			line-height: 28px;
+			padding: 18px 55px;
+		}
 	}
 	&__row {
 		width: 100%;
@@ -43,6 +54,9 @@
 		align-items: stretch;
 
 		margin: 0px -3.5px;
+		@include phone {
+			flex-direction: column;
+		}
 		&:nth-child(odd) {
 			& input:focus ~ span {
 				top: -15px;
@@ -61,6 +75,9 @@
 		align-self: center;
 
 		margin-bottom: 39px;
+		@include adaptive(775) {
+			display: none;
+		}
 	}
 	&__wrap {
 		max-width: 800px;
@@ -76,6 +93,14 @@
 
 		padding: 22px;
 		z-index: 2;
+		@include adaptive(610) {
+			padding: 5px;
+		}
+		@include phone {
+			width: 100%;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+		}
 	}
 	&__form {
 		display: -webkit-flex;
@@ -85,9 +110,19 @@
 		align-items: center;
 
 		padding: 0px 57px 21px;
+		@include adaptive(610) {
+			padding: 0px 15px;
+			padding-bottom: 40px;
+		}
 	}
-	&__title {
+	&__title.custom-subtitle {
 		margin-right: auto;
+		@include phone {
+			margin-left: 18px;
+			&::before {
+				left: -16px;
+			}
+		}
 	}
 	&__cross {
 		margin-left: auto;
@@ -96,6 +131,10 @@
 		svg {
 			width: 36px;
 			height: 36px;
+			@include phone {
+				width: 20px;
+				height: 20px;
+			}
 		}
 	}
 }

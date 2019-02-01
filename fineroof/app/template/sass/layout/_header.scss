@@ -3,7 +3,9 @@
 	&_inner {
 		padding-bottom: 40px;
 		& #{$parent}__feature {
-			display: none;
+			@include adaptive(610) {
+				display: none;
+			}
 		}
 	}
 	padding-bottom: 127px;

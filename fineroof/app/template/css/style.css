@@ -1022,8 +1022,10 @@ a {
   padding-bottom: 40px;
 }
 
-.header_inner .header__feature {
-  display: none;
+@media screen and (max-width: 610px) {
+  .header_inner .header__feature {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1075px) {
@@ -2200,8 +2202,13 @@ a {
 .content-block__image_worker svg {
   width: 1400px;
   height: 581px;
-  width: 665px;
-  height: 295px;
+}
+
+@media screen and (max-width: 1075px) {
+  .content-block__image_worker svg {
+    width: 665px;
+    height: 295px;
+  }
 }
 
 .content-block__image_spiral {

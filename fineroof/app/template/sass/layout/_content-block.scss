@@ -166,9 +166,11 @@
 			& svg {
 				width: 1400px;
 				height: 581px;
-				@include adaptive(1075) {}
+				@include adaptive(1075) {
 					width: 665px;
 					height: 295px;
+				}
+
 			}
 		}
 		&_spiral {

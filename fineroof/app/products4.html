@@ -20,7 +20,7 @@
 	<script defer src='/template/libs/anime.min.js'></script>
 </head>
 
-<body>
+<body class="animated">
 	<header class="header header_inner">
 		<div class="header__top">
 			<div class="container">
@@ -113,32 +113,41 @@
 							Сервис, доставка, монтаж, качественная консультация.
 						</div>
 					</div>
-					<div class="header__hidden">
-						<div class="header__contacts">
+				</div>
+			</div>
+		</div>
+		<div class="header__fixed fixed-menu">
+			<div class="container">
+				<div class="fixed-menu__wrap">
+					<div class="header__logo fixed-menu__logo">
+						<object id="logoObject" type="image/svg+xml" data="/template/img/icons.svg#mini-logo" alt='Логотип FineRoof'></object>
+					</div>
+					<div class="fixed-menu__center">
+						<div class="fixed-menu__contacts header__contacts">
 							<div class="header__right">
 								<a href="tel:78005500053" class="header__item green-text">+7 800 550 00 53</a>
 								<span>Бесплатный звонок</span>
 							</div>
 						</div>
-						<div class="header__center">
-							<div class="header__contacts">
-								<div class="header__left">
-									<img src="/template/img/eliplse1.png" alt="">
-								</div>
-								<div class="header__right">
-									<span class="green-text">г. Волжский, <br>Складской переулок, д. 2г</span>
-								</div>
-							</div>
-							<div class="header__contacts">
-								<div class="header__left">
-									<img src="/template/img/eliplse1.png" alt="">
-								</div>
-								<div class="header__right">
-									<span class="green-text">Рабочий посёлок Средняя Ахтуба, <br> ул. Профсоюзная, д. 35</span>
-								</div>
-							</div>
+						<div class="fixed-menu__navigation">
+							<ul class="fixed-menu__list">
+								<li class="fixed-menu__item"><a href="#" class="fixed-menu__link">Главная</a></li>
+								<li class="fixed-menu__item"><a href="#" class="fixed-menu__link">Продукция</a></li>
+								<li class="fixed-menu__item"><a href="#" class="fixed-menu__link">Услуги</a></li>
+								<li class="fixed-menu__item"><a href="#" class="fixed-menu__link">Фотогалерея</a></li>
+								<li class="fixed-menu__item"><a href="#" class="fixed-menu__link">Контакты</a></li>
+								<li class="fixed-menu__item"><a href="#" class="fixed-menu__link">Youtube-канал</a></li>
+							</ul>
 						</div>
 					</div>
+					<button type="button" class="header__mobile">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -542,29 +551,32 @@
 		<div class="actions">
 			<div class="container">
 				<div class="actions__wrap">
-					<div class="actions__item">
+					<div class="actions__item jsHoverEffect jsOpenPopup" data-target='.jsCallbackForm'>
 						<div class="actions__icon">
-							<object  type="image/svg+xml" data="/template/img/icons.svg#house-hand" ></object>
+							<object class="hoverDraw" type="image/svg+xml" data="/template/img/icons.svg#house-hover"></object>
+							<!-- <img src="/template/img/action1.png" alt=""> -->
 						</div>
-						<a href="#" class="actions__title custom-title custom-title_with-border custom-title_not-full-house custom-title_center">
+						<div class="actions__title custom-title custom-title_with-border custom-title_not-full-house custom-title_center">
 							<span>Форма</span>
 							<span>связи</span>
-						</a>
+						</div>
 						<div class="actions__text">
 							Напишите <br> нам, мы поможем <br> с выбором
 						</div>
+
 					</div>
-					<div class="actions__item">
+					<div class="actions__item jsChannel">
 						<div class="actions__icon">
 							<object type="image/svg+xml" data="/template/img/icons.svg#video-play"></object>
 						</div>
-						<a href="#" class="actions__title custom-title custom-title_with-border custom-title_not-full-house custom-title_center">
+						<div class="actions__title custom-title custom-title_with-border custom-title_not-full-house custom-title_center">
 							<span>Youtube</span>
 							<span>канал</span>
-						</a>
+						</div>
 						<div class="actions__text">
 							Делимся <br> опытом
 						</div>
+						<a href="#"></a>
 					</div>
 				</div>
 			</div>
@@ -584,7 +596,11 @@
 						<a href="#" class="gallery__link classic-button classic-button_white">Смотреть</a>
 					</div>
 					<div class="gallery__right">
-						<img src="/template/img/gallery.png" alt="">
+						<object class='galery-house' type="image/svg+xml" data="/template/img/icons.svg#gallery-house">
+						</object>
+						<!-- <svg xmlns="http://www.w3.org/2000/svg" class="galery-house">
+							<use xlink:href="/template/img/icons.svg#gallery-house" />
+						</svg> -->
 					</div>
 				</div>
 			</div>

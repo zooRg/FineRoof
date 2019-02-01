@@ -39,6 +39,12 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		@include adaptive(1075) {
+			height: 213px!important;
+		}
+		@include phone {
+			padding: 10px;
+		}
 		&:hover {
 			& #{$parent}__image {
 				&::before {
@@ -68,6 +74,9 @@
 		object-fit: cover;
 		& img {
 			height: 100%;
+			@include adaptive(1075) {
+				width: 100%;
+			}
 		}
 		&::before {
 			content: '';
@@ -101,6 +110,11 @@
 
 		pointer-events: none;
 		transition: .3s;
+		@include adaptive(610) {
+			font-size: 21px;
+			line-height: 30px;
+			letter-spacing: 1.05px;
+		}
 	}
 	&__subtitle {
 		color: #ffffff;

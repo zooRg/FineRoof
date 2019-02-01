@@ -1,5 +1,8 @@
 .props-table {
   margin-bottom: 126px;
+	@include phone {
+		margin-bottom: 45px;
+	}
 	& p {
 		font-size: 15px;
 		letter-spacing: 0.38px;
@@ -59,8 +62,10 @@
   }
 	&__tab {
 	    padding: 6px 28px;
-			margin: 3px;
-
+		margin: 3px;
+		@include phone {
+			width: 100%;
+		}
 			&:not(.isActive) {
 				color: #a9c0ba;
 

@@ -58,6 +58,17 @@
 			 nextEl: '.slider-right_galery',
 			 prevEl: '.slider-left_galery',
 			},
+			breakpoints: {
+				900: {
+					slidesPerGroup: 2,
+					slidesPerView:2,
+				},
+				610: {
+					slidesPerColumn: 6,
+					slidesPerGroup:1,
+					slidesPerView:1,
+				}
+			},
 		})
 	}
 

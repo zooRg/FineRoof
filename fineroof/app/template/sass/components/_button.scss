@@ -341,6 +341,9 @@
 	background-color: #f1f6f5;
 
 	padding: 30px 60px;
+	@include adaptive(610) {
+		padding: 30px 20px;
+	}
 
 
 	& .slider-control {
@@ -350,6 +353,11 @@
 		background: #1bc09b;
 
 		cursor: pointer;
+		@include adaptive(610) {
+			width: 28px;
+			height: 7px;
+			background: #6ebf9b;
+		}
 
 		&::before {
 			content: '';
@@ -361,6 +369,11 @@
 
 
 			border: 5px solid transparent;
+			@include adaptive(610) {
+				width: 24px;
+				height: 24px;
+				border: 7px solid transparent;
+			}
 
 		}
 		&.slider-right {
@@ -375,6 +388,10 @@
 				border-right-color: #1bc09b;
 
 				transform: translateY(-50%) rotate(45deg);
+				@include adaptive(610) {
+					border-top-color: #6ebf9b;
+					border-right-color: #6ebf9b;
+				}
 			}
 		}
 		&.slider-left {
@@ -389,6 +406,10 @@
 				border-left-color: #1bc09b;
 
 				transform: translateY(-50%) rotate(-45deg);
+				@include adaptive(610) {
+					border-top-color: #6ebf9b;
+					border-left-color: #6ebf9b;
+				}
 			}
 		}
 	}

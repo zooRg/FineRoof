@@ -246,6 +246,21 @@
 				background-position-y: 0.5px;
 
 				right: 66px;
+				@include adaptive(1205) {
+					width: 243px;
+					height: 72px;
+				}
+				@include adaptive(1075) {
+					right: 0;
+				}
+				@include adaptive(610) {
+					right: 50%;
+					-webkit-transform: translateX(50%);
+					-moz-transform: translateX(50%);
+					-ms-transform: translateX(50%);
+					-o-transform: translateX(50%);
+					transform: translateX(50%);
+				}
 			}
 		}
 		&_contacts {
@@ -305,6 +320,13 @@
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1.4px;
+	@include adaptive(1205) {
+		padding-left: 17px;
+	}
+	@include adaptive(610) {
+		font-size: 21px;
+		line-height: 30px;
+	}
   &_margin-bottom {
     margin-bottom: 75px;
   }
@@ -322,6 +344,9 @@
      position: absolute;
      bottom: -30px;
      left: -58px;
+	  @include adaptive(1205) {
+		  left: 2px;
+	  }
   }
 }
 

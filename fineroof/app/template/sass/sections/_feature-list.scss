@@ -1,5 +1,8 @@
 .feature-list {
 	margin-bottom: 60px;
+	@include phone {
+		margin-bottom: 20px;
+	}
 	&__block {
 		color: #232323;
 		font-size: 15px;
@@ -42,6 +45,8 @@
 			position: absolute;
 			top: -17px;
 			left: -103px;
+			@include adaptive(1075) {}
+			display: none;
 		}
 	}
 	&__name {

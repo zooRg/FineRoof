@@ -2096,8 +2096,36 @@ a {
   }
 }
 
+.content-block__image_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 479px) {
+  .content-block__image_mobile {
+    display: block;
+    left: -373px;
+  }
+  .content-block__image_mobile svg {
+    width: 665px;
+    height: 295px;
+  }
+}
+
 .content-block__image_services {
   margin-top: 80px;
+}
+
+@media screen and (max-width: 1075px) {
+  .content-block__image_services {
+    width: 204px;
+    height: 206px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .content-block__image_services {
+    margin: 10px auto;
+  }
 }
 
 .content-block__image_worker {
@@ -2106,13 +2134,34 @@ a {
   left: -64vw;
 }
 
+@media screen and (max-width: 1075px) {
+  .content-block__image_worker {
+    top: calc(50% - 53vw);
+    left: -38vw;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .content-block__image_worker {
+    display: none;
+  }
+}
+
 .content-block__image_worker svg {
   width: 1400px;
   height: 581px;
+  width: 665px;
+  height: 295px;
 }
 
 .content-block__image_spiral {
   margin: auto auto -92px auto;
+}
+
+@media screen and (max-width: 775px) {
+  .content-block__image_spiral {
+    display: none;
+  }
 }
 
 .content-block__image_spiral svg {
@@ -2613,6 +2662,12 @@ a {
 
 .inner-services {
   margin-bottom: 165px;
+}
+
+@media screen and (max-width: 479px) {
+  .inner-services {
+    margin-bottom: 10px;
+  }
 }
 
 .catalog-section {
@@ -3864,6 +3919,21 @@ a {
   background-image: url("../img/inner-title-bg1.png");
 }
 
+@media screen and (max-width: 1075px) {
+  .inner-title__wrap_services::before {
+    width: 296px;
+    height: 103px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .inner-title__wrap_services::before {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+}
+
 .inner-title__wrap_catalog-second-page::before {
   width: 225px;
   height: 150px;
@@ -4135,6 +4205,12 @@ a {
   margin-bottom: 60px;
 }
 
+@media screen and (max-width: 479px) {
+  .feature-list {
+    margin-bottom: 20px;
+  }
+}
+
 .feature-list__block {
   color: #232323;
   font-size: 15px;
@@ -4180,6 +4256,7 @@ a {
   position: absolute;
   top: -17px;
   left: -103px;
+  display: none;
 }
 
 .feature-list__name {

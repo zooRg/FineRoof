@@ -1,3 +1,6 @@
 .inner-services {
 	margin-bottom: 165px;
+	@include phone {
+		margin-bottom: 10px;
+	}
 }

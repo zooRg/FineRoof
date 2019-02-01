@@ -130,20 +130,51 @@
 		}
 	}
 	&__image {
+		&_mobile {
+			display: none;
+			@include phone {
+				display: block;
+				left: -373px;
+				& svg {
+					width: 665px;
+					height: 295px;
+				}
+			}
+		}
 		&_services {
 			margin-top: 80px;
+			@include adaptive(1075) {
+				width: 204px;
+				height: 206px;
+			}
+			@include phone {
+				margin: 10px auto;
+			}
 		}
 		&_worker {
 			position: absolute;
 			top: calc(50% - 21vw);
 			left: -64vw;
+			@include adaptive(1075) {
+				top: calc(50% - 53vw);
+				left: -38vw;
+			}
+			@include adaptive(610) {
+				display: none;
+			}
 			& svg {
 				width: 1400px;
 				height: 581px;
+				@include adaptive(1075) {}
+					width: 665px;
+					height: 295px;
 			}
 		}
 		&_spiral {
 			margin: auto auto -92px auto ;
+			@include adaptive(775) {
+				display: none;
+			}
 			& svg {
 				width: 63px;
 				height: 310px;

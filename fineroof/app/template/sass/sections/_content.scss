@@ -201,6 +201,18 @@
 				height: 200px;
 
 				background-image: url('../img/inner-title-bg1.png');
+				@include adaptive(1075) {
+					width: 296px;
+					height: 103px;
+				}
+				@include adaptive(610) {
+					right: 50%;
+					-webkit-transform: translateX(50%);
+					-moz-transform: translateX(50%);
+					-ms-transform: translateX(50%);
+					-o-transform: translateX(50%);
+					transform: translateX(50%);
+				}
 			}
 		}
 	    &_catalog-second-page {

@@ -46,6 +46,20 @@
 		   nextEl: '.slider-right_color',
 		   prevEl: '.slider-left_color',
 		  },
+			breakpoints: {
+				1075: {
+					slidesPerColumn: 2,
+					slidesPerGroup:1,
+					slidesPerView:5,
+					spaceBetween: 20,
+				},
+				479: {
+					slidesPerColumn: 3,
+					slidesPerGroup:1,
+					slidesPerView:3,
+					spaceBetween: 10,
+				}
+			},
 		})
 	}
 	if (document.querySelector('.galery-block__slider') !== null) {

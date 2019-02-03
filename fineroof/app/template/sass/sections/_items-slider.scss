@@ -1,5 +1,10 @@
 .items-slider {
 	margin-bottom: 63px;
+	&__wrap {
+		@include adaptive(1075) {
+			height: 182px;
+		}
+	}
 	&__title {
 		color: #232323;
 		font-size: 17px;
@@ -22,7 +27,9 @@
 		transition-property: all!important;
 
 		cursor: pointer;
-
+		@include adaptive(1075) {
+			height: 54px!important;
+		}
 		&:hover {
 			border-bottom-color: black;
 		}

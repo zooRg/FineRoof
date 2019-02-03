@@ -131,6 +131,16 @@
 	       nextEl: '.slider-right_similar',
 	       prevEl: '.slider-left_similar',
 	      },
+			breakpoints: {
+	      		1075: {
+	      			slidesPerView: 2,
+					spaceBeetwen: 40,
+				},
+				610: {
+	      			slidesPerView: 1,
+					spaceBeetwen: 0,
+				}
+			}
 	    })
 	});
 })();

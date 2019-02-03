@@ -6,6 +6,10 @@
 	align-items: flex-start;
 
 	margin-top: 70px;
+	@include adaptive(610) {
+		flex-direction: column;
+		margin-top: 30px;
+	}
 	&:last-child {
 		margin-bottom: 70px;
 	}
@@ -22,6 +26,11 @@
 		flex-shrink: 0;
 
 		margin-right: 56px;
+		@include adaptive(1075) {
+			width: 100px;
+			height: 100px;
+			margin-right: 21px;
+		}
 		& img {
 			display: block;
 			object-fit: contain;
@@ -37,12 +46,20 @@
 
 		padding-bottom: 22px;
 		margin-bottom: 37px;
+		@include adaptive(610) {
+			padding-bottom: 12px;
+			margin-bottom: 20px;
+			margin-top: 11px;
+		}
 	}
 	&__desc {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		align-items: flex-start;
+		@include adaptive(1075) {
+			flex-direction: column-reverse;
+		}
 	}
 	&__button {
 		flex-shrink: 0;

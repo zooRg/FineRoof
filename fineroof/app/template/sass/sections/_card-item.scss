@@ -1,5 +1,6 @@
 .card-item {
 	width: calc(100% / 3 - 128px);
+	max-width: 254px;
 
 	text-align: center;
 
@@ -14,6 +15,16 @@
 	cursor: pointer;
 
 	margin: 38px 64px;
+	@include  adaptive(1075) {
+		width: calc(100% / 2 - 60px);
+		max-width: none;
+		margin: 20px 30px;
+		padding: 5px;
+	}
+	@include adaptive(610) {
+		width: 100%;
+		margin: 34px 0;
+	}
 
 	&__image {
 		width: 202px;
@@ -26,6 +37,9 @@
 		justify-content: center;
 
 		margin-bottom: 7px;
+		@include adaptive(1075) {
+			width: 100%;
+		}
 
 		& img {
 			max-height: 100%;

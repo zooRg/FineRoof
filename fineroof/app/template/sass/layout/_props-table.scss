@@ -24,6 +24,9 @@
     flex-wrap: wrap;
 
     margin: -22px -39px;
+	  @include phone {
+		  margin: -17px 0;
+	  }
   }
   &__sertificate {
     width: calc(100% / 3 - 78px);
@@ -36,6 +39,13 @@
     text-align: center;
 
     margin: 22px 39px;
+	  @include adaptive(610) {
+		  width: calc(100% / 2 - 78px);
+	  }
+	  @include phone {
+		  width: 100%;
+		  margin: 17px 0;
+	  }
   }
   &__sertificate-name {
     color: #232323;
@@ -54,6 +64,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+	  @include adaptive(610) {
+		  max-width: none;
+	  }
 
     & img {
       display: block;
@@ -109,6 +122,10 @@
 		justify-content: center;
 
 		margin-top: 73px;
+		@include adaptive(775) {
+			flex-direction: column;
+			margin-top: 40px;
+		}
 	}
 	&__link {
 		color: #232323;
@@ -122,6 +139,9 @@
 		align-items: flex-start;
 
 		margin: 0px 34px;
+		@include adaptive(775) {
+			margin: 0px 10px;
+		}
 		& .recolor {
 			color: #1bc09b;
 			display: block;

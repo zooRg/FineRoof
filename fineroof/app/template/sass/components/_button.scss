@@ -208,9 +208,17 @@
 
 	z-index: 5;
 	pointer-events: none;
+	@include adaptive(1075) {
+		width: calc(100% + 0px);
+		top: 120%;
+	}
 	&_min {
 		width: calc(100% + 30px);
 		top: 44%;
+		@include adaptive(1075) {
+			width: calc(100% + -10px);
+			top: 120%;
+		}
 	}
 
 	.slider-control {
@@ -223,12 +231,42 @@
 
 		cursor: pointer;
 		transition: .3s;
+		@include phone {
+			width: 28px;
+			height: 7px;
+			background: #6ebf9b;
+			border: none;
+			&::before {
+				content: '';
+				width: 24px;
+				height: 24px;
+				border: 7px solid transparent;
+				position: absolute;
+				top: 42%;
+			}
+		}
 
 		&.slider-left {
 			border-top-color: #1bc09b;
 			border-left-color: #1bc09b;
 
 			transform: rotate(-45deg);
+			@include phone {
+				-webkit-transform: rotate(0);
+				-moz-transform: rotate(0);
+				-ms-transform: rotate(0);
+				-o-transform: rotate(0);
+				transform: rotate(0);
+				border: none;
+				&::before {
+
+					left: 0;
+					border-top-color: #6ebf9b;
+					border-left-color: #6ebf9b;
+					-webkit-transform: translateY(-50%) rotate(-45deg);
+					transform: translateY(-50%) rotate(-45deg);
+				}
+			}
 			&:hover {
 				animation: leftToLeft 1s 1;
 			}
@@ -239,7 +277,20 @@
 			border-right-color: #1bc09b;
 
 			transform: rotate(45deg);
-
+			@include phone {
+				-webkit-transform: rotate(0);
+				-moz-transform: rotate(0);
+				-ms-transform: rotate(0);
+				-o-transform: rotate(0);
+				transform: rotate(0);
+				border: none;
+				&::before {
+					right: 0;
+					border-top-color: #6ebf9b;
+					border-right-color: #6ebf9b;
+					transform: translateY(-50%) rotate(45deg);
+				}
+			}
 			&:hover {
 				animation: rightToRight 1s 1;
 			}
@@ -296,6 +347,9 @@
 	padding: 8px 24px;
 	margin-top: 36px;
 	transition: .3s;
+	@include phone {
+		width: 100%;
+	}
 	$parent: &;
 	&:hover {
 		& #{$parent}__arrow {

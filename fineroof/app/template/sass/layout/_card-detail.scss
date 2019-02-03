@@ -9,6 +9,12 @@
 		padding: 53px 24px 42px;
 
 		margin-bottom: 70px;
+		@include adaptive(775) {
+			border: none;
+			padding: 0;
+			margin-bottom: 35px;
+			padding-top: 25px;
+		}
 		&:hover {
 			& #{$parent}__loop {
 				top: -10px;
@@ -35,6 +41,10 @@
 		display: -ms-flex;
 		display: flex;
 		align-items: flex-start;
+		@include adaptive(775) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__left {
 		display: -webkit-flex;
@@ -97,7 +107,9 @@
 		justify-content: space-between;
 
 		padding: 14px 22px 15px 22px;
-
+		@include phone {
+			padding: 12px 12px 13px 12px;
+		}
 		&:nth-of-type(even) {
 			background-color: #f1f6f5;
 		}
@@ -117,9 +129,21 @@
 		flex-shrink: 0;
 
 		margin-right: 51px;
+		@include adaptive(775) {
+			width: 100%;
+			border-radius: 10px;
+			border-left: 5px solid #1bc09b;
+			border-right: 5px solid #1bc09b;
+			transition: .3s;
+			margin-right: 0;
+		}
 	}
 	&__right {
 		flex-grow: 1;
+		@include adaptive(775) {
+			width: 100%;
+			margin-top: 40px;
+		}
 	}
 	&__prop {
 		color: #222222;

@@ -32,6 +32,10 @@
   transition-property: max-height, box-shadow;
 
   z-index: 2;
+	@include adaptive(610) {
+		width: 100%;
+		max-height: 29px;
+	}
 
   &:hover {
     max-height: 500px;
@@ -51,6 +55,9 @@
   }
   &__position {
     padding: 10px 0;
+	  @include adaptive(610) {
+		  padding: 5px 0;
+	  }
   }
 
   &__right {
@@ -78,11 +85,17 @@
       top: 50%;
 
       transform: translateY(calc(-50% - 8px)) translateX(-50%) rotate(-45deg);
+		@include adaptive(610) {
+			transform: translateY(calc(-50% - 5px)) translateX(-50%) rotate(-45deg);
+		}
     }
     &::after {
       bottom: 50%;
 
       transform: translateY(calc(50% + 8px))  translateX(-50%)rotate(135deg);
+		@include adaptive(610) {
+			transform: translateY(calc(50% + 5px))  translateX(-50%) rotate(135deg);
+		}
     }
   }
 }

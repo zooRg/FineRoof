@@ -10,6 +10,28 @@
 		display: -ms-flex;
 		display: flex;
 		align-items: stretch;
+		&__catalog {
+			justify-content: center;
+			& #{$parent}__item {
+				width: 30%;
+				border: none;
+			}
+			& .content-block__image {
+				&_worker {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: auto;
+					top: auto;
+					padding-top: 158px;
+					& svg {
+						width: auto;
+						height: auto;
+						display: flex;
+					}
+				}
+			}
+		}
 		@include phone {
 			flex-direction: column;
 		}

@@ -5,11 +5,37 @@
 		border: none;
 	}
 	$parent: &;
+	&__svg {
+		margin-top: auto;
+		@include adaptive(1075) {
+			display: none;
+		}
+		&_dog {
+			& svg {
+				width: 361px;
+				height: 160px;
+
+			}
+		}
+		&_hammer {
+			& svg {
+				width: 232px;
+				height: 265px;
+			}
+		}
+	}
 	&__wrap {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		align-items: stretch;
+		&_inner {
+			justify-content: space-between;
+			padding: 58px 0px 74px;
+			@include phone {
+				padding: 20px 0px 25px;
+			}
+		}
 		&__catalog {
 			justify-content: center;
 			& #{$parent}__item {
@@ -47,6 +73,18 @@
 		padding-top: 58px;
 		padding-bottom: 69px;
 		cursor: pointer;
+		&_full {
+			width: auto;
+			flex-grow: 1;
+			left: -45px;
+			padding: 0;
+			@include adaptive(1075) {
+				left: auto;
+				& #{$parent}__icon {
+					margin-right: -5px;
+				}
+			}
+		}
 		&.jsChannel {
 			& object,
 			& #{$parent}__text {
@@ -82,6 +120,7 @@
 		}
 		&:first-child {
 			padding-right: 37px;
+
 			@include adaptive (775) {
 				padding-right: 0;
 			}
@@ -101,6 +140,9 @@
 				& span {
 					color: #1bc09b;
 					&::after {
+						opacity: 0;
+					}
+					& svg {
 						opacity: 0;
 					}
 					&:last-child {

@@ -216,9 +216,10 @@
 		&:last-of-type:not(#{$parent}__images_hammer) {
 			margin-right: auto;
 			margin-left: -28px;
-			margin-bottom: auto;
+
+			margin-bottom: -6px;
 			margin-top: -430px;
-			& object {
+			& svg {
 				width: 645px;
 				height: 683px;
 			}

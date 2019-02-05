@@ -161,20 +161,12 @@
 			& #{$parent}__status {
 				background-color: transparent;
 				& svg {
-					width: 100%;
-					height: 100%;
-
-					display: block;
-
-					position: absolute;
-					top: 50%;
-					left: 50%;
-
-					transform: translate(-50%, -50%);
+					opacity: 1;
 				}
 			}
 			& #{$parent}__icon {
 				svg {
+
 					fill: #1bc09b;
 				}
 			}
@@ -192,7 +184,10 @@
 				color: #1bc09b;
 			}
 			& #{$parent}__status {
-				background-color: #1bc09b;
+				background-color: transparent;
+				& svg {
+					opacity: 1;
+				}
 			}
 			& #{$parent}__item:not(:hover) a {
 				color: #232323;
@@ -210,7 +205,17 @@
 
 		transition: .3s;
 		& svg {
-			display: none;
+			width: 100%;
+			height: 100%;
+
+			display: block;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			transform: translate(-50%, -50%);
+			opacity: 0;
 		}
 	}
 }

@@ -71,22 +71,34 @@
     }
   }
   &_not-full-house {
+    & span {
+		line-height: 74px;
+		@include adaptive(1075) {
+			line-height: 42.51px;
+		}
+		&::after {
+			top: calc(100% - 6px);
+			@include adaptive(1075) {
+				top: calc(100% - 4px);
+			}
+		}
+	}
     & span:last-child {
 		& #{$parent}__svg {
 			width: 94px;
-			height: 90px;
+			height: 91px;
 			position: absolute;
 			top: 45%;
-			right: -5px;
+			right: -4px;
 			-webkit-transform: translateY(-50%);
 			transform: translateY(-50%);
 			z-index: -1;
 			transition: 0.3s;
 			@include adaptive (1075) {
 				width: 50px;
-				height: 50px;
-
-				right: -6px;
+				height: 49px;
+				right: -2px;
+				top: 50%;
 			}
 			@include adaptive (610) {
 				top: 45%;

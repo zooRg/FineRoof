@@ -26,7 +26,7 @@
 	}
 	var fixedMenu = function (object) {
 		let wHeight = window.innerHeight;
-		let headerBlock = document.querySelector('.header');
+		let headerBlock = document.querySelector('.header__top');
 		let fixedHeader = document.querySelector('.fixed-menu');
 		let windowScroll = window.pageYOffset;
 
@@ -76,7 +76,7 @@
 			if (overlay !== null) overlay.addEventListener('click', handleOverlayClose);
 		})
 		window.addEventListener('scroll', function () {
-			window.utils.debounce(fixedMenu, 50);
+			window.utils.debounce(fixedMenu, 5);
 		});
 
 	    // window.slider.canvas();

@@ -100,12 +100,17 @@
 	      },
 	    })
 	    var swiper = new Swiper ('.catalog-slider__wrapper', {
-	      slidesPerView: 1.2,
+	      slidesPerView: 2,
 	      spaceBeetwen: 26,
 	      autoplay: {
 	        delay: 5000,
 	      },
 		  breakpoints: {
+	      	1280: {
+				slidesPerView: 1.2,
+				loop: true,
+				loopedSlides: 2,
+			},
 			  775: {
 				slidesPerView: 1,
 				spaceBetween: 0

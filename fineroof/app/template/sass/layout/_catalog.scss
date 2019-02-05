@@ -33,7 +33,7 @@
 			@include adaptive (1075) {
 				display: none;
 			}
-			& object {
+			& svg {
 				width: 450px;
 				height: 450px;
 			}
@@ -51,7 +51,7 @@
 			@include adaptive (1075) {
 				display: none;
 			}
-			& object {
+			& svg {
 				width: 766px;
 				height: 766px;
 			}

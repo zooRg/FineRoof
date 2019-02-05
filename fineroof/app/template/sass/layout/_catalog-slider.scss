@@ -20,16 +20,56 @@
 	&__pagination,
 	&__controls {
 		top: 87%;
+		left: 72% !important;
+		@include adaptive(1280) {
+			left: 50% !important;
+		}
 	}
 	&__pagination {
 		justify-content: center;
+
+	}
+	&__heads {
+		display: flex;
+		justify-content: space-between;
+		margin-left: 11px;
+		margin-right: 14px;
+		@include adaptive(1280) {
+			position: absolute;
+			top: 11px;
+			left: -11px;
+
+		}
+		@include adaptive(1075) {
+			top: 38px;
+			left: auto;
+			right: -299px;
+		}
+		@include adaptive(775) {
+			right: auto;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+			margin: 0;
+		}
+		@include phone {
+			top: 11px;
+		}
 	}
 	&__wrapper {
-		max-width: 620px;
+		max-width: 1000px;
 		margin-right: auto!important;
-		margin-left: -15px !important;
+		margin-left: -410px !important;
 		margin-top: 56px !important;
 		padding-bottom: 56px !important;
+		@include adaptive(1280) {
+			max-width: 620px;
+			padding-top: 56px !important;
+			margin-left: -15px !important;
+		}
 		@include adaptive (1075) {
 			max-width: 470px;
 			margin-top: 0px !important;
@@ -38,10 +78,30 @@
 			max-width: none;
 			margin-left: 0 !important;
 		}
+		@include phone {
+			padding-top: 120px !important;
+		}
 	}
 	&__head {
+		@include adaptive(1280) {
+			flex-shrink: 0;
+			margin: 0px 20px;
+		}
+		@include adaptive(1075) {
+			flex-shrink: 1;
+		}
+		@include adaptive(775) {
+			margin: 0;
+			&:last-child {
+				display: none;
+			}
+		}
+		@include adaptive(610) {
+			width: 305px;
+			flex-shrink: 0;
+		}
 		@include phone {
-			max-width: 300px;
+			max-width: 285px;
 			max-height: 300px;
 			display: flex;
 			align-items: center;
@@ -52,6 +112,9 @@
 		border-radius: 50%;
 		overflow: hidden;
 		margin-top: -80px;
+		@include adaptive(1280) {
+			margin-top: 80px;
+		}
 		@include phone {
 			margin-top: -30px;
 		}

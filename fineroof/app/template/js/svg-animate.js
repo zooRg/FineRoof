@@ -85,39 +85,39 @@
 		}
 	}
 
-	var hoverDrowEffect = function (parent) {
-		var childObj = parent.querySelector('.hoverDraw');
-		if (childObj !== null) {
-			childObj.addEventListener('load', function () {
-				var getChildCont = childObj.contentDocument;
-				var animationTarget = getChildCont.querySelector('.hoverDrawTarget');
-
-				parent.onmouseover = parent.onmouseout = handler;
-
-				var status = false;
-				var animation = anime({
-					targets: animationTarget,
-					strokeDashoffset: [anime.setDashoffset, 0],
-					easing: 'linear',
-					delay: 0,
-					duration: 10000,
-					autoplay: false
-				});
-				function handler(event) {
-					if (event.type == 'mouseover' && status === false) {
-						status = true;
-						animation.restart();
-					}
-					if (event.type == 'mouseout' && status === true) {
-						animation.reverse();
-						animation.finished.then(status = false);
-					}
-				};
-
-			});
-		}
-
-	}
+	// var hoverDrowEffect = function (parent) {
+	// 	var childObj = parent.querySelector('.hoverDraw');
+	// 	if (childObj !== null) {
+	// 		childObj.addEventListener('load', function () {
+	// 			var getChildCont = childObj.contentDocument;
+	// 			var animationTarget = getChildCont.querySelector('.hoverDrawTarget');
+	//
+	// 			parent.onmouseover = parent.onmouseout = handler;
+	//
+	// 			var status = false;
+	// 			var animation = anime({
+	// 				targets: animationTarget,
+	// 				strokeDashoffset: [anime.setDashoffset, 0],
+	// 				easing: 'linear',
+	// 				delay: 0,
+	// 				duration: 10000,
+	// 				autoplay: false
+	// 			});
+	// 			function handler(event) {
+	// 				if (event.type == 'mouseover' && status === false) {
+	// 					status = true;
+	// 					animation.restart();
+	// 				}
+	// 				if (event.type == 'mouseout' && status === true) {
+	// 					animation.reverse();
+	// 					animation.finished.then(status = false);
+	// 				}
+	// 			};
+	//
+	// 		});
+	// 	}
+	//
+	// }
 	var animatedGalery = function() {
 		var svgWrapper = document.querySelector('.gallery__wrap');
 		if (svgWrapper !== null) {
@@ -237,9 +237,9 @@
 		for (let i = 0; i < objectsList.length; i++) {
 			createNSupportDraw(objectsList[i].svgName, objectsList[i].svgAnimation, objectsList[i].defaultDur)
 		}
-		document.querySelectorAll('.jsHoverEffect').forEach(function(item) {
-			hoverDrowEffect(item);
-		})
+		// document.querySelectorAll('.jsHoverEffect').forEach(function(item) {
+		// 	hoverDrowEffect(item);
+		// })
 	} else {
 		return
 	}

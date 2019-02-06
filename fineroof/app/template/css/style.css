@@ -1379,6 +1379,7 @@ a {
 
 .header__map {
   z-index: auto;
+  position: static;
   margin-top: -14px;
   margin-left: auto;
 }
@@ -1397,9 +1398,9 @@ a {
   transition: .5s;
   position: absolute;
   top: 50%;
-  right: -19vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   z-index: -1;
   pointer-events: none;
 }
@@ -1412,7 +1413,7 @@ a {
 
 .header__map::before {
   background-image: url("../img/map.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
@@ -1432,6 +1433,13 @@ a {
   margin-bottom: -60px;
   margin-right: -16px;
   margin-left: 45px;
+}
+
+@media screen and (max-width: 1075px) {
+  .header__map object {
+    width: 67px;
+    margin-left: 3px;
+  }
 }
 
 @media screen and (max-width: 610px) {

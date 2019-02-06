@@ -215,6 +215,7 @@
 	}
 	&__map {
 		z-index:auto;
+		position: static;
 		margin-top: -14px;
 		margin-left: auto;
 		@include adaptive (610) {
@@ -235,8 +236,8 @@
 
 			position: absolute;
 			top: 50%;
-			right: -19vw;
-			transform: translateY(-50%);
+			right: 50%;
+			transform: translate(50%,-50%);
 
 			z-index: -1;
 
@@ -248,7 +249,7 @@
 		}
 		&::before {
 			background-image: url('../img/map.jpg');
-			background-size: cover;
+			background-size: contain;
 			background-position: center;
 		}
 		&::after {
@@ -272,6 +273,10 @@
 			margin-bottom: -60px;
 			margin-right: -16px;
 			margin-left: 45px;
+			@include adaptive(1075) {
+				width: 67px;
+				margin-left: 3px;
+			}
 			@include adaptive (610) {
 				margin-right: 0px;
 				margin-left: 1px;

@@ -1411,15 +1411,9 @@ a {
 }
 
 .header__map::before {
-  background-image: url("../img/map.png");
+  background-image: url("../img/map.jpg");
   background-size: cover;
   background-position: center;
-}
-
-@media screen and (max-width: 1750px) {
-  .header__map::before {
-    display: none;
-  }
 }
 
 .header__map::after {
@@ -1908,6 +1902,8 @@ a {
   position: absolute;
   right: -64px;
   top: 27px;
+  -webkit-transform: translateX(700px);
+  transform: translateX(700px);
 }
 
 @media screen and (max-width: 1075px) {
@@ -1932,6 +1928,8 @@ a {
   position: absolute;
   left: -171px;
   top: 55px;
+  -webkit-transform: translateX(-700px);
+  transform: translateX(-700px);
 }
 
 @media screen and (max-width: 1655px) {

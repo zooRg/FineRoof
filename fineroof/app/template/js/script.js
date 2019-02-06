@@ -35,7 +35,6 @@
 				itemTop: headerBlock.getBoundingClientRect().top + pageYOffset,
 			};
 		}
-		console.log(window.utils.visibility(headerBlock));
 		if (window.utils.visibility(headerBlock) === true) {
 			fixedHeader.classList.add('isFixed');
 		} else {

@@ -25,6 +25,11 @@
 			position: absolute;
 			right: -64px;
 			top: 27px;
+			-webkit-transform: translateX(700px);
+			-moz-transform: translateX(700px);
+			-ms-transform: translateX(700px);
+			-o-transform: translateX(700px);
+			transform: translateX(700px);
 			@include adaptive (1075) {
 				right: -90px;
 				top: -49px;
@@ -42,6 +47,11 @@
 			position: absolute;
 			left: -171px;
 			top: 55px;
+			-webkit-transform: translateX(-700px);
+			-moz-transform: translateX(-700px);
+			-ms-transform: translateX(-700px);
+			-o-transform: translateX(-700px);
+			transform: translateX(-700px);
 			@include adaptive (1655) {
 				left: -373px;
 			}

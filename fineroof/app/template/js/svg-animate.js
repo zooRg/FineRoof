@@ -3,20 +3,15 @@
 (function(){
 	var objectsList = [
 		{
-			svgName: document.getElementById("mainFlowerObject"),
-			svgAnimation: '#animatedFlower',
-			defaultDur: 25000,
+			SVG: document.querySelector(".catalog__svg_worker"),
+			defaultDur: 1500,
+			property: -700,
 		},
 		{
-			svgName: document.getElementById("mainHammer"),
-			svgAnimation: '#animatedHammer',
-			defaultDur: 15000,
+			SVG: document.querySelector(".catalog__svg_hammer"),
+			defaultDur: 760,
+			property: 700,
 		},
-		{
-			svgName: document.getElementById("mainWorker1"),
-			svgAnimation: '#animatedWorker1',
-			defaultDur: 65000,
-		}
 	];
 
 	function handleMapElement () {
@@ -45,43 +40,58 @@
 		}
 
 	}
-	var createNSupportDraw = function(currentSvg, animatedElement, dur) {
+	var createNSupportDraw = function(currentSvg, dur, property) {
 		if (currentSvg !== null) {
-			currentSvg.addEventListener('load', function () {
-				var svgDocument = currentSvg.contentDocument;
 				var animateSvg = function () {
-
-					var animationTarget = svgDocument.querySelector(animatedElement);
-					var lineDrawing = anime({
-						targets: animationTarget,
-						strokeDashoffset: [anime.setDashoffset, 0],
-						easing: 'linear',
-						delay: 400,
-						duration: dur
-					});
+					// var lineDrawing = anime({
+					// 	targets: currentSvg,
+					// 	translateX: 0,
+					// 	easing: 'linear',
+					// 	delay: 400,
+					// 	duration: dur
+					// });
 
 					window.addEventListener('scroll', function () {
 						let wHeight = this.innerHeight;
-						document.querySelectorAll('.jsAnimate').forEach(function (item) {
+						document.querySelectorAll('.catalog__svg').forEach(function (item) {
 
 							function getCoords() {
 								return {
 									itemTop: item.getBoundingClientRect().top + pageYOffset,
 								};
 							}
-							let windowScroll = window.pageYOffset;
 
-							if ((windowScroll + wHeight > getCoords().itemTop) && window.utils.visibility(item) === false && ((windowScroll + wHeight - getCoords().itemTop) <= 200)) {
-								lineDrawing.restart();
+							let windowScroll = window.pageYOffset;
+							if ((windowScroll + wHeight > getCoords().itemTop) && window.utils.visibility(item) === false) {
+								console.log('Относительно высоты экрана')
+								console.log(windowScroll + wHeight > getCoords().itemTop);
+								console.log('Визабилити');
+								console.log(window.utils.visibility(item));
+								console.log('Запас экрана 200')
+								console.log(((windowScroll + wHeight - getCoords().itemTop) <= 200));
+								anime({
+									targets: currentSvg,
+									translateX: 0,
+									easing: 'easeInOutBack',
+									delay: 100,
+									duration: dur
+								});
+
 							} else {
-								return;
+								anime({
+									targets: currentSvg,
+									translateX: property,
+									easing: 'linear',
+									delay: 0,
+									duration: 1
+								});
 							}
 						})
 					});
 
 				}
 				animateSvg();
-			});
+
 		}
 	}
 
@@ -97,7 +107,7 @@
 	// 			var status = false;
 	// 			var animation = anime({
 	// 				targets: animationTarget,
-	// 				strokeDashoffset: [anime.setDashoffset, 0],
+	// 				translateX: 0,
 	// 				easing: 'linear',
 	// 				delay: 0,
 	// 				duration: 10000,
@@ -235,7 +245,7 @@
 
 	if (document.body.classList.contains('animated')) {
 		for (let i = 0; i < objectsList.length; i++) {
-			createNSupportDraw(objectsList[i].svgName, objectsList[i].svgAnimation, objectsList[i].defaultDur)
+			createNSupportDraw(objectsList[i].SVG, objectsList[i].defaultDur, objectsList[i].property)
 		}
 		// document.querySelectorAll('.jsHoverEffect').forEach(function(item) {
 		// 	hoverDrowEffect(item);

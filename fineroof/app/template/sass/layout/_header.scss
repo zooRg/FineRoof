@@ -247,12 +247,9 @@
 
 		}
 		&::before {
-			background-image: url('../img/map.png');
+			background-image: url('../img/map.jpg');
 			background-size: cover;
 			background-position: center;
-			@include adaptive (1750) {
-				display: none;
-			}
 		}
 		&::after {
 			background-color: #232323;

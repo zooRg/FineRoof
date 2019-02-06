@@ -49,9 +49,7 @@
 	 		};
 
 			if (targetPosition.bottom > windowPosition.top &&
-				targetPosition.top < windowPosition.bottom &&
-				targetPosition.right > windowPosition.left &&
-				targetPosition.left < windowPosition.right) {
+				targetPosition.top < windowPosition.bottom) {
 
 				return false;
 			} else {

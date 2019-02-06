@@ -4,12 +4,12 @@
 	var objectsList = [
 		{
 			SVG: document.querySelector(".catalog__svg_worker"),
-			defaultDur: 1500,
+			defaultDur: 1000,
 			property: -700,
 		},
 		{
 			SVG: document.querySelector(".catalog__svg_hammer"),
-			defaultDur: 760,
+			defaultDur: 660,
 			property: 700,
 		},
 	];
@@ -40,21 +40,21 @@
 		}
 
 	}
-	var createNSupportDraw = function(currentSvg, dur, property) {
+	var createNSupportDraw = function(currentSvg, dur) {
 		if (currentSvg !== null) {
 				var animateSvg = function () {
-					// var lineDrawing = anime({
-					// 	targets: currentSvg,
-					// 	translateX: 0,
-					// 	easing: 'linear',
-					// 	delay: 400,
-					// 	duration: dur
-					// });
 
 					window.addEventListener('scroll', function () {
 						let wHeight = this.innerHeight;
 						document.querySelectorAll('.catalog__svg').forEach(function (item) {
+							let drow = anime({
+									targets: currentSvg,
+									translateX: 0,
+									easing: 'easeInOutBack',
+									delay: 50,
+									duration: dur,
 
+							});
 							function getCoords() {
 								return {
 									itemTop: item.getBoundingClientRect().top + pageYOffset,
@@ -62,30 +62,13 @@
 							}
 
 							let windowScroll = window.pageYOffset;
-							if ((windowScroll + wHeight > getCoords().itemTop) && window.utils.visibility(item) === false) {
-								console.log('Относительно высоты экрана')
-								console.log(windowScroll + wHeight > getCoords().itemTop);
-								console.log('Визабилити');
-								console.log(window.utils.visibility(item));
-								console.log('Запас экрана 200')
-								console.log(((windowScroll + wHeight - getCoords().itemTop) <= 200));
-								anime({
-									targets: currentSvg,
-									translateX: 0,
-									easing: 'easeInOutBack',
-									delay: 100,
-									duration: dur
-								});
-
-							} else {
-								anime({
-									targets: currentSvg,
-									translateX: property,
-									easing: 'linear',
-									delay: 0,
-									duration: 1
-								});
-							}
+							window.utils.debounce(function () {
+								if ((windowScroll + wHeight / 2 > getCoords().itemTop) && window.utils.visibility(item) === false) {
+									drow
+								} else {
+									return
+								}
+							}, 400)
 						})
 					});
 
@@ -95,39 +78,6 @@
 		}
 	}
 
-	// var hoverDrowEffect = function (parent) {
-	// 	var childObj = parent.querySelector('.hoverDraw');
-	// 	if (childObj !== null) {
-	// 		childObj.addEventListener('load', function () {
-	// 			var getChildCont = childObj.contentDocument;
-	// 			var animationTarget = getChildCont.querySelector('.hoverDrawTarget');
-	//
-	// 			parent.onmouseover = parent.onmouseout = handler;
-	//
-	// 			var status = false;
-	// 			var animation = anime({
-	// 				targets: animationTarget,
-	// 				translateX: 0,
-	// 				easing: 'linear',
-	// 				delay: 0,
-	// 				duration: 10000,
-	// 				autoplay: false
-	// 			});
-	// 			function handler(event) {
-	// 				if (event.type == 'mouseover' && status === false) {
-	// 					status = true;
-	// 					animation.restart();
-	// 				}
-	// 				if (event.type == 'mouseout' && status === true) {
-	// 					animation.reverse();
-	// 					animation.finished.then(status = false);
-	// 				}
-	// 			};
-	//
-	// 		});
-	// 	}
-	//
-	// }
 	var animatedGalery = function() {
 		var svgWrapper = document.querySelector('.gallery__wrap');
 		if (svgWrapper !== null) {
@@ -238,20 +188,21 @@
 		}
 	}
 
-	handleMapElement();
-	animatedGalery();
-	animatedLogo();
-	animatedYt();
+	document.addEventListener('DOMContentLoaded', function () {
+		handleMapElement();
+		animatedGalery();
+		animatedLogo();
+		animatedYt();
 
-	if (document.body.classList.contains('animated')) {
-		for (let i = 0; i < objectsList.length; i++) {
-			createNSupportDraw(objectsList[i].SVG, objectsList[i].defaultDur, objectsList[i].property)
+		if (document.body.classList.contains('animated')) {
+			for (let i = 0; i < objectsList.length; i++) {
+				createNSupportDraw(objectsList[i].SVG, objectsList[i].defaultDur)
+			}
+
+		} else {
+			return
 		}
-		// document.querySelectorAll('.jsHoverEffect').forEach(function(item) {
-		// 	hoverDrowEffect(item);
-		// })
-	} else {
-		return
-	}
+
+	})
 
 })();

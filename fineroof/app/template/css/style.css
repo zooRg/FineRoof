@@ -1560,13 +1560,15 @@ a {
 
 .catalog-slider {
   margin-top: 139px;
-  margin-bottom: 220px;
+  margin-bottom: 170px;
+  padding-bottom: 50px;
   overflow: hidden;
 }
 
 @media screen and (max-width: 1375px) {
   .catalog-slider {
     margin-bottom: 80px;
+    padding-bottom: 0;
   }
 }
 
@@ -5181,7 +5183,7 @@ a {
   display: -ms-flex;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   align-self: flex-start;
   transition: inherit;
 }
@@ -5221,6 +5223,30 @@ a {
   padding: 0px 17px 10px 54px;
   cursor: pointer;
   transition: .3s;
+}
+
+.catalog-list__block_mod1 .catalog-list__icon use {
+  x: -20;
+}
+
+.catalog-list__block_mod3 .catalog-list__icon use {
+  x: -21;
+}
+
+.catalog-list__block_mod4 .catalog-list__icon use {
+  x: -24;
+}
+
+.catalog-list__block_mod5 .catalog-list__icon use {
+  x: -5;
+}
+
+.catalog-list__block_mod6 .catalog-list__icon use {
+  x: -24;
+}
+
+.catalog-list__block_mod7 .catalog-list__icon use {
+  x: -21;
 }
 
 @media screen and (max-width: 1075px) {

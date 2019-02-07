@@ -83,42 +83,41 @@
 			var SVG = document.querySelector('.galery-house');
 		}
 		if (SVG !== null) {
-			SVG.addEventListener('load', function(){
-				svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
-				var animationUp = SVG.querySelector('.lights-up');
-				var recolorElems = SVG.querySelectorAll('.recolor-elems');
-				function handler(event) {
+			var animationUp = SVG.querySelector('.lights-up');
+			var recolorElems = SVG.querySelectorAll('.recolor-elems');
+			var handler = function (event) {
 
-					if (event.type == 'mouseover') {
+				if (event.type == 'mouseover') {
+					anime({
+						targets: animationUp,
+						translateY: -10
+					});
+					recolorElems.forEach(function (elem) {
 						anime({
-							targets: animationUp,
-							translateY: -10
+							targets: elem,
+							fill: '#1bc09b',
+							easing: 'easeInOutSine',
+							duration: 500
 						});
-						recolorElems.forEach(function (elem) {
-							anime({
-								targets: elem,
-								fill: '#1bc09b',
-								easing: 'easeInOutSine',
-								duration: 500
-							});
-						})
-					}
-					if (event.type == 'mouseout') {
+					})
+				}
+				if (event.type == 'mouseout') {
+					anime({
+						targets: animationUp,
+						translateY: 0
+					});
+					recolorElems.forEach(function (elem) {
 						anime({
-							targets: animationUp,
-							translateY: 0
+							targets: elem,
+							fill: '#DAE9E5',
+							easing: 'easeInOutSine',
+							duration: 500
 						});
-						recolorElems.forEach(function (elem) {
-							anime({
-								targets: elem,
-								fill: '#DAE9E5',
-								easing: 'easeInOutSine',
-								duration: 500
-							});
-						})
-					}
-				};
-			})
+					})
+				}
+			};
+			svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
+
 		}
 	}
 	var animatedLogo = function() {

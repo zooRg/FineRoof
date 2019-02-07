@@ -101,7 +101,7 @@
 		display: -ms-flex;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 
 		align-self: flex-start;
 
@@ -144,6 +144,48 @@
 		cursor: pointer;
 
 		transition: .3s;
+		&_mod1 {
+			& #{$parent}__icon {
+				& use {
+					x: -20;
+				}
+			}
+		}
+		&_mod3 {
+			& #{$parent}__icon {
+				& use {
+					x: -21;
+				}
+			}
+		}
+		&_mod4 {
+			& #{$parent}__icon {
+				& use {
+					x: -24;
+				}
+			}
+		}
+		&_mod5 {
+			& #{$parent}__icon {
+				& use {
+					x: -5;
+				}
+			}
+		}
+		&_mod6 {
+			& #{$parent}__icon {
+				& use {
+					x: -24;
+				}
+			}
+		}
+		&_mod7 {
+			& #{$parent}__icon {
+				& use {
+					x: -21;
+				}
+			}
+		}
 		@include adaptive(1075) {
 			align-items: center;
 			text-align: center;

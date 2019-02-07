@@ -1,9 +1,11 @@
 .catalog-slider {
 	margin-top: 139px;
-	margin-bottom: 220px;
+	margin-bottom: 170px;
+	padding-bottom: 50px;
 	overflow: hidden;
 	@include adaptive (1375) {
 		margin-bottom: 80px;
+		padding-bottom: 0;
 	}
 	@include adaptive (775) {
 		margin-top: 70px;

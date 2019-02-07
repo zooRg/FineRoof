@@ -59,6 +59,12 @@
 		}
 	}
 	&__logo {
+		&:hover {
+			&::before,
+			&::after {
+				opacity: 1;
+			}
+		}
 		&::before,
 		&::after {
 			content: '';
@@ -69,15 +75,14 @@
 
 			position: absolute;
 			left: 0;
-			top: 0;
+			top: -1px;
 			z-index: 2;
-			opacity: 1;
-
-			transition: .3s;
+			opacity: 0;
 		}
 		&::before {
 			border-width: 14px 25px 0 0;
 			border-color: #232323 transparent transparent transparent;
+			left: 1px;
 		}
 		&::after {
 			border-width: 0 25px 14px 0;
@@ -92,7 +97,7 @@
 				opacity: 0;
 			}
 		}
-		& object {
+		& svg {
 			width: 50px;
 			height: 48px;
 		}
@@ -103,7 +108,7 @@
 	&__image {
 
 		flex-shrink: 0;
-		& object {
+		& svg {
 			width: 219px;
 			height: 99px;
 
@@ -262,7 +267,7 @@
 				opacity: 0.6;
 			}
 		}
-		& object {
+		& svg {
 			width: 70px;
 			height: 73px;
 

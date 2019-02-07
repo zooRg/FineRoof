@@ -41,10 +41,54 @@
 			fixedHeader.classList.remove('isFixed');
 		}
 	}
+	// var TIMEOUT = 5000;
+	// var SERVER_STATUS_OK = 200;
+	// var exchangeType =
+	// var createXhr = function (responseType, timeout) {
+	// 	var xhr = new XMLHttpRequest();
+	// 	xhr.responseType = responseType;
+	// 	xhr.timeout = timeout;
+	//
+	// 	return xhr;
+	// };
+	// var onProcessXhr = function (onSuccess, onError) {
+	// 	var xhr = createXhr('xml', TIMEOUT);
+	//
+	// 	xhr.addEventListener('load', function () {
+	// 		if (xhr.status === SERVER_STATUS_OK) {
+	//
+	// 		} else {
+	//
+	// 		}
+	// 	});
+	//
+	// 	xhr.addEventListener('timeout', function () {
+	// 		onError(ERRORS.timeoutError(xhr.timeout));
+	// 	});
+	//
+	// 	return xhr;
+	// };
+	// var exchangeData = function (type, url, data) {
+	// 	var response = onProcessXhr;
+	// 	response.open(type, url);
+	//
+	// 	if (data !== null) {
+	// 		response.send(data);
+	// 	} else {
+	// 		response.send();
+	// 	}
+	// };
+	//
+	// var getPinsData = function (callback) {
+	// 	window.script.exchange(exchangeType, DOWNLOAD_URL, onLoadData, onLoadDataError);
+	// 	callback.call();
+	// };
+
 
 	window.script = {
 		closePopup: handleClosePopup,
 		removePseudo: removeLogoitem,
+		// exchange: exchangeData,
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {

@@ -2,9 +2,9 @@
 
 @-webkit-keyframes up-logo-forwards {
   to {
-    -webkit-transform: translate(-37%, -93%);
-    -ms-transform: translate(-37%, -93%);
-    transform: translate(-37%, -93%);
+	  -webkit-transform: translate(-37%, -100%);
+	  -ms-transform: translate(-37%, -100%);
+	  transform: translate(-37%, -100%);
   }
 }
 @-webkit-keyframes up-logo-back {
@@ -17,9 +17,9 @@
 
 @keyframes up-logo-forwards {
   to {
-    -webkit-transform: translate(-37%, -93%);
-    -ms-transform: translate(-37%, -93%);
-    transform: translate(-37%, -93%);
+    -webkit-transform: translate(-37%, -100%);
+    -ms-transform: translate(-37%, -100%);
+    transform: translate(-37%, -100%);
   }
 }
 @keyframes up-logo-back {
@@ -35,7 +35,6 @@
 .animated-svg {
   fill: #1bc09b;
 
-  display: none;
 }
 .animated-svg:target {
   display: block;
@@ -69,10 +68,14 @@
 }
 
 .hover-animation_background {
-	transition: .5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	-webkit-transition-property: y, x;
+	-moz-transition-property: y, x;
+	-ms-transition-property: y, x;
+	-o-transition-property: y, x;
 	transition-property: y, x;
-}
-
-.galery-house.isActive path {
-  display: none;
 }

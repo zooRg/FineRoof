@@ -86,7 +86,7 @@
 			}
 		}
 		&.jsChannel {
-			& object,
+			& svg,
 			& #{$parent}__text {
 				pointer-events: none;
 			}
@@ -106,9 +106,6 @@
 			@include phone {
 				padding-left: 0px;
 				padding-right: 0;
-			}
-			& #{$parent}__icon {
-				margin-left: 40px;
 			}
 			& #{$parent}__text {
 				top: calc(50% - 43px);
@@ -178,7 +175,7 @@
 	&__icon {
 		margin-right: -37px;
 		margin-bottom: 15px;
-		& object {
+		& svg {
 			width: 138px;
 			height: 148px;
 		}

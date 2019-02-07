@@ -21,18 +21,17 @@
 		if (mapLane !== null) {
 			mapLane.addEventListener('load', function() {
 				mapButton.onmouseover = mapButton.onmouseout = handler;
-				var mapDocument = mapLane.contentDocument;
-				var mapPath = mapDocument.querySelector('.hover-animation_background');
+				var mapPath = mapLane.querySelector('.hover-animation_background');
 
 				function handler (event) {
 					if (event.type == 'mouseover') {
-						mapPath.style.x = "-35";
-						mapPath.style.y = "40";
+						mapPath.setAttribute('x', '-35');
+						mapPath.setAttribute('y', '40');
 						window.script.removePseudo();
 					}
 					if (event.type == 'mouseout') {
-						mapPath.style.x = "-5";
-						mapPath.style.y = "-5";
+						mapPath.setAttribute('x', '-5');
+						mapPath.setAttribute('y', '-5');
 						window.script.removePseudo();
 					}
 				};
@@ -86,8 +85,8 @@
 		if (SVG !== null) {
 			SVG.addEventListener('load', function(){
 				svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
-				var animationUp = SVG.contentDocument.querySelector('.lights-up');
-				var recolorElems = SVG.contentDocument.querySelectorAll('.recolor-elems');
+				var animationUp = SVG.querySelector('.lights-up');
+				var recolorElems = SVG.querySelectorAll('.recolor-elems');
 				function handler(event) {
 
 					if (event.type == 'mouseover') {
@@ -124,11 +123,11 @@
 	}
 	var animatedLogo = function() {
 		var svgWrapper = document.querySelector('.header__image');
-		var SVG = svgWrapper.querySelector('object');
+		var SVG = svgWrapper.querySelector('svg');
 		if (SVG !== null) {
 			SVG.addEventListener('load', function(){
 				svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
-				var animationUp = SVG.contentDocument.querySelector('.hover-animation_logo');
+				var animationUp = SVG.querySelector('.hover-animation_logo');
 				function handler(event) {
 
 					if (event.type == 'mouseover') {
@@ -154,11 +153,11 @@
 	}
 	var animatedYt = function() {
 		var svgWrapper = document.querySelector('.jsChannel');
-		var SVG = svgWrapper.querySelector('object');
+		var SVG = svgWrapper.querySelector('svg');
 		if (SVG !== null) {
 			SVG.addEventListener('load', function(){
 				svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
-				var animationUp = SVG.contentDocument.querySelector('.hover-animation_play');
+				var animationUp = SVG.querySelector('.hover-animation_play');
 				function handler(event) {
 
 					if (event.type == 'mouseover') {

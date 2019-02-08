@@ -79,10 +79,10 @@
 
 	var animatedGalery = function() {
 		var svgWrapper = document.querySelector('.gallery__wrap');
-		if (svgWrapper !== null) {
+		if (svgWrapper != null) {
 			var SVG = document.querySelector('.galery-house');
 		}
-		if (SVG !== null) {
+		if (SVG != null) {
 			var animationUp = SVG.querySelector('.lights-up');
 			var recolorElems = SVG.querySelectorAll('.recolor-elems');
 			var handler = function (event) {
@@ -122,8 +122,10 @@
 	}
 	var animatedLogo = function() {
 		var svgWrapper = document.querySelector('.header__image');
-		var SVG = svgWrapper.querySelector('svg');
-		if (SVG !== null) {
+		if (svgWrapper != null) {
+			var SVG = svgWrapper.querySelector('svg');
+		}
+		if (SVG != null) {
 			SVG.addEventListener('load', function(){
 				svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
 				var animationUp = SVG.querySelector('.hover-animation_logo');
@@ -152,8 +154,10 @@
 	}
 	var animatedYt = function() {
 		var svgWrapper = document.querySelector('.jsChannel');
-		var SVG = svgWrapper.querySelector('svg');
-		if (SVG !== null) {
+		if (svgWrapper != null) {
+			var SVG = svgWrapper.querySelector('svg');
+		}
+		if (SVG != null) {
 			SVG.addEventListener('load', function(){
 				svgWrapper.onmouseover = svgWrapper.onmouseout = handler;
 				var animationUp = SVG.querySelector('.hover-animation_play');

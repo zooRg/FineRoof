@@ -5135,7 +5135,7 @@ a {
   display: -ms-flex;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .catalog-list__icon svg {
@@ -5246,7 +5246,11 @@ a {
 }
 
 .catalog-list__block_mod7 .catalog-list__icon use {
-  x: -21;
+  x: -5;
+}
+
+.catalog-list__block_mod8 .catalog-list__icon use {
+  x: -3;
 }
 
 @media screen and (max-width: 1075px) {

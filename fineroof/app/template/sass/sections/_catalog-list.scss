@@ -49,7 +49,7 @@
 		display: -ms-flex;
 		display: flex;
 		align-items: flex-end;
-		justify-content: center;
+		justify-content: flex-start;
 		& svg {
 			width: 120px;
 			height: 100px;
@@ -182,7 +182,14 @@
 		&_mod7 {
 			& #{$parent}__icon {
 				& use {
-					x: -21;
+					x: -5;
+				}
+			}
+		}
+		&_mod8 {
+			& #{$parent}__icon {
+				& use {
+					x: -3;
 				}
 			}
 		}
